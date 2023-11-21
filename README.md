@@ -81,8 +81,8 @@ That's how the game ends. Even though in the original story the only ending is o
 ## Class diagram
 
 ### UML approach
-
 As we didn't start coding much yet, this is our current class diagram. Every class name should be understandable due to the game's structural context.
+![versão1_uml](https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/1c7257d6-a696-4132-a82d-8ee95967f494)
 
 ## Implemented approaches
 
