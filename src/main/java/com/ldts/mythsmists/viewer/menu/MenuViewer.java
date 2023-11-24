@@ -11,6 +11,7 @@ public class MenuViewer extends Viewer<Menu> {
         super(menu);
     }
 
+    @Override
     public void drawElements(GUI gui) {
         gui.drawText(new Position(5, 5), "MYTHS AND MISTS", "#FFFFFF");
 
