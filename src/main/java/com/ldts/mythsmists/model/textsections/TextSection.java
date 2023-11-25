@@ -4,7 +4,7 @@ import java.util.List;
 public class TextSection {
     private List<String> sentences;
 
-    public TextSection(List<String> sentences) {
+    public TextSection() {
         this.sentences = sentences;
     }
 
