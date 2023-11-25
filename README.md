@@ -78,7 +78,7 @@ That's how the game ends. Even though in the original story the only ending is o
 
 *All good things must come to an end. The bad ones too.*
 
-## Class diagram
+## Class Diagram
 
 ### UML approach
 As we didn't start coding much yet, this is our current class diagram. Every class name should be understandable due to the game's structural context.
@@ -87,7 +87,7 @@ As we didn't start coding much yet, this is our current class diagram. Every cla
 
 ## List of features
 
-## Design patterns
+## Design Patterns
 ### Factory Method Pattern 
 
 A creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.
@@ -106,6 +106,47 @@ In the game, the CompoundGraphic concept is reflected in the MenuState and Menu 
 A behavioral design pattern that orchestrates the continuous and structured execution of steps such as updating, rendering, and handling input in a cycle, ensuring a seamless and responsive gaming experience.
 
 In the Game program, the Game Loop Pattern choreographs the continuous execution of updating, rendering, and input handling, ensuring a responsive gaming experience. The cyclical orchestration within the main loop encapsulates the essence of this behavioral design pattern, facilitating a seamless and dynamic gameplay flow.
+
+### State Pattern
+
+This behavioral design pattern is an important part of our game. By implementing it, we can allow loading of "scenes".
+
+We started by creating an abstract class called State that requires a Viewer and a Controller.
+
+All together, we can now create a specific State for a level or for a menu.
+
+This state simplifies and improves our code.
+
+### MVC architectural Pattern
+
+MVC stands for Model View Controller.
+
+This pattern mostly relates to the UI/interaction layer of our game, allowing these three aspects to work together.
+
+- Model - includes the class code itself, the pure application data and logic.
+
+- Viewer - presents the data to the user, in this case, printing out to the GUI the information specified in the model.
+
+- Controller - exists between the Model and the Viewer, listening to events triggered either by the Viewer or by the user.
+
+
+The most simple example is the user pressing a key to show something ingame: the controller listens to the pressed key, the model processes this input and the viewer outputs it.
+
+This is an important pattern for our project, as it allows all group elements to work simultaneously on the model, controller and viewers while also allowing models to have multiple viewers, something that can really come in handy.
+
+
+### Template Method
+
+
+The template method defines the skeleton of an algorithm in the superclass but lets subclasses override specific steps of the algorithm without changing its structure.
+
+This behavioral pattern is present in many aspects of our code, for example, in the creation of states, viewers and controllers.
+
+For example:
+- The State abstract class is defined
+- Act1State, Act2State, Act3State classes are defined as extensions of the State class, overriding some of its' functions.
+
+Overall, it is a nice pattern, as we can override only specific parts of the code, making them less suitable to errors triggered by changes to the rest of the code.
 
 ## Testing
 
