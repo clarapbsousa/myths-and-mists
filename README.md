@@ -97,6 +97,24 @@ Neste diagrama:
 ## List of features
 
 ## Design patterns
+### Factory Method Pattern 
+
+A creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.
+
+The base Game class uses the LanternaGUI library for its graphical interface, ensuring consistent behavior across platforms. Through the factory method pattern, platform-specific GUI components can be generated without rewriting the Game class logic. This approach involves interacting with abstract GUI components, maintaining functionality through a common base class or interface.
+
+
+### Composite Pattern
+
+A structural design pattern that lets you compose objects into tree structures and then work with these structures as if they were individual objects.
+
+In the game, the CompoundGraphic concept is reflected in the MenuState and Menu classes, functioning as a unified container for diverse graphical elements. The client code in the Game class interacts seamlessly with these graphics, abstracted through a common interface, enabling flexible handling of complex graphic structures without direct coupling to specific classes.
+
+### Game Loop Pattern
+
+A behavioral design pattern that orchestrates the continuous and structured execution of steps such as updating, rendering, and handling input in a cycle, ensuring a seamless and responsive gaming experience.
+
+In the Game program, the Game Loop Pattern choreographs the continuous execution of updating, rendering, and input handling, ensuring a responsive gaming experience. The cyclical orchestration within the main loop encapsulates the essence of this behavioral design pattern, facilitating a seamless and dynamic gameplay flow.
 
 ## Testing
 
