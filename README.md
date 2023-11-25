@@ -83,15 +83,6 @@ That's how the game ends. Even though in the original story the only ending is o
 ### UML approach
 As we didn't start coding much yet, this is our current class diagram. Every class name should be understandable due to the game's structural context.
 
-
-![versão1_uml](https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/1c7257d6-a696-4132-a82d-8ee95967f494)
-
-Neste diagrama:
-* A classe Game representa o jogo em si, que tem títulos, uma lista de atos (Act), e um ato atual.
-* Act representa um ato dentro do jogo, com um título, uma lista de segmentos (Segment), e um segmento atual.
-* Segment é a classe base para diferentes tipos de segmentos no jogo, como HeroSegment para o tutorial do herói, MazeSegment para o labirinto, SingingSegment para o ato de cantar, e EndingSegment para o segmento de término.
-* Option representa as opções disponíveis em um MazeSegment.
-
 ## Implemented approaches
 
 ## List of features
