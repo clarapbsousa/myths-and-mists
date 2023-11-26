@@ -83,6 +83,14 @@ That's how the game ends. Even though in the original story the only ending is o
 ### UML approach
 As we didn't start coding much yet, this is our current class diagram. Every class name should be understandable due to the game's structural context.
 ![(/home/miguel/Transferências/UML LDTS.jpg)]
+
+## Mockups
+### Menu
+<img width="728" alt="Captura de ecrã 2023-11-26, às 18 53 34" src="https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/4ae8bb2e-9af2-48fe-94b2-a07359f12af3">
+
+### Prologue
+<img width="728" alt="Captura de ecrã 2023-11-26, às 18 55 22" src="https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/0faf9ec1-517d-45a4-b53b-f82838d12b3e">
+
 ## Implemented approaches
 
 ## List of features
