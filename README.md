@@ -95,10 +95,6 @@ We've implemented a simple menu. In the future it may look better - let's focus 
 
 Text sections will essentially look like this. Something simple and readable on every screen, keeping you updated with the story.
 
-## Implemented approaches
-
-## List of features
-
 ## Design Patterns
 ### Factory Method Pattern 
 
@@ -159,9 +155,6 @@ For example:
 - Act1State, Act2State, Act3State classes are defined as extensions of the State class, overriding some of its' functions.
 
 Overall, it is a nice pattern, as we can override only specific parts of the code, making them less suitable to errors triggered by changes to the rest of the code.
-
-## Testing
-
 
 
 
