@@ -88,8 +88,12 @@ As we didn't start coding much yet, this is our current class diagram. Every cla
 ### Menu
 <img width="728" alt="Captura de ecrã 2023-11-26, às 18 53 34" src="https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/4ae8bb2e-9af2-48fe-94b2-a07359f12af3">
 
+We've implemented a simple menu. In the future it may look better - let's focus on more important aspects for now.
+
 ### Prologue
 <img width="728" alt="Captura de ecrã 2023-11-26, às 18 55 22" src="https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/0faf9ec1-517d-45a4-b53b-f82838d12b3e">
+
+Text sections will essentially look like this. Something simple and readable on every screen, keeping you updated with the story.
 
 ## Implemented approaches
 
