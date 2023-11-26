@@ -82,7 +82,7 @@ That's how the game ends. Even though in the original story the only ending is o
 
 ### UML approach
 As we didn't start coding much yet, this is our current class diagram. Every class name should be understandable due to the game's structural context.
-![](/home/miguel/Transferências/UML LDTS.jpg)
+![(/home/miguel/Transferências/UML LDTS.jpg)]
 ## Implemented approaches
 
 ## List of features
