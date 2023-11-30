@@ -14,11 +14,22 @@ public class PrologueState extends State<TextSection> {
 
     public PrologueState(TextSection ts) {
         super(ts);
-        List<String> sentences = Arrays.asList("Once upon a time in Greece, ",
-                "there was a story",
-                "about a loving newlywed couple",
-                "that would soon face the biggest proof of love",
-                "press enter to continue."
+        List<String> sentences = Arrays.asList("Once upon a time in ancient Greece," ,
+                "Orpheus and Eurydice, a newlywed couple," ,
+                "found their love tested by a cruel twist of fate." ,
+                "" ,
+                "In a quaint village, Orpheus, a gifted musician," ,
+                "charmed all with his lyre's enchanting tunes." ,
+                "Eurydice, his beloved, possessed beauty that rivaled goddesses." ,
+                "" ,
+                "Tragedy struck when Eurydice, lured into a meadow," ,
+                "fell victim to a serpent's deadly bite." ,
+                "Orpheus, unaware, continued his melodies until grief's shadow loomed." ,
+                "" ,
+                "Learning of Eurydice's demise, he defied death itself," ,
+                "venturing to the underworld with his lyre's haunting notes." ,
+                "",
+                "(Press enter to continue)"
         );
         ts.setSentences(sentences);
     }
