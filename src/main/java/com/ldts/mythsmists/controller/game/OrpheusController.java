@@ -9,7 +9,12 @@ public class OrpheusController extends GameController{
 
     public OrpheusController(Map map){super(map);}
 
-    public void moveOrpheusLeft(){ move}
+    public void moveOrpheusLeft(){ moveOrpheus(getModel().getOrpheus().getPosition().getLeft());}
+    public void moveOrpheusRight(){ moveOrpheus(getModel().getOrpheus().getPosition().getRight());}
+    public void moveOrpheusUp(){ moveOrpheus(getModel().getOrpheus().getPosition().getUp());}
+
+    public void moveOrpheusDown(){ moveOrpheus(getModel().getOrpheus().getPosition().getDown());}
+
 
     public void moveOrpheus(Position position) {
         if(getModel().isEmpty(position)){
