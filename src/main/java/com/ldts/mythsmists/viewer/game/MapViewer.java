@@ -11,6 +11,7 @@ public class MapViewer extends Viewer<Map> {
         super(map);
     }
 
+
     @Override
     protected void drawElements(GUI gui) {
         gui.drawText(new Position(0, 0), "Shall you look back?", "#FFFFFF");

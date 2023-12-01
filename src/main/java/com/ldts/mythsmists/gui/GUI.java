@@ -13,6 +13,8 @@ public interface GUI {
 
     void close() throws IOException;
 
+
+
     enum ACTION {UP, DOWN, LEFT, RIGHT, QUIT, SELECT, NONE};
     ACTION getNextAction() throws IOException;
 }
