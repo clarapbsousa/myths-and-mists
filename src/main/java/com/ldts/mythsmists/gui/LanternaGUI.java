@@ -9,6 +9,7 @@ import com.googlecode.lanterna.terminal.DefaultTerminalFactory;
 import com.googlecode.lanterna.terminal.Terminal;
 import com.googlecode.lanterna.terminal.swing.AWTTerminalFontConfiguration;
 import com.googlecode.lanterna.TerminalSize;
+import com.ldts.mythsmists.model.Elements.Orpheus;
 import com.ldts.mythsmists.model.Position;
 
 import java.awt.*;
@@ -84,6 +85,22 @@ public class LanternaGUI implements GUI {
 
         return ACTION.NONE;
     }
+
+    @Override
+    public void drawOrpheus(Position position) {
+
+    }
+
+    @Override
+    public void drawWall(Position position) {
+
+    }
+
+    @Override
+    public void drawEnemy(Position position) {
+
+    }
+
     @Override
     public void drawText(Position position, String text, String color) {
         TextGraphics tg = screen.newTextGraphics();
@@ -105,5 +122,4 @@ public class LanternaGUI implements GUI {
     public void close() throws IOException {
         screen.close();
     }
-
 }
