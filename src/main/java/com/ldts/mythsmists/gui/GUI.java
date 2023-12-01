@@ -5,6 +5,12 @@ import com.ldts.mythsmists.model.Position;
 import java.io.IOException;
 
 public interface GUI {
+
+    void drawOrpheus(Position position);
+
+    void drawWall(Position position);
+
+    void drawEnemy(Position position);
     void drawText(Position position, String text, String color);
 
     void clear();
