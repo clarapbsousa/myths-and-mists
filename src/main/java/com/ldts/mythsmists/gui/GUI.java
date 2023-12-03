@@ -13,6 +13,7 @@ public interface GUI {
     void drawEnemy(Position position);
     void drawText(Position position, String text, String color);
 
+
     void clear();
 
     void refresh() throws IOException;

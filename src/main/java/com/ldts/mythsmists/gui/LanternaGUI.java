@@ -86,9 +86,15 @@ public class LanternaGUI implements GUI {
         return ACTION.NONE;
     }
 
+    private void drawCharacter(int x, int y, char c, String color) {
+        TextGraphics graphics = screen.newTextGraphics();
+        graphics.setForegroundColor(TextColor.Factory.fromString(color));
+        graphics.putString(x, y-1, "" + c);
+    }
+
     @Override
     public void drawOrpheus(Position position) {
-
+        drawCharacter(position.getX(), position.getY(), 'Ä', "#FFFFFF");
     }
 
     @Override
