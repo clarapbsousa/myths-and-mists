@@ -1,6 +1,7 @@
 package com.ldts.mythsmists;
 
 import com.ldts.mythsmists.gui.LanternaGUI;
+import com.ldts.mythsmists.sound.AudioPlayer;
 import com.ldts.mythsmists.states.State;
 import com.ldts.mythsmists.states.MenuState;
 import com.ldts.mythsmists.model.menu.Menu;
@@ -14,12 +15,15 @@ public class Game {
     private final LanternaGUI gui;
     private State state;
 
+    private AudioPlayer player;
     public Game() throws IOException, URISyntaxException, FontFormatException {
         this.gui = new LanternaGUI(150, 150);
         this.state = new MenuState(new Menu());
+        this.player = new AudioPlayer("./src/main/resources/thefiringline.aiff");
+        player.play();
     }
 
-    public static void main(String[] args) throws IOException, URISyntaxException, FontFormatException {
+    public static void main(String[] args) throws IOException, URISyntaxException, FontFormatException, InterruptedException {
         new Game().start();
     }
 
@@ -27,7 +31,7 @@ public class Game {
         this.state = state;
     }
 
-    private void start() throws IOException {
+    private void start() throws IOException, InterruptedException {
         int FPS = 10;
         int frameTime = 1000/FPS;
 

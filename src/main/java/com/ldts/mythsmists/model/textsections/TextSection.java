@@ -16,6 +16,7 @@ public class TextSection {
         this.sentences = sentences;
     }
 
+
     public int getNumberOfSentences() {
         return this.sentences.size();
     }

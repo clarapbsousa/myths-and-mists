@@ -5,6 +5,8 @@ import com.ldts.mythsmists.model.Position;
 import com.ldts.mythsmists.model.textsections.TextSection;
 import com.ldts.mythsmists.viewer.Viewer;
 
+import java.io.IOException;
+
 public class TextSectionViewer extends Viewer<TextSection> {
 
     public TextSectionViewer(TextSection ts) {
@@ -13,10 +15,9 @@ public class TextSectionViewer extends Viewer<TextSection> {
 
     @Override
     public void drawElements(GUI gui) {
-        gui.drawText(new Position(5, 5), "Act 1", "#FFFFFF");
 
         for (int i = 0; i < getModel().getNumberOfSentences(); i++) {
-            gui.drawText(new Position(5, 7+i), getModel().getSentence(i), "#FFFFFF");
+            gui.drawText(new Position(5, 2+i), getModel().getSentence(i), "#FFFFFF");
         }
 
     }

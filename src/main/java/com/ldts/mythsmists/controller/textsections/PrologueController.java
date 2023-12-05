@@ -20,6 +20,9 @@ public class PrologueController extends Controller<TextSection> {
 
     @Override
     public void step(Game game, GUI.ACTION action, long time) throws IOException {
-        if (action == GUI.ACTION.SELECT) game.setState(new Act1State(new MapLoader(1).createMap()));
+
+        if (action == GUI.ACTION.SELECT) {
+            game.setState(new Act1State(new MapLoader(1).createMap()));
+        }
     }
 }
