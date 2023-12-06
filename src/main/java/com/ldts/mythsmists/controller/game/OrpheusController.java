@@ -19,7 +19,9 @@ public class OrpheusController extends GameController{
     public void moveOrpheus(Position position) {
         if(getModel().isEmpty(position)){
             getModel().getOrpheus().setPosition(position);
-            //falta interação com os inimigos , terei que implementar na arena um bool com isso
+            if(getModel().isEnemy(position)){
+                getModel().getOrpheus().decreaseEnergy();
+            }
         }
     }
 

@@ -1,5 +1,6 @@
 package com.ldts.mythsmists.model.game.map;
 
+import com.ldts.mythsmists.model.Elements.Enemy;
 import com.ldts.mythsmists.model.Elements.Orpheus;
 import com.ldts.mythsmists.model.Elements.Wall;
 import com.ldts.mythsmists.model.Position;
@@ -12,11 +13,13 @@ public class Map {
 
     private Orpheus orpheus;
     private List<Wall> walls;
+    private List<Enemy> enemys;
 
 
     public Map(int width, int height) {
         this.width = width;
         this.height = height;
+        this.orpheus = new Orpheus(width/2,height/2);
     }
 
     public int getWidth() {
@@ -43,9 +46,21 @@ public class Map {
         this.walls = walls;
     }
 
+    public List<Enemy> getEnemys(){return enemys;}
+
+    public void setEnemys(List<Enemy> enemys){this.enemys = enemys;}
+
     public boolean isEmpty(Position position) {
         for (Wall wall: walls){
             if(wall.getPosition().equals(position))
+                return false;
+        }
+        return true;
+    }
+
+    public boolean isEnemy(Position position) {
+        for (Enemy enemy: enemys){
+            if(enemy.getPosition().equals(position))
                 return false;
         }
         return true;
