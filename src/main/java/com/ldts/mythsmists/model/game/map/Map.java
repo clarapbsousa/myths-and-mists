@@ -4,6 +4,7 @@ import com.ldts.mythsmists.model.Elements.Enemy;
 import com.ldts.mythsmists.model.Elements.Orpheus;
 import com.ldts.mythsmists.model.Elements.Wall;
 import com.ldts.mythsmists.model.Position;
+import com.ldts.mythsmists.model.textsections.TextSection;
 
 import java.util.List;
 

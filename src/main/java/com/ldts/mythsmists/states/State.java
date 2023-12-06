@@ -3,6 +3,7 @@ package com.ldts.mythsmists.states;
 import com.ldts.mythsmists.Game;
 import com.ldts.mythsmists.gui.GUI;
 import com.ldts.mythsmists.controller.Controller;
+import com.ldts.mythsmists.model.textsections.TextSection;
 import com.ldts.mythsmists.sound.AudioPlayer;
 import com.ldts.mythsmists.viewer.Viewer;
 

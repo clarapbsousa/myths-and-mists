@@ -8,11 +8,14 @@ import com.ldts.mythsmists.model.game.map.MapLoader;
 import com.ldts.mythsmists.model.textsections.TextSection;
 import com.ldts.mythsmists.states.Act1State;
 import com.ldts.mythsmists.states.PrologueState;
+import com.ldts.mythsmists.states.State;
 import org.w3c.dom.Text;
 
 import java.io.IOException;
 
 public class PrologueController extends Controller<TextSection> {
+
+    private State Act1State;
 
     public PrologueController(TextSection prologue) {
         super(prologue);
@@ -22,7 +25,7 @@ public class PrologueController extends Controller<TextSection> {
     public void step(Game game, GUI.ACTION action, long time) throws IOException {
 
         if (action == GUI.ACTION.SELECT) {
-            game.setState(new Act1State(new MapLoader(1).createMap()));
+          game.setState(Act1State);
         }
     }
 }
