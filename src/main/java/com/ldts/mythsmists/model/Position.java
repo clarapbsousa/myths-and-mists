@@ -41,4 +41,18 @@ public class Position {
         Position position = (Position) o;
         return x == position.x && y == position.y;
     }
+
+    public Position getRandomNeighbour() {
+        int n = (int) (Math.random() * 4);
+        switch (n) {
+            case 0:
+                return getUp();
+            case 1:
+                return getRight();
+            case 2:
+                return getDown();
+            default:
+                return getLeft();
+        }
+    }
 }

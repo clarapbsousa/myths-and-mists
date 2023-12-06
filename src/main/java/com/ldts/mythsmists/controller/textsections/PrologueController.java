@@ -3,6 +3,7 @@ package com.ldts.mythsmists.controller.textsections;
 import com.ldts.mythsmists.Game;
 import com.ldts.mythsmists.controller.Controller;
 import com.ldts.mythsmists.gui.GUI;
+import com.ldts.mythsmists.model.game.map.Map;
 import com.ldts.mythsmists.model.game.map.MapBuilder;
 import com.ldts.mythsmists.model.game.map.MapLoader;
 import com.ldts.mythsmists.model.textsections.TextSection;
@@ -13,9 +14,8 @@ import org.w3c.dom.Text;
 
 import java.io.IOException;
 
-public class PrologueController extends Controller<TextSection> {
 
-    private State Act1State;
+public class PrologueController extends Controller<TextSection>{
 
     public PrologueController(TextSection prologue) {
         super(prologue);
@@ -25,7 +25,7 @@ public class PrologueController extends Controller<TextSection> {
     public void step(Game game, GUI.ACTION action, long time) throws IOException {
 
         if (action == GUI.ACTION.SELECT) {
-          game.setState(Act1State);
+          game.setState(new Act1State(new Map(10,10)));
         }
     }
 }
