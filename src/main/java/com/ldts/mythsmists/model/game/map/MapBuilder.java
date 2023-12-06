@@ -14,5 +14,7 @@ public abstract class MapBuilder {
 
     protected abstract int getHeight();
 
-    protected abstract Orpheus createOrpheus();
+    protected Orpheus createOrpheus(){
+        return new Orpheus(getWidth()/2,getHeight()/2);
+    }
 }

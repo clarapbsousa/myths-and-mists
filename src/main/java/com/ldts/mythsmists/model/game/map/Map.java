@@ -19,7 +19,6 @@ public class Map {
     public Map(int width, int height) {
         this.width = width;
         this.height = height;
-        this.orpheus = new Orpheus(width/2,height/2);
     }
 
     public int getWidth() {
