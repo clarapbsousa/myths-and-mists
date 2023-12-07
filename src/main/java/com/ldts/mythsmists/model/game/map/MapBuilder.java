@@ -1,21 +1,29 @@
 package com.ldts.mythsmists.model.game.map;
 
+import com.ldts.mythsmists.model.Elements.Enemy;
 import com.ldts.mythsmists.model.Elements.Orpheus;
 import com.ldts.mythsmists.model.Elements.Wall;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.Random;
 public class MapBuilder {
+
+    private final Random rng;
     private int width;
     private int height;
+
+    private  int numberOfEnemys;
 
     public MapBuilder(){
     }
 
-    public MapBuilder(int width,int height) {
+    public MapBuilder(int width,int height,int numberOfEnemys) {
+        this.rng = new Random();
+
         this.width = width;
         this.height= height;
+        this.numberOfEnemys=numberOfEnemys;
     }
 
     public Map createMap() {
@@ -23,6 +31,7 @@ public class MapBuilder {
 
         map.setOrpheus(createOrpheus());
         map.setWalls(createWalls());
+        map.setEnemys(createEnemys());
         return map;
     }
 
@@ -44,5 +53,14 @@ public class MapBuilder {
         }
 
         return walls;
+    }
+
+    protected List<Enemy> createEnemys() {
+        List<Enemy> enemys = new ArrayList<>();
+
+        while (enemys.size() < numberOfEnemys)
+            enemys.add(new Enemy(rng.nextInt(width - 2) + 1, rng.nextInt(height - 2) + 1));
+
+        return enemys;
     }
 }
