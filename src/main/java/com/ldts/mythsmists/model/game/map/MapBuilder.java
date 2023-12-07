@@ -8,14 +8,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 public class MapBuilder {
-
     private final Random rng;
-    private int width;
-    private int height;
+    private final int width;
+    private final int height;
 
-    private  int numberOfEnemys;
+    private  final int numberOfEnemys;
 
     public MapBuilder(){
+        this.rng = new Random();
+        this.width= 0;
+        this.height=0;
+        this.numberOfEnemys=0;
     }
 
     public MapBuilder(int width,int height,int numberOfEnemys) {

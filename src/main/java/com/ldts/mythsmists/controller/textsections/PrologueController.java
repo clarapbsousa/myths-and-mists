@@ -25,7 +25,7 @@ public class PrologueController extends Controller<TextSection>{
     public void step(Game game, GUI.ACTION action, long time) throws IOException {
 
         if (action == GUI.ACTION.SELECT) {
-          game.setState(new Act1State(new Map(10,10)));
+          game.setState(new Act1State(new MapLoader(1).createMap()));
         }
     }
 }

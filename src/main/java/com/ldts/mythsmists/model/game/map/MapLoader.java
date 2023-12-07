@@ -1,6 +1,8 @@
 package com.ldts.mythsmists.model.game.map;
 
+import com.ldts.mythsmists.model.Elements.Enemy;
 import com.ldts.mythsmists.model.Elements.Orpheus;
+import com.ldts.mythsmists.model.Elements.Wall;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -11,12 +13,13 @@ import java.net.URL;
 
 public class MapLoader extends MapBuilder {
 
+    private final int number;
     private final List<String> lines;
 
-    public MapLoader() throws IOException {
-        super();
+    public MapLoader(int number) throws IOException {
+        this.number = number;
 
-        URL getMapFile = MapLoader.class.getResource("/maps/map1.asset");
+        URL getMapFile = MapLoader.class.getResource("/maps/map" + number + ".asset");
         assert getMapFile != null;
         BufferedReader reader = new BufferedReader(new FileReader(getMapFile.getFile()));
 
@@ -46,9 +49,35 @@ public class MapLoader extends MapBuilder {
         for (int y = 0; y < lines.size(); y++) {
             String line = lines.get(y);
             for (int x = 0; x < line.length(); x++)
-                if (line.charAt(x) == 'Ä') return new Orpheus(x, y);
+                if (line.charAt(x) == 'O') return new Orpheus(x, y);
         }
         return null;
+    }
+
+    @Override
+    protected List<Wall> createWalls() {
+        List<Wall> walls = new ArrayList<>();
+
+        for (int y = 0; y < lines.size(); y++) {
+            String line = lines.get(y);
+            for (int x = 0; x < line.length(); x++)
+                if (line.charAt(x) == '#') walls.add(new Wall(x, y));
+        }
+
+        return walls;
+    }
+
+    @Override
+    protected List<Enemy> createEnemys() {
+        List<Enemy> enemys = new ArrayList<>();
+
+        for (int y = 0; y < lines.size(); y++) {
+            String line = lines.get(y);
+            for (int x = 0; x < line.length(); x++)
+                if (line.charAt(x) == 'E') enemys.add(new Enemy(x, y));
+        }
+
+        return enemys;
     }
 
 
