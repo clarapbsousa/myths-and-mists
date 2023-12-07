@@ -19,13 +19,14 @@ public class MapViewer extends Viewer<Map> {
     @Override
     protected void drawElements(GUI gui) {
 
+        gui.drawText(new Position(1, 0), "Collect the coins and follow to the Underworld.", "#FFFFFF");
+        gui.drawText(new Position(1, 1),"DO NOT GET CAUGHT!", "#FF0000" );
+
+        gui.drawText(new Position(1, 3), "Energy: " + getModel().getOrpheus().getEnergy(), "#FFD700");
+
         drawElements(gui, getModel().getWalls(), new WallViewer());
         drawElements(gui, getModel().getEnemys(), new EnemyViewer());
         drawElement(gui, getModel().getOrpheus(), new OrpheusViewer());
-
-        gui.drawText(new Position(0, 0), "Shall you look back?", "#FFFFFF");
-
-        gui.drawText(new Position(10, 10), "Energy: " + getModel().getOrpheus().getEnergy(), "#FFD700");
     }
 
     private <T extends Element> void drawElements(GUI gui, List<T> elements, ElementViewer<T> viewer) {
