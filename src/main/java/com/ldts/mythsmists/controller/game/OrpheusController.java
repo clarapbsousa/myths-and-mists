@@ -19,7 +19,7 @@ public class OrpheusController extends GameController{
     public void moveOrpheus(Position position) {
         if(getModel().isEmpty(position)){
             getModel().getOrpheus().setPosition(position);
-            if(getModel().isEnemy(position)){
+            if(!(getModel().isEnemy(position))){
                 getModel().getOrpheus().decreaseEnergy();
             }
         }
