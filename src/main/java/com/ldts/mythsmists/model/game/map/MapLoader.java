@@ -1,8 +1,6 @@
 package com.ldts.mythsmists.model.game.map;
 
-import com.ldts.mythsmists.model.Elements.Enemy;
 import com.ldts.mythsmists.model.Elements.Orpheus;
-import com.ldts.mythsmists.model.Elements.Wall;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -13,15 +11,14 @@ import java.net.URL;
 
 public class MapLoader extends MapBuilder {
 
-    private final int lvl;
-
     private final List<String> lines;
 
-    public MapLoader(int lvl) throws IOException {
-        this.lvl = lvl;
+    public MapLoader() throws IOException {
+        super();
 
-        URL getLevelFile = MapLoader.class.getResource("/maps/map" + lvl + ".asset");
-        BufferedReader reader = new BufferedReader(new FileReader(getLevelFile.getFile()));
+        URL getMapFile = MapLoader.class.getResource("/maps/map1.asset");
+        assert getMapFile != null;
+        BufferedReader reader = new BufferedReader(new FileReader(getMapFile.getFile()));
 
         lines = readLines(reader);
     }
@@ -34,14 +31,12 @@ public class MapLoader extends MapBuilder {
         return lines;
     }
 
-    @Override
     protected int getWidth() {
         int width = 0;
         for (String line : lines) width = Math.max(width, line.length());
         return width;
     }
 
-    @Override
     protected int getHeight() {
         return lines.size();
     }
@@ -55,28 +50,6 @@ public class MapLoader extends MapBuilder {
         }
         return null;
     }
-    @Override
-    protected List<Enemy> createEnemys() {
-        List<Enemy> monsters = new ArrayList<>();
 
-        for (int y = 0; y < lines.size(); y++) {
-            String line = lines.get(y);
-            for (int x = 0; x < line.length(); x++)
-                if (line.charAt(x) == 'E') monsters.add(new Enemy(x, y));
-        }
-        return monsters;
-    }
-    @Override
-    protected List<Wall> createWalls() {
-        List<Wall> walls = new ArrayList<>();
-
-        for (int y = 0; y < lines.size(); y++) {
-            String line = lines.get(y);
-            for (int x = 0; x < line.length(); x++)
-                if (line.charAt(x) == '#') walls.add(new Wall(x, y));
-        }
-
-        return walls;
-    }
 
 }
