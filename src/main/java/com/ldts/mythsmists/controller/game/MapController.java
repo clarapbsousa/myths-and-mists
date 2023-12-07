@@ -21,9 +21,8 @@ public class MapController extends GameController {
 
     @Override
     public void step(Game game, GUI.ACTION action, long time) throws IOException {
-
-        System.out.println(1234);
-        if (action == GUI.ACTION.QUIT) {
+        Orpheus orpheus = getModel().getOrpheus();
+        if (action == GUI.ACTION.QUIT || (orpheus != null && orpheus.getEnergy() == 0)) {
             game.setState(new MenuState(new Menu()));
         }
         else {

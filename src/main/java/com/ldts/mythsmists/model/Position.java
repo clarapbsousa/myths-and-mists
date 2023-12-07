@@ -1,5 +1,7 @@
 package com.ldts.mythsmists.model;
 
+import java.util.Objects;
+
 public class Position {
 
     private final int x;
@@ -54,5 +56,9 @@ public class Position {
             default:
                 return getLeft();
         }
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(x, y);
     }
 }

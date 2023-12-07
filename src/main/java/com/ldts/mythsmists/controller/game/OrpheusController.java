@@ -2,6 +2,7 @@ package com.ldts.mythsmists.controller.game;
 
 import com.ldts.mythsmists.Game;
 import com.ldts.mythsmists.gui.GUI;
+import com.ldts.mythsmists.model.Elements.Orpheus;
 import com.ldts.mythsmists.model.Position;
 import com.ldts.mythsmists.model.game.map.Map;
 
@@ -15,7 +16,6 @@ public class OrpheusController extends GameController{
 
     public void moveOrpheusDown(){ moveOrpheus(getModel().getOrpheus().getPosition().getDown());}
 
-
     public void moveOrpheus(Position position) {
         if(getModel().isEmpty(position)){
             getModel().getOrpheus().setPosition(position);
@@ -27,9 +27,9 @@ public class OrpheusController extends GameController{
 
     @Override
     public void step(Game game, GUI.ACTION action, long time) {
-        if (action == GUI.ACTION.UP) moveOrpheusUp();
-        if (action == GUI.ACTION.RIGHT) moveOrpheusRight();
-        if (action == GUI.ACTION.DOWN) moveOrpheusDown();
-        if (action == GUI.ACTION.LEFT) moveOrpheusLeft();
+            if (action == GUI.ACTION.UP) moveOrpheusUp();
+            if (action == GUI.ACTION.RIGHT) moveOrpheusRight();
+            if (action == GUI.ACTION.DOWN) moveOrpheusDown();
+            if (action == GUI.ACTION.LEFT) moveOrpheusLeft();
     }
 }

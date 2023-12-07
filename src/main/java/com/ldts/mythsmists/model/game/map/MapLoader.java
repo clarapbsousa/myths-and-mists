@@ -1,9 +1,10 @@
 package com.ldts.mythsmists.model.game.map;
 
+import com.ldts.mythsmists.model.Elements.Enemy;
 import com.ldts.mythsmists.model.Elements.Orpheus;
+import com.ldts.mythsmists.model.Elements.Wall;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -54,6 +55,28 @@ public class MapLoader extends MapBuilder {
         }
         return null;
     }
+    @Override
+    protected List<Enemy> createEnemys() {
+        List<Enemy> monsters = new ArrayList<>();
 
+        for (int y = 0; y < lines.size(); y++) {
+            String line = lines.get(y);
+            for (int x = 0; x < line.length(); x++)
+                if (line.charAt(x) == 'E') monsters.add(new Enemy(x, y));
+        }
+        return monsters;
+    }
+    @Override
+    protected List<Wall> createWalls() {
+        List<Wall> walls = new ArrayList<>();
+
+        for (int y = 0; y < lines.size(); y++) {
+            String line = lines.get(y);
+            for (int x = 0; x < line.length(); x++)
+                if (line.charAt(x) == '#') walls.add(new Wall(x, y));
+        }
+
+        return walls;
+    }
 
 }
