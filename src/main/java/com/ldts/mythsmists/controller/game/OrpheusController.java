@@ -2,6 +2,7 @@ package com.ldts.mythsmists.controller.game;
 
 import com.ldts.mythsmists.Game;
 import com.ldts.mythsmists.gui.GUI;
+import com.ldts.mythsmists.model.Elements.Dracma;
 import com.ldts.mythsmists.model.Elements.Orpheus;
 import com.ldts.mythsmists.model.Position;
 import com.ldts.mythsmists.model.game.map.Map;
@@ -21,6 +22,10 @@ public class OrpheusController extends GameController{
             getModel().getOrpheus().setPosition(position);
             if(!(getModel().isEnemy(position))){
                 getModel().getOrpheus().decreaseEnergy();
+            }
+            if(!(getModel().isDracma(position))){
+                getModel().getOrpheus().increaseCount();
+                getModel().getDracmas().removeIf(dracma -> dracma.getPosition().equals(position));
             }
         }
     }

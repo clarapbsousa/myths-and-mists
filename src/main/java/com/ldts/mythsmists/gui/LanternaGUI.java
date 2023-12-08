@@ -9,7 +9,6 @@ import com.googlecode.lanterna.terminal.DefaultTerminalFactory;
 import com.googlecode.lanterna.terminal.Terminal;
 import com.googlecode.lanterna.terminal.swing.AWTTerminalFontConfiguration;
 import com.googlecode.lanterna.TerminalSize;
-import com.ldts.mythsmists.model.Elements.Orpheus;
 import com.ldts.mythsmists.model.Position;
 
 import java.awt.*;
@@ -101,6 +100,8 @@ public class LanternaGUI implements GUI {
     public void drawWall(Position position) {
         drawCharacter(position.getX(), position.getY(), '#', "#3333FF");
     }
+    @Override
+    public void drawDracma(Position position){ drawCharacter(position.getX(), position.getY(), '$', "#FFFF00");}
 
     @Override
     public void drawEnemy(Position position) {

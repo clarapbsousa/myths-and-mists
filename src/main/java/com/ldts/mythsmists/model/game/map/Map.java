@@ -1,5 +1,6 @@
 package com.ldts.mythsmists.model.game.map;
 
+import com.ldts.mythsmists.model.Elements.Dracma;
 import com.ldts.mythsmists.model.Elements.Enemy;
 import com.ldts.mythsmists.model.Elements.Orpheus;
 import com.ldts.mythsmists.model.Elements.Wall;
@@ -15,6 +16,7 @@ public class Map {
     private Orpheus orpheus;
     private List<Wall> walls;
     private List<Enemy> enemys;
+    private List<Dracma> dracmas;
 
 
     public Map(int width, int height) {
@@ -46,6 +48,12 @@ public class Map {
         this.walls = walls;
     }
 
+    public List<Dracma> getDracmas() { return dracmas; }
+
+    public void setDracmas(List<Dracma> dracmas) {
+        this.dracmas = dracmas;
+    }
+
     public List<Enemy> getEnemys(){return enemys;}
 
     public void setEnemys(List<Enemy> enemys){this.enemys = enemys;}
@@ -65,5 +73,11 @@ public class Map {
         }
         return true;
     }
-
+    public boolean isDracma(Position position) {
+        for (Dracma dracma: dracmas){
+            if(dracma.getPosition().equals(position))
+                return false;
+        }
+        return true;
+    }
 }

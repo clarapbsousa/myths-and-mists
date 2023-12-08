@@ -1,5 +1,6 @@
 package com.ldts.mythsmists.model.game.map;
 
+import com.ldts.mythsmists.model.Elements.Dracma;
 import com.ldts.mythsmists.model.Elements.Enemy;
 import com.ldts.mythsmists.model.Elements.Orpheus;
 import com.ldts.mythsmists.model.Elements.Wall;
@@ -7,11 +8,10 @@ import com.ldts.mythsmists.model.Elements.Wall;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-public class MapBuilder {
+public abstract class MapBuilder {
     private final Random rng;
     private final int width;
     private final int height;
-
     private  final int numberOfEnemys;
 
     public MapBuilder(){
@@ -21,20 +21,13 @@ public class MapBuilder {
         this.numberOfEnemys=0;
     }
 
-    public MapBuilder(int width,int height,int numberOfEnemys) {
-        this.rng = new Random();
-
-        this.width = width;
-        this.height= height;
-        this.numberOfEnemys=numberOfEnemys;
-    }
-
     public Map createMap() {
         Map map = new Map(width, height);
 
         map.setOrpheus(createOrpheus());
         map.setWalls(createWalls());
         map.setEnemys(createEnemys());
+        map.setDracmas(createDracmas());
         return map;
     }
 
@@ -65,5 +58,14 @@ public class MapBuilder {
             enemys.add(new Enemy(rng.nextInt(width - 2) + 1, rng.nextInt(height - 2) + 1));
 
         return enemys;
+    }
+
+    protected List<Dracma> createDracmas() {
+        List<Dracma> dracmas = new ArrayList<>();
+
+        while (dracmas.size() < numberOfEnemys)
+            dracmas.add(new Dracma(rng.nextInt(width - 2) + 1, rng.nextInt(height - 2) + 1));
+
+            return dracmas;
     }
 }

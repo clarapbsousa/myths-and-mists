@@ -1,5 +1,6 @@
 package com.ldts.mythsmists.model.game.map;
 
+import com.ldts.mythsmists.model.Elements.Dracma;
 import com.ldts.mythsmists.model.Elements.Enemy;
 import com.ldts.mythsmists.model.Elements.Orpheus;
 import com.ldts.mythsmists.model.Elements.Wall;
@@ -65,6 +66,18 @@ public class MapLoader extends MapBuilder {
         }
 
         return walls;
+    }
+
+    @Override
+    protected List<Dracma> createDracmas() {
+        List<Dracma> dracmas = new ArrayList<>();
+
+        for (int y = 0; y < lines.size(); y++) {
+            String line = lines.get(y);
+            for (int x = 0; x < line.length(); x++)
+                if (line.charAt(x) == '$') dracmas.add(new Dracma(x, y));
+        }
+        return dracmas;
     }
 
     @Override

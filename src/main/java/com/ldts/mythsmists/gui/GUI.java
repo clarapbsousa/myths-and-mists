@@ -10,6 +10,8 @@ public interface GUI {
 
     void drawWall(Position position);
 
+    void drawDracma(Position position);
+
     void drawEnemy(Position position);
     void drawText(Position position, String text, String color);
 
