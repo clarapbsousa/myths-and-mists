@@ -1,4 +1,6 @@
 package com.ldts.mythsmists.gui;
+import com.googlecode.lanterna.SGR;
+import com.googlecode.lanterna.TerminalPosition;
 import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.graphics.TextGraphics;
 import com.googlecode.lanterna.input.KeyStroke;
@@ -113,6 +115,15 @@ public class LanternaGUI implements GUI {
         TextGraphics tg = screen.newTextGraphics();
         tg.setForegroundColor(TextColor.Factory.fromString(color));
         tg.putString(position.getX(), position.getY(), text);
+    }
+
+    @Override
+    public void drawTerrain(Position position) {
+        TextGraphics graphics = screen.newTextGraphics();
+        graphics.setBackgroundColor(TextColor.Factory.fromString("#86DB86"));
+        graphics.enableModifiers(SGR.BOLD);
+        graphics.setForegroundColor(TextColor.Factory.fromString("#71C76F"));
+        graphics.fillRectangle(new TerminalPosition(0, 0), new TerminalSize(150, 150), 'W');
     }
 
     @Override

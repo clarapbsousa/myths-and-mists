@@ -19,7 +19,7 @@ public class MapViewer extends Viewer<Map> {
 
     @Override
     protected void drawElements(GUI gui) {
-
+        gui.drawTerrain(new Position(0, 0));
         gui.drawText(new Position(1, 0), "Collect the coins and follow to the Underworld.", "#FFFFFF");
         gui.drawText(new Position(1, 1),"DO NOT GET CAUGHT!", "#FF0000" );
 

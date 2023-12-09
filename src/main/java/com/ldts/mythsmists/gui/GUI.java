@@ -13,6 +13,9 @@ public interface GUI {
     void drawDracma(Position position);
 
     void drawEnemy(Position position);
+
+    void drawTerrain(Position position);
+
     void drawText(Position position, String text, String color);
 
 
