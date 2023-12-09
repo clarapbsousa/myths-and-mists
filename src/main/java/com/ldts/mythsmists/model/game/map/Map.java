@@ -1,9 +1,6 @@
 package com.ldts.mythsmists.model.game.map;
 
-import com.ldts.mythsmists.model.Elements.Dracma;
-import com.ldts.mythsmists.model.Elements.Enemy;
-import com.ldts.mythsmists.model.Elements.Orpheus;
-import com.ldts.mythsmists.model.Elements.Wall;
+import com.ldts.mythsmists.model.Elements.*;
 import com.ldts.mythsmists.model.Position;
 import com.ldts.mythsmists.model.textsections.TextSection;
 
@@ -17,6 +14,10 @@ public class Map {
     private List<Wall> walls;
     private List<Enemy> enemys;
     private List<Dracma> dracmas;
+
+    private Checkpoint checkpoint;
+
+    private List<Water> rivers;
 
 
     public Map(int width, int height) {
@@ -58,6 +59,22 @@ public class Map {
 
     public void setEnemys(List<Enemy> enemys){this.enemys = enemys;}
 
+    public List<Water> getRivers() {
+        return rivers;
+    }
+
+    public void setRivers(List<Water> rivers) {
+        this.rivers = rivers;
+    }
+
+    public Checkpoint getCheckpoint() {
+        return checkpoint;
+    }
+
+    public void setCheckpoint(Checkpoint checkpoint) {
+        this.checkpoint = checkpoint;
+    }
+
     public boolean isEmpty(Position position) {
         for (Wall wall: walls){
             if(wall.getPosition().equals(position))
@@ -80,4 +97,10 @@ public class Map {
         }
         return true;
     }
+
+    public boolean isCheckpoint(Position position) {
+        if (checkpoint.getPosition().equals(position)) return false;
+        return true;
+    }
+
 }

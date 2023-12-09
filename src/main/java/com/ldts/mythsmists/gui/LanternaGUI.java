@@ -127,6 +127,20 @@ public class LanternaGUI implements GUI {
     }
 
     @Override
+    public void drawWater(Position position) {
+        TextGraphics tg = screen.newTextGraphics();
+        tg.setBackgroundColor(TextColor.Factory.fromString("#44A6C6"));
+        tg.setForegroundColor(TextColor.Factory.fromString("#4465C6"));
+        tg.enableModifiers(SGR.BOLD);
+        tg.fillRectangle(new TerminalPosition(position.getX(), position.getY()), new TerminalSize(5, 5), '~');
+    }
+
+    @Override
+    public void drawCheckpoint(Position position) {
+        drawCharacter(position.getX(), position.getY(), 'F', "#F5428D");
+    }
+
+    @Override
     public void clear() {
         screen.clear();
     }

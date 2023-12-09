@@ -1,9 +1,6 @@
 package com.ldts.mythsmists.model.game.map;
 
-import com.ldts.mythsmists.model.Elements.Dracma;
-import com.ldts.mythsmists.model.Elements.Enemy;
-import com.ldts.mythsmists.model.Elements.Orpheus;
-import com.ldts.mythsmists.model.Elements.Wall;
+import com.ldts.mythsmists.model.Elements.*;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -78,6 +75,29 @@ public class MapLoader extends MapBuilder {
                 if (line.charAt(x) == '$') dracmas.add(new Dracma(x, y));
         }
         return dracmas;
+    }
+
+    @Override
+    protected List<Water> createRivers() {
+        List<Water> rivers = new ArrayList<>();
+
+        for (int y = 0; y < lines.size(); y++) {
+            String line = lines.get(y);
+            for (int x = 0; x < line.length(); x++)
+                if (line.charAt(x) == 'W') rivers.add(new Water(x, y));
+        }
+
+        return rivers;
+    }
+
+    @Override
+    protected Checkpoint createCheckpoint() {
+        for (int y = 0; y < lines.size(); y++) {
+            String line = lines.get(y);
+            for (int x = 0; x < line.length(); x++)
+                if (line.charAt(x) == 'F') return new Checkpoint(x, y);
+        }
+        return null;
     }
 
     @Override

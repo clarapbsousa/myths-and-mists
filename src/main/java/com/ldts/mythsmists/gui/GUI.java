@@ -16,6 +16,10 @@ public interface GUI {
 
     void drawTerrain(Position position);
 
+    void drawWater(Position position);
+
+    void drawCheckpoint(Position position);
+
     void drawText(Position position, String text, String color);
 
 
@@ -24,6 +28,8 @@ public interface GUI {
     void refresh() throws IOException;
 
     void close() throws IOException;
+
+
 
     enum ACTION {UP, DOWN, LEFT, RIGHT, QUIT, SELECT, NONE};
     ACTION getNextAction() throws IOException;

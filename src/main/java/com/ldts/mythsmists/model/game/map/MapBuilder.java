@@ -1,9 +1,6 @@
 package com.ldts.mythsmists.model.game.map;
 
-import com.ldts.mythsmists.model.Elements.Dracma;
-import com.ldts.mythsmists.model.Elements.Enemy;
-import com.ldts.mythsmists.model.Elements.Orpheus;
-import com.ldts.mythsmists.model.Elements.Wall;
+import com.ldts.mythsmists.model.Elements.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,10 +21,12 @@ public abstract class MapBuilder {
     public Map createMap() {
         Map map = new Map(width, height);
 
+        map.setRivers(createRivers());
         map.setOrpheus(createOrpheus());
         map.setWalls(createWalls());
         map.setEnemys(createEnemys());
         map.setDracmas(createDracmas());
+        map.setCheckpoint(createCheckpoint());
         return map;
     }
 
@@ -66,6 +65,19 @@ public abstract class MapBuilder {
         while (dracmas.size() < numberOfEnemys)
             dracmas.add(new Dracma(rng.nextInt(width - 2) + 1, rng.nextInt(height - 2) + 1));
 
-            return dracmas;
+        return dracmas;
+    }
+
+    protected List<Water> createRivers() {
+        List<Water> rivers = new ArrayList<>();
+
+        while (rivers.size() < numberOfEnemys)
+            rivers.add(new Water(rng.nextInt(width - 2) + 1, rng.nextInt(height - 2) + 1));
+
+        return rivers;
+    }
+
+    protected Checkpoint createCheckpoint() {
+        return new Checkpoint(0, 0);
     }
 }
