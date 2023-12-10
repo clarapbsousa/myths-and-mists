@@ -95,7 +95,7 @@ public class LanternaGUI implements GUI {
 
     @Override
     public void drawOrpheus(Position position) {
-        drawCharacter(position.getX(), position.getY(), 'O', "#FFFFFF");
+        drawCharacter(position.getX(), position.getY(), '}', "#FFFFFF");
     }
 
     @Override
