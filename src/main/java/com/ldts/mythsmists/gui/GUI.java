@@ -31,6 +31,6 @@ public interface GUI {
 
 
 
-    enum ACTION {UP, DOWN, LEFT, RIGHT, QUIT, SELECT, NONE};
+    enum ACTION {UP, DOWN, LEFT, RIGHT, QUIT, SELECT, NONE, LOOK, DESTROY};
     ACTION getNextAction() throws IOException;
 }
