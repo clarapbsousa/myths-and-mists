@@ -11,9 +11,8 @@ import com.ldts.mythsmists.viewer.Viewer;
 import java.util.Collections;
 import java.util.List;
 
-public class MapViewer extends Viewer<Map> {
-
-    public MapViewer(Map map) {
+public class Map15Viewer extends Viewer<Map> {
+    public Map15Viewer(Map map) {
         super(map);
     }
 
@@ -27,6 +26,7 @@ public class MapViewer extends Viewer<Map> {
         drawElement(gui, getModel().getOrpheus(), new OrpheusViewer());
         drawElement(gui, getModel().getDracmas(), new DracmaViewer());
         drawElement(gui, getModel().getCheckpoint(), new CheckpointViewer());
+
 
         gui.drawText(new Position(1, 0), "Collect the coins and follow to the Underworld.", "#FFFFFF");
         gui.drawText(new Position(1, 1),"DO NOT GET CAUGHT!", "#FF0000" );
@@ -59,5 +59,4 @@ public class MapViewer extends Viewer<Map> {
     private <T extends Element> void drawElement(GUI gui, T element, ElementViewer<T> viewer) {
         viewer.draw(element, gui);
     }
-
 }

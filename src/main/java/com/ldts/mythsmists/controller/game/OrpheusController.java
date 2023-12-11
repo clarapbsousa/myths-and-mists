@@ -51,9 +51,5 @@ public class OrpheusController extends GameController{
             if (action == GUI.ACTION.RIGHT) moveOrpheusRight();
             if (action == GUI.ACTION.DOWN) moveOrpheusDown();
             if (action == GUI.ACTION.LEFT) moveOrpheusLeft();
-
-            /*if (getModel().getOrpheus().get_hasReachedCheckpoint()) {
-                game.setState(new Interlude1State(new TextSection()));
-            }*/
     }
 }

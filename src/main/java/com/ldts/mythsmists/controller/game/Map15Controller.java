@@ -7,18 +7,17 @@ import com.ldts.mythsmists.model.game.map.Map;
 import com.ldts.mythsmists.model.game.map.MapLoader;
 import com.ldts.mythsmists.model.menu.Menu;
 import com.ldts.mythsmists.model.textsections.TextSection;
-import com.ldts.mythsmists.states.Act15State;
 import com.ldts.mythsmists.states.Act1State;
 import com.ldts.mythsmists.states.Interlude1State;
 import com.ldts.mythsmists.states.MenuState;
 
 import java.io.IOException;
 
-public class MapController extends GameController {
+public class Map15Controller extends GameController {
     private final OrpheusController orpheusController;
     private final EnemyController enemyController;
 
-    public MapController(Map map) {
+    public Map15Controller(Map map) {
         super(map);
         this.orpheusController = new OrpheusController(map);
         this.enemyController = new EnemyController(map);
@@ -30,11 +29,11 @@ public class MapController extends GameController {
         if (action == GUI.ACTION.QUIT || (orpheus != null && orpheus.getEnergy() == 0)) {
             game.setState(new MenuState(new Menu()));
         }
-        else if ((orpheus.getCount() == 4) && (getModel().getOrpheus().get_hasReachedCheckpoint())){
+        else if ((orpheus.getCount() == 4) || (getModel().getOrpheus().get_hasReachedCheckpoint())){
             game.setState(new Interlude1State(new TextSection()));
         }
-        else if((orpheus.getPosition().getY() < 0)) {
-            game.setState(new Act15State(new MapLoader(2).createMap()));
+        else if((orpheus.getPosition().getY() > -150)) {
+            game.setState(new Act1State(new MapLoader(1).createMap()));
         }
         else {
             orpheusController.step(game, action, time);
