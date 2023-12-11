@@ -21,32 +21,13 @@ public class Map3Viewer extends Viewer<Map> {
     @Override
     protected void drawElements(GUI gui) {
         gui.drawTerrain(new Position(0, 0));
-        drawRiver(gui, getModel().getRivers(), new WaterViewer());
         drawElements(gui, getModel().getWalls(), new WallViewer());
-        drawElements(gui, getModel().getEnemys(), new EnemyViewer());
         drawElement(gui, getModel().getOrpheus(), new OrpheusViewer());
-        drawElement(gui, getModel().getDracmas(), new DracmaViewer());
         drawElement(gui, getModel().getCheckpoint(), new CheckpointViewer());
 
-        gui.drawText(new Position(1, 0), "Collect the coins and follow to the Underworld.", "#FFFFFF");
-        gui.drawText(new Position(1, 1),"DO NOT GET CAUGHT!", "#FF0000" );
-
-        gui.drawText(new Position(1, 3), "Energy: " + getModel().getOrpheus().getEnergy(), "#FFD700");
-        gui.drawText(new Position(12, 3), "Dracmas: " + getModel().getOrpheus().getCount(), "#FFD700");
+        gui.drawText(new Position(1, 0), "Do you think it's the right time?", "#FFFFFF");
+        gui.drawText(new Position(1, 1),"Press L to look back.", "#FF0000" );
     }
-
-    private void drawRiver(GUI gui, List<Water> rivers, WaterViewer waterViewer) {
-        for (Water water : rivers) {
-            waterViewer.draw(water, gui);
-        }
-    }
-
-    private void drawElement(GUI gui, List<Dracma> dracmas, DracmaViewer dracmaViewer) {
-        for (Dracma dracma : dracmas) {
-            dracmaViewer.draw(dracma, gui);
-        }
-    }
-
 
     private <T extends Element> void drawElements(GUI gui, List<T> elements, ElementViewer<T> viewer) {
         List<T> validElements = (elements != null) ? elements : Collections.emptyList();

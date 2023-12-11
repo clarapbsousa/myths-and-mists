@@ -3,7 +3,6 @@ package com.ldts.mythsmists.states;
 import com.ldts.mythsmists.controller.Controller;
 import com.ldts.mythsmists.controller.textsections.PrologueController;
 import com.ldts.mythsmists.model.textsections.TextSection;
-import com.ldts.mythsmists.sound.AudioPlayer;
 import com.ldts.mythsmists.viewer.Viewer;
 import com.ldts.mythsmists.viewer.textsections.TextSectionViewer;
 
@@ -11,10 +10,10 @@ import java.util.Arrays;
 import java.util.List;
 
 
-public class PrologueState extends State<TextSection> {
-    public PrologueState(TextSection ts) {
+public class BadEndingState extends State<TextSection> {
+    public BadEndingState(TextSection ts) {
         super(ts);
-        List<String> sentences = Arrays.asList("Act 1",
+        List<String> sentences = Arrays.asList("Bad Ending",
                 "Once upon a time in ancient Greece," ,
                 "Orpheus and Eurydice, a newlywed couple," ,
                 "found their love tested by a cruel twist of fate." ,

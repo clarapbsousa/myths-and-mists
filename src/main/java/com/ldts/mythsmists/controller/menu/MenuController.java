@@ -5,12 +5,10 @@ import com.ldts.mythsmists.model.menu.Menu;
 import com.ldts.mythsmists.Game;
 import com.ldts.mythsmists.gui.GUI;
 import com.ldts.mythsmists.model.textsections.TextSection;
-import com.ldts.mythsmists.states.PrologueState;
+import com.ldts.mythsmists.states.GoodEndingState;
 
 
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
 
 public class MenuController extends Controller<Menu> {
 
@@ -28,7 +26,7 @@ public class MenuController extends Controller<Menu> {
                 getModel().nextEntry();
                 break;
             case SELECT:
-                if (getModel().isSelectedStart()) game.setState(new PrologueState(new TextSection()));
+                if (getModel().isSelectedStart()) game.setState(new GoodEndingState(new TextSection()));
                 if (getModel().isSelectedExit()) game.setState(null);
                 break;
         }

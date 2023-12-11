@@ -36,6 +36,9 @@ public class OrpheusController extends GameController{
             if(!(getModel().isCheckpoint(position))) {
                 getModel().getOrpheus().setHasReachedCheckpoint();
             }
+            if(!(getModel().isLookSpace(position))) {
+                getModel().getOrpheus().set_isLookSpace();
+            }
         }
     }
 
@@ -51,7 +54,7 @@ public class OrpheusController extends GameController{
             if (action == GUI.ACTION.RIGHT) moveOrpheusRight();
             if (action == GUI.ACTION.DOWN) moveOrpheusDown();
             if (action == GUI.ACTION.LEFT) moveOrpheusLeft();
-
+            if (action == GUI.ACTION.LOOK) getModel().getOrpheus().set_lookback();
             if (action == GUI.ACTION.DESTROY) breakWall();
     }
 }

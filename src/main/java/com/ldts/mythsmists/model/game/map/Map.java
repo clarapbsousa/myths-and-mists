@@ -19,6 +19,8 @@ public class Map {
 
     private List<Water> rivers;
 
+    private List<LookSpace> lookspace;
+
 
     public Map(int width, int height) {
         this.width = width;
@@ -75,6 +77,10 @@ public class Map {
         this.checkpoint = checkpoint;
     }
 
+    public void setLookSpace(List<LookSpace> lookspace) {
+        this.lookspace = lookspace;
+    }
+
     public boolean isEmpty(Position position) {
         for (Wall wall: walls){
             if(wall.getPosition().equals(position))
@@ -102,5 +108,12 @@ public class Map {
         if (checkpoint.getPosition().equals(position)) return false;
         return true;
     }
+    public boolean isLookSpace(Position position) {
+        for (LookSpace l : lookspace) {
+            if (l.getPosition().equals(position)) return false;
+        }
+        return true;
+    }
+
 
 }

@@ -113,5 +113,17 @@ public class MapLoader extends MapBuilder {
         return enemys;
     }
 
+    @Override
+    protected List<LookSpace> createLookSpace() {
+        List<LookSpace> lookspace = new ArrayList<>();
+
+        for (int y = 0; y < lines.size(); y++) {
+            String line = lines.get(y);
+            for (int x = 0; x < line.length(); x++)
+                if (line.charAt(x) == 'A') lookspace.add(new LookSpace(x, y));
+        }
+        return lookspace;
+    }
+
 
 }

@@ -7,10 +7,7 @@ import com.ldts.mythsmists.model.game.map.Map;
 import com.ldts.mythsmists.model.game.map.MapLoader;
 import com.ldts.mythsmists.model.menu.Menu;
 import com.ldts.mythsmists.model.textsections.TextSection;
-import com.ldts.mythsmists.states.Act15State;
-import com.ldts.mythsmists.states.Act1State;
-import com.ldts.mythsmists.states.Interlude1State;
-import com.ldts.mythsmists.states.MenuState;
+import com.ldts.mythsmists.states.*;
 
 import java.io.IOException;
 
@@ -30,8 +27,8 @@ public class MapController extends GameController {
         if (action == GUI.ACTION.QUIT || (orpheus != null && orpheus.getEnergy() == 0)) {
             game.setState(new MenuState(new Menu()));
         }
-        else if ((orpheus.getCount() == 4) && (getModel().getOrpheus().get_hasReachedCheckpoint())){
-            game.setState(new Interlude1State(new TextSection()));
+        else if ((orpheus.getCount() == 4) || (getModel().getOrpheus().get_hasReachedCheckpoint())){
+            game.setState(new Interlude2State(new TextSection()));
         }
         else if((orpheus.getPosition().getY() < 0)) {
             game.setState(new Act15State(new MapLoader(2).createMap()));

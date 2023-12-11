@@ -27,6 +27,7 @@ public abstract class MapBuilder {
         map.setEnemys(createEnemys());
         map.setDracmas(createDracmas());
         map.setCheckpoint(createCheckpoint());
+        map.setLookSpace(createLookSpace());
         return map;
     }
 
@@ -79,5 +80,14 @@ public abstract class MapBuilder {
 
     protected Checkpoint createCheckpoint() {
         return new Checkpoint(0, 0);
+    }
+
+    protected List<LookSpace> createLookSpace() {
+        List<LookSpace> lookspace = new ArrayList<>();
+
+        while (lookspace.size() < numberOfEnemys)
+            lookspace.add(new LookSpace(rng.nextInt(width - 2) + 1, rng.nextInt(height - 2) + 1));
+
+        return lookspace;
     }
 }

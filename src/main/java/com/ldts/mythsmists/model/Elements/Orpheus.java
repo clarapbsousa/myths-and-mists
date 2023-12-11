@@ -5,6 +5,9 @@ public class Orpheus extends Element{
     private int count;
 
     private boolean hasReachedCheckpoint;
+    private boolean isLookSpace;
+
+    private boolean lookback;
 
     public Orpheus(int x, int y) {
         super(x, y);
@@ -35,5 +38,21 @@ public class Orpheus extends Element{
 
     public void setHasReachedCheckpoint() {
         this.hasReachedCheckpoint = true;
+    }
+
+    public boolean get_isLookSpace() {
+        return isLookSpace;
+    }
+
+    public void set_isLookSpace() {
+        this.isLookSpace = true;
+    }
+
+    public boolean get_lookback() {
+        return lookback;
+    }
+
+    public void set_lookback() {
+        this.lookback = true;
     }
 }
