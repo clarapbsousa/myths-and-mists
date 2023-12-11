@@ -1,20 +1,19 @@
 package com.ldts.mythsmists.controller.menu;
 
-import com.ldts.mythsmists.controller.Controller;
-import com.ldts.mythsmists.model.menu.Menu;
 import com.ldts.mythsmists.Game;
+import com.ldts.mythsmists.controller.Controller;
 import com.ldts.mythsmists.gui.GUI;
 import com.ldts.mythsmists.model.menu.OptionsMenu;
+import com.ldts.mythsmists.model.menu.Menu;
 import com.ldts.mythsmists.model.textsections.TextSection;
-import com.ldts.mythsmists.states.OptionsMenuState;
+import com.ldts.mythsmists.states.MenuState;
 import com.ldts.mythsmists.states.PrologueState;
-
 
 import java.io.IOException;
 
-public class MenuController extends Controller<Menu> {
+public class OptionsMenuController extends Controller<OptionsMenu> {
 
-    public MenuController(Menu menu) {
+    public OptionsMenuController(OptionsMenu menu) {
         super(menu);
     }
 
@@ -28,9 +27,10 @@ public class MenuController extends Controller<Menu> {
                 getModel().nextEntry();
                 break;
             case SELECT:
-                if (getModel().isSelectedStart()) game.setState(new PrologueState(new TextSection()));
-                if (getModel().isSelectedExit()) game.setState(null);
-                if (getModel().isSelectedOptions()) game.setState(new OptionsMenuState(new OptionsMenu()));
+                if (getModel().isSelected(0)) game.getPlayer().volUp();
+                if (getModel().isSelected(1)) game.getPlayer().volDown();
+                if (getModel().isSelected(2)) game.getPlayer().stop();
+                if (getModel().isSelected(3)) game.setState(new MenuState(new Menu()));
                 break;
         }
     }

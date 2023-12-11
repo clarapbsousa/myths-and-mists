@@ -35,6 +35,11 @@ public class Game {
         return state;
     }
 
+    public AudioPlayer getPlayer() {
+        return player;
+    }
+
+
     private void start() throws IOException, InterruptedException {
         int FPS = 10;
         int frameTime = 1000/FPS;

@@ -20,7 +20,19 @@ public class AudioPlayer {
 
     public void play(){
         clip.setFramePosition(0);
-        fc.setValue(-30.0f);
+        fc.setValue(-10.0f);
         clip.start();
+    }
+
+    public void stop() {
+        clip.stop();
+    }
+
+    public void volUp() {
+        fc.setValue(-2.0f);
+    }
+
+    public void volDown() {
+        fc.setValue(2.0f);
     }
 }

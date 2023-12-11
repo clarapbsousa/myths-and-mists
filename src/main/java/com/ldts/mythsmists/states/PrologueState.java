@@ -9,8 +9,9 @@ import com.ldts.mythsmists.viewer.textsections.TextSectionViewer;
 import java.util.Arrays;
 import java.util.List;
 
-public class GoodEndingState extends State<TextSection> {
-    public GoodEndingState(TextSection ts) {
+
+public class PrologueState extends State<TextSection> {
+    public PrologueState(TextSection ts) {
         super(ts);
         List<String> sentences = Arrays.asList("Prologue",
                 "Once upon a time in ancient Greece," ,
