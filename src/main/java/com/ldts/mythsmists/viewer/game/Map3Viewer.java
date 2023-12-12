@@ -23,7 +23,6 @@ public class Map3Viewer extends Viewer<Map> {
         gui.drawTerrain(new Position(0, 0));
         drawElements(gui, getModel().getWalls(), new WallViewer());
         drawElement(gui, getModel().getOrpheus(), new OrpheusViewer());
-        drawElement(gui, getModel().getCheckpoint(), new CheckpointViewer());
 
         gui.drawText(new Position(1, 0), "Do you think it's the right time?", "#FFFFFF");
         gui.drawText(new Position(1, 1),"Press L to look back.", "#FF0000" );

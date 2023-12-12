@@ -12,7 +12,7 @@ import java.util.List;
 public class GoodEndingState extends State<TextSection> {
     public GoodEndingState(TextSection ts) {
         super(ts);
-        List<String> sentences = Arrays.asList("Prologue",
+        List<String> sentences = Arrays.asList("Good ending",
                 "Once upon a time in ancient Greece," ,
                 "Orpheus and Eurydice, a newlywed couple," ,
                 "found their love tested by a cruel twist of fate." ,
