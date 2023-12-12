@@ -39,6 +39,9 @@ public class OrpheusController extends GameController{
             if(!(getModel().isLookSpace(position))) {
                 getModel().getOrpheus().set_isLookSpace();
             }
+            if(!(getModel().isWater(position))) {
+                getModel().getOrpheus().decreaseEnergy();
+            }
         }
     }
 

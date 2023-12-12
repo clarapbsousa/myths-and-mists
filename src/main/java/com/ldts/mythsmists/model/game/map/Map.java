@@ -115,5 +115,12 @@ public class Map {
         return true;
     }
 
+    public boolean isWater(Position position) {
+        for (Water w : rivers) {
+            if (w.getPosition().equals(position)) return false;
+        }
+        return true;
+    }
+
 
 }
