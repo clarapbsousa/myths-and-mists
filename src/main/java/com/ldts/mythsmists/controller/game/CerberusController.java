@@ -14,6 +14,8 @@ import com.ldts.mythsmists.states.MenuState;
 import java.util.List;
 
 public class CerberusController extends GameController {
+    private boolean moveRight = true;
+
     public CerberusController(Map map) {
         super(map);
     }
@@ -23,24 +25,33 @@ public class CerberusController extends GameController {
         List<Cerberus> cerberus = getModel().getCerberus();
         Position orpheusPosition = getModel().getOrpheus().getPosition();
 
-            int max_W = getModel().getWidth();
-            int max_L = 1;
+        int max_W = 50;
+        int max_L = 1;
 
-            for (Cerberus cerb : cerberus) {
 
-                int currentX = cerb.getPosition().getX();
-                int currentY = cerb.getPosition().getY();
+        for (Cerberus cerb : cerberus) {
 
-                if (currentX < max_W) {
+            int currentX = cerb.getPosition().getX();
+            int currentY = cerb.getPosition().getY();
+
+            if (currentX == 0) {
+                moveRight = true;
+                moveCerberus(cerb, cerb.getPosition().getDown());
+            } else if (currentX == 10) {
+                moveRight = false;
+                moveCerberus(cerb, cerb.getPosition().getDown());
+            } else {
+                if (moveRight) {
                     moveCerberus(cerb, cerb.getPosition().getRight());
-                } else if (currentX > max_L) {
+                } else {
                     moveCerberus(cerb, cerb.getPosition().getLeft());
-                } else if (currentY < orpheusPosition.getY()) {
-                    moveCerberus(cerb, cerb.getPosition().getDown());
-                } else if (currentY == orpheusPosition.getY()) {
-                    game.setState(new MenuState(new Menu()));
                 }
             }
+            /*if (currentY == orpheusPosition.getY()) {
+                game.setState(new MenuState(new Menu()));
+            }*/
+
+        }
     }
 
     private void moveCerberus(Cerberus cerberus, Position position) {
