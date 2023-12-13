@@ -8,6 +8,8 @@ import com.ldts.mythsmists.model.Elements.Enemy;
 import com.ldts.mythsmists.model.Elements.Orpheus;
 import com.ldts.mythsmists.model.Position;
 import com.ldts.mythsmists.model.game.map.Map;
+import com.ldts.mythsmists.model.menu.Menu;
+import com.ldts.mythsmists.states.MenuState;
 
 import java.util.List;
 
@@ -21,31 +23,24 @@ public class CerberusController extends GameController {
         List<Cerberus> cerberus = getModel().getCerberus();
         Position orpheusPosition = getModel().getOrpheus().getPosition();
 
-        if (cerberus != null) {
-            int max_W = 50;
-            int max_L = 50;
+            int max_W = getModel().getWidth();
+            int max_L = 1;
 
             for (Cerberus cerb : cerberus) {
-                int speedX = 1;
-                int speedY = 8;
 
                 int currentX = cerb.getPosition().getX();
                 int currentY = cerb.getPosition().getY();
 
-                if (currentX + speedX <= max_W) {
-                    cerb.setPosition(new Position(currentX + speedX, currentY));
-                } else {
-                    cerb.setPosition(new Position(max_W, currentY + speedY));
-
-                    if (currentX - speedX >= max_L) {
-                        cerb.setPosition(new Position(currentX - speedX, currentY));
-                    } else {
-                        // If at maxLeft, move down and change direction
-                        cerb.setPosition(new Position(max_L, currentY + speedY));
-                    }
+                if (currentX < max_W) {
+                    moveCerberus(cerb, cerb.getPosition().getRight());
+                } else if (currentX > max_L) {
+                    moveCerberus(cerb, cerb.getPosition().getLeft());
+                } else if (currentY < orpheusPosition.getY()) {
+                    moveCerberus(cerb, cerb.getPosition().getDown());
+                } else if (currentY == orpheusPosition.getY()) {
+                    game.setState(new MenuState(new Menu()));
                 }
             }
-        }
     }
 
     private void moveCerberus(Cerberus cerberus, Position position) {
