@@ -14,7 +14,7 @@ import com.ldts.mythsmists.states.MenuState;
 import java.util.List;
 
 public class CerberusController extends GameController {
-    private boolean moveRight = true;
+    boolean moveRight = true;
 
     public CerberusController(Map map) {
         super(map);
@@ -25,34 +25,30 @@ public class CerberusController extends GameController {
         List<Cerberus> cerberus = getModel().getCerberus();
         Position orpheusPosition = getModel().getOrpheus().getPosition();
 
-        int max_W = 50;
-        int max_L = 1;
+        // Verifica se pelo menos um Cerberus está na posição 0
+        boolean atPosition0 = cerberus.stream().anyMatch(cerb -> cerb.getPosition().getX() == 1);
 
+        // Verifica se pelo menos um Cerberus está na posição 10
+        boolean atPosition10 = cerberus.stream().anyMatch(cerb -> cerb.getPosition().getX() == 10);
 
         for (Cerberus cerb : cerberus) {
-
             int currentX = cerb.getPosition().getX();
             int currentY = cerb.getPosition().getY();
 
-            if (currentX == 0) {
+            if (atPosition0) {
                 moveRight = true;
                 moveCerberus(cerb, cerb.getPosition().getDown());
-            } else if (currentX == 10) {
+            } else if (atPosition10) {
+                moveCerberus(cerb, cerb.getPosition().getLeft());
                 moveRight = false;
-                moveCerberus(cerb, cerb.getPosition().getDown());
             } else {
-                if (moveRight) {
-                    moveCerberus(cerb, cerb.getPosition().getRight());
-                } else {
-                    moveCerberus(cerb, cerb.getPosition().getLeft());
-                }
+                if (moveRight){ moveCerberus(cerb, cerb.getPosition().getRight());}
+                else { moveCerberus(cerb, cerb.getPosition().getLeft());}
             }
-            /*if (currentY == orpheusPosition.getY()) {
-                game.setState(new MenuState(new Menu()));
-            }*/
-
         }
     }
+
+
 
     private void moveCerberus(Cerberus cerberus, Position position) {
         if (getModel().isEmpty(position)) {
