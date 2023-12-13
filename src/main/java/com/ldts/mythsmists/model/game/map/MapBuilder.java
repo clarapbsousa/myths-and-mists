@@ -23,6 +23,7 @@ public abstract class MapBuilder {
 
         map.setRivers(createRivers());
         map.setOrpheus(createOrpheus());
+        map.setCerberus(createCerberus());
         map.setWalls(createWalls());
         map.setEnemys(createEnemys());
         map.setDracmas(createDracmas());
@@ -58,6 +59,15 @@ public abstract class MapBuilder {
             enemys.add(new Enemy(rng.nextInt(width - 2) + 1, rng.nextInt(height - 2) + 1));
 
         return enemys;
+    }
+
+    protected List<Cerberus> createCerberus() {
+        List<Cerberus> cerberus = new ArrayList<>();
+
+        while (cerberus.size() < 4)
+            cerberus.add(new Cerberus(rng.nextInt(width+1), rng.nextInt(height+1)));
+
+        return cerberus;
     }
 
     protected List<Dracma> createDracmas() {

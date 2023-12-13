@@ -20,6 +20,8 @@ public interface GUI {
 
     void drawCheckpoint(Position position);
 
+    void drawCerberus(Position position);
+
     void drawText(Position position, String text, String color);
 
 

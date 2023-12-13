@@ -28,7 +28,7 @@ public class MapController extends GameController {
             game.setState(new MenuState(new Menu()));
         }
         else if ((orpheus.getCount() == 4) || (getModel().getOrpheus().get_hasReachedCheckpoint())){
-            game.setState(new Interlude2State(new TextSection()));
+            game.setState(new Interlude1State(new TextSection()));
         }
         else if((orpheus.getPosition().getY() < 0)) {
             game.setState(new Act15State(new MapLoader(2).createMap()));

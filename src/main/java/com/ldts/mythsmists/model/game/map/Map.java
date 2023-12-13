@@ -20,6 +20,7 @@ public class Map {
     private List<Water> rivers;
 
     private List<LookSpace> lookspace;
+    private List<Cerberus> cerberus;
 
 
     public Map(int width, int height) {
@@ -60,6 +61,9 @@ public class Map {
     public List<Enemy> getEnemys(){return enemys;}
 
     public void setEnemys(List<Enemy> enemys){this.enemys = enemys;}
+
+    public List<Cerberus> getCerberus() {return cerberus;}
+    public void setCerberus(List<Cerberus> cerberus) {this.cerberus = cerberus;}
 
     public List<Water> getRivers() {
         return rivers;
@@ -121,6 +125,4 @@ public class Map {
         }
         return true;
     }
-
-
 }

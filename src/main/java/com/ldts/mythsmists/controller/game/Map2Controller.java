@@ -13,12 +13,12 @@ import java.io.IOException;
 
 public class Map2Controller extends GameController {
     private final OrpheusController orpheusController;
-    private final EnemyController enemyController;
+    private final CerberusController cerberusController;
 
     public Map2Controller(Map map) {
         super(map);
         this.orpheusController = new OrpheusController(map);
-        this.enemyController = new EnemyController(map);
+        this.cerberusController = new CerberusController(map);
     }
 
     @Override
@@ -32,7 +32,7 @@ public class Map2Controller extends GameController {
         }
         else {
             orpheusController.step(game, action, time);
-            enemyController.step(game, action, time);
+            cerberusController.step(game, action, time);
         }
     }
 }

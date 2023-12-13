@@ -114,6 +114,11 @@ public class LanternaGUI implements GUI {
     }
 
     @Override
+    public void drawCerberus(Position position) {
+        drawCharacter(position.getX(), position.getY(), 'C', "#CC0000");
+    }
+
+    @Override
     public void drawText(Position position, String text, String color) {
         TextGraphics tg = screen.newTextGraphics();
         tg.setForegroundColor(TextColor.Factory.fromString(color));
