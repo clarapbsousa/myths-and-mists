@@ -17,12 +17,6 @@ import java.util.Arrays;
 
 public class OrpheusControllerTest {
 
-    /*
-
-    Ainda não funcional.
-    Tenho de tentar perceber como funciona. Mas parece-me um teste ok.
-
-     */
     private Orpheus orpheus;
     private Map map;
     private OrpheusController controller;
@@ -45,15 +39,15 @@ public class OrpheusControllerTest {
     @Test
     void moveRightEmpty() {
         controller.moveOrpheusRight();
-        assertEquals(new Position(6, 5), orpheus.getPosition());
+        assertEquals(new Position(11, 10), orpheus.getPosition());
     }
 
 
     @Test
     void moveRightNotEmpty() {
-        map.setWalls(Arrays.asList(new Wall(6, 5)));
+        map.setWalls(Arrays.asList(new Wall(11, 10)));
         controller.moveOrpheusRight();
-        assertEquals(new Position(5, 5), orpheus.getPosition());
+        assertEquals(new Position(10, 10), orpheus.getPosition());
     }
 
 }
