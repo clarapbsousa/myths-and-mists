@@ -34,7 +34,7 @@ public class LanternaGUI implements GUI {
     }
 
     private AWTTerminalFontConfiguration loadSquareFont() throws IOException, FontFormatException, URISyntaxException {
-        URL resource = getClass().getClassLoader().getResource("unispace3.ttf");
+        URL resource = getClass().getClassLoader().getResource("unispace4.ttf");
         File fontFile = new File(resource.toURI());
         Font font = Font.createFont(Font.TRUETYPE_FONT, fontFile);
 
@@ -128,10 +128,11 @@ public class LanternaGUI implements GUI {
     @Override
     public void drawTerrain(Position position) {
         TextGraphics graphics = screen.newTextGraphics();
-        graphics.setBackgroundColor(TextColor.Factory.fromString("#86DB86"));
+        graphics.setBackgroundColor(TextColor.Factory.fromString("#000000"));
+        // graphics.setBackgroundColor(TextColor.Factory.fromString("#86DB86"));
         graphics.enableModifiers(SGR.BOLD);
-        graphics.setForegroundColor(TextColor.Factory.fromString("#71C76F"));
-        graphics.fillRectangle(new TerminalPosition(0, 0), new TerminalSize(150, 150), 'W');
+        // graphics.setForegroundColor(TextColor.Factory.fromString("#71C76F"));
+        graphics.fillRectangle(new TerminalPosition(0, 0), new TerminalSize(150, 150), ' ');
     }
 
     @Override

@@ -28,7 +28,7 @@ public class Map15Viewer extends Viewer<Map> {
         drawElement(gui, getModel().getCheckpoint(), new CheckpointViewer());
 
 
-        gui.drawText(new Position(1, 0), "Collect the coins and follow to the Underworld.", "#FFFFFF");
+        gui.drawText(new Position(1, 0), "Collect 5 more coins, you're almost there!", "#FFFFFF");
         gui.drawText(new Position(1, 1),"DO NOT GET CAUGHT!", "#FF0000" );
 
         gui.drawText(new Position(1, 3), "Energy: " + getModel().getOrpheus().getEnergy(), "#FFD700");
