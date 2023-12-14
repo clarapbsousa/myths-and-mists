@@ -98,7 +98,7 @@ public class LanternaGUI implements GUI {
 
     @Override
     public void drawOrpheus(Position position) {
-        drawCharacter(position.getX(), position.getY(), 'O', "#FFFFFF");
+        drawCharacter(position.getX(), position.getY(), '}', "#FFFFFF");
     }
 
     @Override
@@ -110,12 +110,12 @@ public class LanternaGUI implements GUI {
 
     @Override
     public void drawEnemy(Position position) {
-        drawCharacter(position.getX(), position.getY(), 'E', "#CC0000");
+        drawCharacter(position.getX(), position.getY(), '\\', "#CC0000");
     }
 
     @Override
     public void drawCerberus(Position position) {
-        drawCharacter(position.getX(), position.getY(), 'C', "#CC0000");
+        drawCharacter(position.getX(), position.getY(), '[', "#CC0000");
     }
 
     @Override
