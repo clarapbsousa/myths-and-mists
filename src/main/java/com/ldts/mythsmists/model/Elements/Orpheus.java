@@ -20,6 +20,9 @@ public class Orpheus extends Element{
         this.energy--;
     }
 
+    public void setEnergyToZero() {
+        this.energy = 0;
+    }
     public void increaseCount() {
         this.count++;
     }

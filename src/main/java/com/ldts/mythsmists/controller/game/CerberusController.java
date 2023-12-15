@@ -45,6 +45,10 @@ public class CerberusController extends GameController {
                 if (moveRight){ moveCerberus(cerb, cerb.getPosition().getRight());}
                 else { moveCerberus(cerb, cerb.getPosition().getLeft());}
             }
+
+            if (currentY == orpheusPosition.getY()) {
+                getModel().getOrpheus().setEnergyToZero();
+            }
         }
     }
 
@@ -53,6 +57,9 @@ public class CerberusController extends GameController {
     private void moveCerberus(Cerberus cerberus, Position position) {
         if (getModel().isEmpty(position)) {
             cerberus.setPosition(position);
+            if (getModel().getOrpheus().getPosition().equals(position))
+                getModel().getOrpheus().setEnergyToZero();
         }
+
     }
 }

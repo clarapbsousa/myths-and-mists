@@ -20,7 +20,7 @@ public class AudioPlayer {
 
     public void play(){
         clip.setFramePosition(0);
-        fc.setValue(-10.0f);
+        fc.setValue(-5.0f);
         clip.start();
     }
 
@@ -28,11 +28,14 @@ public class AudioPlayer {
         clip.stop();
     }
 
+    // allowed threshold -80.0 to 4.206dB
+    // setting if conditions to avoid IllegalArgumentException
+    // i know, i could just do a try/catch
     public void volUp() {
-        fc.setValue(-2.0f);
+        if (fc.getValue() < 4.206) fc.setValue(fc.getValue() + 2.0f);
     }
 
     public void volDown() {
-        fc.setValue(2.0f);
+        if (fc.getValue() > -78.0) fc.setValue(fc.getValue() -2.0f);
     }
 }

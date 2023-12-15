@@ -21,14 +21,14 @@ public class MapViewer extends Viewer<Map> {
     @Override
     protected void drawElements(GUI gui) {
         gui.drawTerrain(new Position(0, 0));
-        drawRiver(gui, getModel().getRivers(), new WaterViewer());
-        drawElements(gui, getModel().getWalls(), new WallViewer());
         drawElements(gui, getModel().getEnemys(), new EnemyViewer());
+        drawElements(gui, getModel().getWalls(), new WallViewer());
+        drawRiver(gui, getModel().getRivers(), new WaterViewer());
         drawElement(gui, getModel().getOrpheus(), new OrpheusViewer());
         drawElement(gui, getModel().getDracmas(), new DracmaViewer());
         drawElement(gui, getModel().getCheckpoint(), new CheckpointViewer());
 
-        gui.drawText(new Position(1, 0), "Collect 5 coins and follow to the Underworld.", "#FFFFFF");
+        gui.drawText(new Position(1, 0), "Collect 5 dracmas and follow to the Underworld.", "#FFFFFF");
         gui.drawText(new Position(1, 1),"DO NOT GET CAUGHT!", "#FF0000" );
 
         gui.drawText(new Position(1, 3), "Energy: " + getModel().getOrpheus().getEnergy(), "#FFD700");

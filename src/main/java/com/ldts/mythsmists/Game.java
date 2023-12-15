@@ -19,7 +19,7 @@ public class Game {
     public Game() throws IOException, URISyntaxException, FontFormatException {
         this.gui = new LanternaGUI(150, 150);
         this.state = new MenuState(new Menu());
-        this.player = new AudioPlayer("./src/main/resources/thefiringline.aiff");
+        this.player = new AudioPlayer("./src/main/resources/music/overture.wav");
         player.play();
     }
 
@@ -39,6 +39,11 @@ public class Game {
         return player;
     }
 
+    public void setPlayer(String file) {
+        player.stop();
+        this.player = new AudioPlayer(file);
+        player.play();
+    }
 
     private void start() throws IOException, InterruptedException {
         int FPS = 10;

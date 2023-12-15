@@ -1,6 +1,7 @@
 package com.ldts.mythsmists.states;
 
 import com.ldts.mythsmists.controller.Controller;
+import com.ldts.mythsmists.controller.textsections.EndingController;
 import com.ldts.mythsmists.controller.textsections.PrologueController;
 import com.ldts.mythsmists.model.textsections.TextSection;
 import com.ldts.mythsmists.viewer.Viewer;
@@ -46,6 +47,6 @@ public class GoodEndingState extends State<TextSection> {
 
     @Override
     protected Controller<TextSection> getController() {
-        return new PrologueController(getModel());
+        return new EndingController(getModel());
     }
 }

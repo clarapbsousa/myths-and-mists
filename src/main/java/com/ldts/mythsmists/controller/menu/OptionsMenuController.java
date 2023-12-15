@@ -30,7 +30,9 @@ public class OptionsMenuController extends Controller<OptionsMenu> {
                 if (getModel().isSelected(0)) game.getPlayer().volUp();
                 if (getModel().isSelected(1)) game.getPlayer().volDown();
                 if (getModel().isSelected(2)) game.getPlayer().stop();
-                if (getModel().isSelected(3)) game.setState(new MenuState(new Menu()));
+                if (getModel().isSelected(3)) game.setPlayer("./src/main/resources/music/cancan.wav");
+                if (getModel().isSelected(4)) game.setState(new MenuState(new Menu()));
+
                 break;
         }
     }

@@ -34,7 +34,7 @@ public class LanternaGUI implements GUI {
     }
 
     private AWTTerminalFontConfiguration loadSquareFont() throws IOException, FontFormatException, URISyntaxException {
-        URL resource = getClass().getClassLoader().getResource("unispace4.ttf");
+        URL resource = getClass().getClassLoader().getResource("unispace.ttf");
         File fontFile = new File(resource.toURI());
         Font font = Font.createFont(Font.TRUETYPE_FONT, fontFile);
 
@@ -103,7 +103,10 @@ public class LanternaGUI implements GUI {
 
     @Override
     public void drawWall(Position position) {
-        drawCharacter(position.getX(), position.getY(), '&', "#222224");
+        TextGraphics graphics = screen.newTextGraphics();
+        graphics.setBackgroundColor(TextColor.Factory.fromString("#B80D15"));
+        graphics.setForegroundColor(TextColor.Factory.fromString("#222224"));
+        graphics.putString(position.getX(), position.getY()-1, "&");
     }
     @Override
     public void drawDracma(Position position){ drawCharacter(position.getX(), position.getY(), '$', "#FFFF00");}
@@ -131,8 +134,8 @@ public class LanternaGUI implements GUI {
         graphics.setBackgroundColor(TextColor.Factory.fromString("#000000"));
         // graphics.setBackgroundColor(TextColor.Factory.fromString("#86DB86"));
         graphics.enableModifiers(SGR.BOLD);
-        // graphics.setForegroundColor(TextColor.Factory.fromString("#71C76F"));
-        graphics.fillRectangle(new TerminalPosition(0, 0), new TerminalSize(150, 150), ' ');
+        graphics.setForegroundColor(TextColor.Factory.fromString("#212021"));
+        graphics.fillRectangle(new TerminalPosition(0, 0), new TerminalSize(150, 150), '%');
     }
 
     @Override

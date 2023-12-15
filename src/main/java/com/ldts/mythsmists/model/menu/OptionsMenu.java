@@ -9,7 +9,7 @@ public class OptionsMenu {
     private int curEntry = 0;
 
     public OptionsMenu() {
-        this.entries = Arrays.asList("Volume up", "Volume down", "Mute music", "Return to main menu");
+        this.entries = Arrays.asList("Volume up", "Volume down", "Mute music", "Change music", "Return to main menu");
     }
 
     public void nextEntry() {

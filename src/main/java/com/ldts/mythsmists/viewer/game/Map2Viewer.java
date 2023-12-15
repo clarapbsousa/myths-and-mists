@@ -21,13 +21,16 @@ public class Map2Viewer extends Viewer<Map> {
     @Override
     protected void drawElements(GUI gui) {
         gui.drawTerrain(new Position(0, 0));
+        drawElements(gui, getModel().getEnemys(), new EnemyViewer());
         drawElements(gui, getModel().getWalls(), new WallViewer());
         drawElement(gui, getModel().getOrpheus(), new OrpheusViewer());
         drawElement(gui, getModel().getCheckpoint(), new CheckpointViewer());
         drawElement(gui, getModel().getCerberus(), new CerberusViewer());
 
-        gui.drawText(new Position(1, 0), "On No!! Cerebrus is awake", "#FFFFFF");
-        gui.drawText(new Position(1, 1),"Make him sleep", "#FF0000" );
+
+        gui.drawText(new Position(1, 0), "Cerebrus is awake!", "#FFFFFF");
+        gui.drawText(new Position(1, 1),"AVOID BEING ON ITS' WAY!", "#FF0000" );
+        gui.drawText(new Position(1, 3), "Energy: " + getModel().getOrpheus().getEnergy(), "#FFD700");
         
     }
 
