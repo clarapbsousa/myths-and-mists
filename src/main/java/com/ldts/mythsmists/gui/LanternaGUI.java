@@ -118,7 +118,7 @@ public class LanternaGUI implements GUI {
 
     @Override
     public void drawCerberus(Position position) {
-        drawCharacter(position.getX(), position.getY(), '[', "#CC0000");
+        drawCharacter(position.getX(), position.getY(), '[', "#324AA8");
     }
 
     @Override
@@ -144,7 +144,7 @@ public class LanternaGUI implements GUI {
         tg.setBackgroundColor(TextColor.Factory.fromString("#44A6C6"));
         tg.setForegroundColor(TextColor.Factory.fromString("#4465C6"));
         tg.enableModifiers(SGR.BOLD);
-        tg.fillRectangle(new TerminalPosition(position.getX(), position.getY()), new TerminalSize(5, 5), '~');
+        tg.fillRectangle(new TerminalPosition(position.getX(), position.getY()), new TerminalSize(2, 2), '~');
     }
 
     @Override

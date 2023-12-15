@@ -34,7 +34,7 @@ public class CerberusController extends GameController {
         for (Cerberus cerb : cerberus) {
             int currentX = cerb.getPosition().getX();
             int currentY = cerb.getPosition().getY();
-
+            System.out.println(currentY);
             if (atPosition0) {
                 moveRight = true;
                 moveCerberus(cerb, cerb.getPosition().getDown());
@@ -46,7 +46,7 @@ public class CerberusController extends GameController {
                 else { moveCerberus(cerb, cerb.getPosition().getLeft());}
             }
 
-            if (currentY == orpheusPosition.getY()) {
+            if (currentX == orpheusPosition.getX() && currentY != 26) {
                 getModel().getOrpheus().setEnergyToZero();
             }
         }
