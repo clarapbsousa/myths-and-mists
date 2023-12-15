@@ -14,28 +14,20 @@ public class GoodEndingState extends State<TextSection> {
     public GoodEndingState(TextSection ts) {
         super(ts);
         List<String> sentences = Arrays.asList("Good ending",
-                "Once upon a time in ancient Greece," ,
-                "Orpheus and Eurydice, a newlywed couple," ,
-                "found their love tested by a cruel twist of fate." ,
-                "" ,
-                "In a quaint village, Orpheus, a gifted musician," ,
-                "charmed all with his lyre's enchanting tunes." ,
-                "Eurydice, his beloved, possessed beauty that rivaled goddesses." ,
-                "" ,
-                "Tragedy struck when Eurydice, lured into a meadow," ,
-                "fell victim to a serpent's deadly bite." ,
-                "Orpheus, unaware, continued his melodies until grief's shadow loomed." ,
-                "" ,
-                "Learning of Eurydice's demise, he defied death itself," ,
-                "venturing to the underworld with his lyre's haunting notes." ,
+                "Through shadows deep, where echoes thrum,",
+                "Orpheus walks, love's song begun.",
+                "Eurydice's hand in his entwined,",
+                "A love rekindled, fate aligned.",
+                " ",
+                "No backward glances, doubts dismissed,",
+                "The underworld yields to love's sweet tryst.",
+                "Gates part, daylight welcomes the pair,",
+                "Orpheus and Eurydice, a love affair.",
                 "",
-                "However, if you want to defy death, you should first pay the price.",
-                "",
-                "Colect 10 Dracmas, pay Caronte and cross the river",
-                "",
-                "Or remain in the Underworld forever.",
-                "",
-                "(Press enter to continue)"
+                "In Hades' realm, where shadows wane,",
+                "A lover triumphs, breaks the chain.",
+                "Eurydice walks in daylight's gleam,",
+                "A lover's dream, a cherished theme."
         );
         ts.setSentences(sentences);
     }

@@ -3,6 +3,7 @@ package com.ldts.mythsmists.states;
 import com.ldts.mythsmists.controller.Controller;
 import com.ldts.mythsmists.controller.textsections.EndingController;
 import com.ldts.mythsmists.controller.textsections.PrologueController;
+import com.ldts.mythsmists.model.Elements.Orpheus;
 import com.ldts.mythsmists.model.textsections.TextSection;
 import com.ldts.mythsmists.viewer.Viewer;
 import com.ldts.mythsmists.viewer.textsections.TextSectionViewer;
@@ -15,28 +16,25 @@ public class BadEndingState extends State<TextSection> {
     public BadEndingState(TextSection ts) {
         super(ts);
         List<String> sentences = Arrays.asList("Bad Ending",
-                "Once upon a time in ancient Greece," ,
-                "Orpheus and Eurydice, a newlywed couple," ,
-                "found their love tested by a cruel twist of fate." ,
-                "" ,
-                "In a quaint village, Orpheus, a gifted musician," ,
-                "charmed all with his lyre's enchanting tunes." ,
-                "Eurydice, his beloved, possessed beauty that rivaled goddesses." ,
-                "" ,
-                "Tragedy struck when Eurydice, lured into a meadow," ,
-                "fell victim to a serpent's deadly bite." ,
-                "Orpheus, unaware, continued his melodies until grief's shadow loomed." ,
-                "" ,
-                "Learning of Eurydice's demise, he defied death itself," ,
-                "venturing to the underworld with his lyre's haunting notes." ,
+                "Through shadows deep, where echoes weave,",
+                "Orpheus walks, a heart deceived.",
+                "Eurydice's hand in his holds tight,",
+                "Yet doubt creeps in, a silent blight.",
                 "",
-                "However, if you want to defy death, you should first pay the price.",
+                "A glance backward, a moment's doubt,",
+                "The underworld's grip tightens about.",
+                "Eurydice fades, love's cruel jest,",
+                "A lover's choice, a heart distressed.",
                 "",
-                "Colect 10 Dracmas, pay Caronte and cross the river",
-                "",
-                "Or remain in the Underworld forever.",
-                "",
-                "(Press enter to continue)"
+                "In Hades' realm, where shadows loom,",
+                "Orpheus faces impending doom.",
+                "Eurydice lost in shadows' play,",
+                "A lover's misstep, love in decay.",
+                 "",
+                "The path ahead, a lone refrain,",
+                "A shattered love, a bitter bane.",
+                "The interlude ends, a tragic rhyme,",
+                "A lover's sorrow, frozen in time."
         );
         ts.setSentences(sentences);
     }

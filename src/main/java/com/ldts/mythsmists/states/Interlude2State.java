@@ -3,6 +3,7 @@ package com.ldts.mythsmists.states;
 import com.ldts.mythsmists.controller.Controller;
 import com.ldts.mythsmists.controller.textsections.Interlude1Controller;
 import com.ldts.mythsmists.controller.textsections.Interlude2Controller;
+import com.ldts.mythsmists.model.Elements.Orpheus;
 import com.ldts.mythsmists.model.textsections.TextSection;
 import com.ldts.mythsmists.viewer.Viewer;
 import com.ldts.mythsmists.viewer.textsections.TextSectionViewer;
@@ -14,22 +15,31 @@ public class Interlude2State extends State<TextSection> {
     public Interlude2State(TextSection ts) {
         super(ts);
         List<String> sentences = Arrays.asList(
-                "INTERLUDE 2.",
-                "In Hades' grip, where shadows sprawl,",
-                "Orpheus strides, a lover's call." ,
-                "Cerberus guards the gates of gloom," ,
-                "Three heads, fierce guardian of the tomb." ,
+                "In twilight's grasp, where shadows blend,",
+                "Orpheus embarks, love's quest to mend.",
+                "To Hades' hall, a daring plea,",
+                "A chance to set Eurydice free.",
                 "" ,
-                "With lyre in hand, a melody weaves," ,
-                "Notes of hope, the underworld perceives." ,
-                "Cerberus, once fierce, lulled by the song,",
-                "Entranced, in slumber, it rests along." ,
-                "",
-                "Orpheus moves through the silent night," ,
-                "Love's echo guiding, a beacon bright." ,
-                "In Hades' realm, where shadows fade,n" ,
-                "A lover's song, redemption laid.",
-                "",
+                "Through Stygian mist and solemn gloom,",
+                "Orpheus leads through the shadowed tomb.",
+                "A whispered pact, a lover's pact,",
+                "To guide her forth, an arduous act.",
+                "" ,
+                "Yet, Hades warns with a stern decree,",
+                "Look not back, to sunlight flee.",
+                "The path unfolds, a fateful line,",
+                "Love's redemption or fate malign.",
+                "" ,
+                "Eurydice walks in silent stride,",
+                "Orpheus battles doubt inside.",
+                "The choice awaits, a moment dire,",
+                "To look back now or walk through fire.",
+                "" ,
+                "In Hades' realm, where shadows play,",
+                "A lover hesitates, love at bay.",
+                "The interlude unfolds its rhyme,",
+                "A choice profound, frozen in time.",
+                "" ,
                 "(Press enter to continue)"
         );
         ts.setSentences(sentences);
