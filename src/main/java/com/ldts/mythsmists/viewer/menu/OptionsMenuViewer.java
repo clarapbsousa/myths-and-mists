@@ -2,7 +2,6 @@ package com.ldts.mythsmists.viewer.menu;
 
 import com.ldts.mythsmists.gui.GUI;
 import com.ldts.mythsmists.model.Position;
-import com.ldts.mythsmists.model.menu.Menu;
 import com.ldts.mythsmists.model.menu.OptionsMenu;
 import com.ldts.mythsmists.viewer.Viewer;
 

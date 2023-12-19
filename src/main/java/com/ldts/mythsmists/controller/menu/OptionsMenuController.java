@@ -5,10 +5,7 @@ import com.ldts.mythsmists.controller.Controller;
 import com.ldts.mythsmists.gui.GUI;
 import com.ldts.mythsmists.model.menu.OptionsMenu;
 import com.ldts.mythsmists.model.menu.Menu;
-import com.ldts.mythsmists.model.textsections.TextSection;
 import com.ldts.mythsmists.states.MenuState;
-import com.ldts.mythsmists.states.PrologueState;
-
 import java.io.IOException;
 
 public class OptionsMenuController extends Controller<OptionsMenu> {

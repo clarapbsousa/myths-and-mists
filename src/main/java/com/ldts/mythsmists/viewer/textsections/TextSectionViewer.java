@@ -5,8 +5,6 @@ import com.ldts.mythsmists.model.Position;
 import com.ldts.mythsmists.model.textsections.TextSection;
 import com.ldts.mythsmists.viewer.Viewer;
 
-import java.io.IOException;
-
 public class TextSectionViewer extends Viewer<TextSection> {
 
     public TextSectionViewer(TextSection ts) {

@@ -32,16 +32,6 @@ public class MapLoader extends MapBuilder {
         return lines;
     }
 
-    protected int getWidth() {
-        int width = 0;
-        for (String line : lines) width = Math.max(width, line.length());
-        return width;
-    }
-
-    protected int getHeight() {
-        return lines.size();
-    }
-
     @Override
     protected Orpheus createOrpheus() {
         for (int y = 0; y < lines.size(); y++) {

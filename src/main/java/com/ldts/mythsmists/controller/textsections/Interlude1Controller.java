@@ -5,7 +5,6 @@ import com.ldts.mythsmists.controller.Controller;
 import com.ldts.mythsmists.gui.GUI;
 import com.ldts.mythsmists.model.game.map.MapLoader;
 import com.ldts.mythsmists.model.textsections.TextSection;
-import com.ldts.mythsmists.states.Act1State;
 import com.ldts.mythsmists.states.Act2State;
 
 import java.io.IOException;

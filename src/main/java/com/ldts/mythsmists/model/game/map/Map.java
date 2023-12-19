@@ -2,7 +2,6 @@ package com.ldts.mythsmists.model.game.map;
 
 import com.ldts.mythsmists.model.Elements.*;
 import com.ldts.mythsmists.model.Position;
-import com.ldts.mythsmists.model.textsections.TextSection;
 
 import java.util.List;
 
@@ -26,14 +25,6 @@ public class Map {
     public Map(int width, int height) {
         this.width = width;
         this.height = height;
-    }
-
-    public int getWidth() {
-        return width;
-    }
-
-    public int getHeight() {
-        return height;
     }
 
     public Orpheus getOrpheus() {
@@ -109,8 +100,7 @@ public class Map {
     }
 
     public boolean isCheckpoint(Position position) {
-        if (checkpoint.getPosition().equals(position)) return false;
-        return true;
+        return !checkpoint.getPosition().equals(position);
     }
     public boolean isLookSpace(Position position) {
         for (LookSpace l : lookspace) {

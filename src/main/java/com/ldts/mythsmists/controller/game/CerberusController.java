@@ -1,16 +1,10 @@
 package com.ldts.mythsmists.controller.game;
 
-import com.googlecode.lanterna.screen.Screen;
 import com.ldts.mythsmists.Game;
 import com.ldts.mythsmists.gui.GUI;
 import com.ldts.mythsmists.model.Elements.Cerberus;
-import com.ldts.mythsmists.model.Elements.Enemy;
-import com.ldts.mythsmists.model.Elements.Orpheus;
 import com.ldts.mythsmists.model.Position;
 import com.ldts.mythsmists.model.game.map.Map;
-import com.ldts.mythsmists.model.menu.Menu;
-import com.ldts.mythsmists.states.MenuState;
-
 import java.util.List;
 
 public class CerberusController extends GameController {

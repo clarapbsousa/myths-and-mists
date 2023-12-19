@@ -31,10 +31,6 @@ public class Game {
         this.state = state;
     }
 
-    public State getCurrentState() {
-        return state;
-    }
-
     public AudioPlayer getPlayer() {
         return player;
     }

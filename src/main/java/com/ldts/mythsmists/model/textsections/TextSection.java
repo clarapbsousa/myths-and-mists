@@ -5,11 +5,6 @@ public class TextSection {
     private List<String> sentences;
 
     public TextSection() {
-        this.sentences = sentences;
-    }
-
-    public List<String> getSentences() {
-        return sentences;
     }
 
     public void setSentences(List<String> sentences) {

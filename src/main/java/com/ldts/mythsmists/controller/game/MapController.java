@@ -6,7 +6,6 @@ import com.ldts.mythsmists.model.Elements.Orpheus;
 import com.ldts.mythsmists.model.game.map.Map;
 import com.ldts.mythsmists.model.game.map.MapLoader;
 import com.ldts.mythsmists.model.menu.Menu;
-import com.ldts.mythsmists.model.textsections.TextSection;
 import com.ldts.mythsmists.states.*;
 
 import java.io.IOException;
@@ -27,12 +26,15 @@ public class MapController extends GameController {
         if (action == GUI.ACTION.QUIT || (orpheus != null && orpheus.getEnergy() == 0)) {
             game.setState(new MenuState(new Menu()));
         }
-        else if ((orpheus.getCount() >= 5) && (getModel().getOrpheus().get_hasReachedCheckpoint())){
-            game.setState(new Act15State(new MapLoader(15).createMap()));
-        }
         else {
-            orpheusController.step(game, action, time);
-            enemyController.step(game, action, time);
+            assert orpheus != null;
+            if ((orpheus.getCount() >= 5) && (getModel().getOrpheus().get_hasReachedCheckpoint())){
+                game.setState(new Act15State(new MapLoader(15).createMap()));
+            }
+            else {
+                orpheusController.step(game, action, time);
+                enemyController.step(game, action, time);
+            }
         }
     }
 }

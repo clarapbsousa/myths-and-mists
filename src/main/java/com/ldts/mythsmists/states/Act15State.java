@@ -2,11 +2,9 @@ package com.ldts.mythsmists.states;
 
 import com.ldts.mythsmists.controller.Controller;
 import com.ldts.mythsmists.controller.game.Map15Controller;
-import com.ldts.mythsmists.controller.game.MapController;
 import com.ldts.mythsmists.model.game.map.Map;
 import com.ldts.mythsmists.viewer.Viewer;
 import com.ldts.mythsmists.viewer.game.Map15Viewer;
-import com.ldts.mythsmists.viewer.game.MapViewer;
 
 public class Act15State extends State<Map>{
 

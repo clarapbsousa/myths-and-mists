@@ -1,12 +1,9 @@
 package com.ldts.mythsmists.states;
 
 import com.ldts.mythsmists.controller.Controller;
-import com.ldts.mythsmists.controller.menu.MenuController;
 import com.ldts.mythsmists.controller.menu.OptionsMenuController;
-import com.ldts.mythsmists.model.menu.Menu;
 import com.ldts.mythsmists.model.menu.OptionsMenu;
 import com.ldts.mythsmists.viewer.Viewer;
-import com.ldts.mythsmists.viewer.menu.MenuViewer;
 import com.ldts.mythsmists.viewer.menu.OptionsMenuViewer;
 
 public class OptionsMenuState extends State<OptionsMenu> {

@@ -2,7 +2,6 @@ package com.ldts.mythsmists.states;
 
 import com.ldts.mythsmists.controller.Controller;
 import com.ldts.mythsmists.controller.textsections.EndingController;
-import com.ldts.mythsmists.controller.textsections.PrologueController;
 import com.ldts.mythsmists.model.textsections.TextSection;
 import com.ldts.mythsmists.viewer.Viewer;
 import com.ldts.mythsmists.viewer.textsections.TextSectionViewer;

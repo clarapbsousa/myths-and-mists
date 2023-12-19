@@ -3,9 +3,6 @@ package com.ldts.mythsmists.states;
 import com.ldts.mythsmists.Game;
 import com.ldts.mythsmists.gui.GUI;
 import com.ldts.mythsmists.controller.Controller;
-import com.ldts.mythsmists.gui.LanternaGUI;
-import com.ldts.mythsmists.model.textsections.TextSection;
-import com.ldts.mythsmists.sound.AudioPlayer;
 import com.ldts.mythsmists.viewer.Viewer;
 
 import java.io.IOException;
@@ -15,8 +12,6 @@ public abstract class State<T> {
     private final T model;
     private final Controller<T> controller;
     private final Viewer<T> viewer;
-
-    private State state;
 
     public State(T model) {
         this.model = model;

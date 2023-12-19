@@ -1,9 +1,7 @@
 package com.ldts.mythsmists.viewer.game;
 
 import com.ldts.mythsmists.gui.GUI;
-import com.ldts.mythsmists.model.Elements.Dracma;
 import com.ldts.mythsmists.model.Elements.Element;
-import com.ldts.mythsmists.model.Elements.Water;
 import com.ldts.mythsmists.model.Position;
 import com.ldts.mythsmists.model.game.map.Map;
 import com.ldts.mythsmists.viewer.Viewer;

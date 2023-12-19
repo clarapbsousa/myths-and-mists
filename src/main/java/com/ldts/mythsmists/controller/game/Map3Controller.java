@@ -9,7 +9,6 @@ import com.ldts.mythsmists.model.textsections.TextSection;
 import com.ldts.mythsmists.states.GoodEndingState;
 import com.ldts.mythsmists.states.MenuState;
 import com.ldts.mythsmists.states.BadEndingState;
-import com.ldts.mythsmists.states.PrologueState;
 
 import java.io.IOException;
 import java.util.Objects;

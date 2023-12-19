@@ -31,7 +31,7 @@ public class PrologueState extends State<TextSection> {
                 "",
                 "However, if you want to defy death, you should first pay the price.",
                 "",
-                "Colect 10 Dracmas, pay Caronte and cross the river",
+                "Collect 10 Dracmas, pay Caronte and cross the river",
                 "",
                 "Or remain in the Underworld forever.",
                 "",

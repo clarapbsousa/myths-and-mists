@@ -1,8 +1,6 @@
 package com.ldts.mythsmists.controller.game;
 
 import com.ldts.mythsmists.controller.Controller;
-import com.ldts.mythsmists.model.Elements.Cerberus;
-import com.ldts.mythsmists.model.Position;
 import com.ldts.mythsmists.model.game.map.Map;
 
 public abstract class GameController extends Controller<Map> {
