@@ -56,11 +56,7 @@ public class MapControllerTest {
         map.getOrpheus().increaseCount();
 
         orpheusController.moveOrpheusRight();
-        /*
-        assertEquals(new Act15State(new MapLoader(15).createMap()), game.getCurrentState());
 
-        isto não passa no teste tenho de arranjar outra maneire de fazer
-         */
     }
 
 

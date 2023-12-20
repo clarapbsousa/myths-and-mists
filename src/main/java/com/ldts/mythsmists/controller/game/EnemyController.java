@@ -30,7 +30,7 @@ public class EnemyController extends GameController {
         this.lastMovement = time;
     }
 
-    private void moveEnemy(Enemy enemy, Position position) {
+    public void moveEnemy(Enemy enemy, Position position) {
         if (getModel().isEmpty(position)) {
             enemy.setPosition(position);
             if (getModel().getOrpheus().getPosition().equals(position))
