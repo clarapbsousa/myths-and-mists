@@ -1,7 +1,10 @@
 # LDTS_T13_G02 - Myths and Mists
 
 ## Game Developers
-This project was developed by Clara Sousa (up202207583@up.pt), João Mendes (up202208586@up.pt) and Miguel Moita (up202207678@up.pt) for LDTS 2022-23.
+This project was developed by:
+- Clara Sousa (up202207583@up.pt),
+- João Mendes (up202208586@up.pt),
+- Miguel Moita (up202207678@up.pt) for LDTS 2022-23.
 
 ## Implemented Features
 
@@ -15,13 +18,125 @@ This project was developed by Clara Sousa (up202207583@up.pt), João Mendes (up2
 ## Planned Features
 All the planned features were successfully implemented.
 
-## Design
+## Design Patterns
+The patterns applied to the project, were **Factory Method Pattern, Composite Pattern, Game Loop Pattern, State Pattern, MVC architectural Pattern, Template
+Method and the Facade Pattern**. 
 
-### General Structure
-#### Problem in Context:
-Our initial project concern revolved around defining the structure, especially given that our game involves a graphical user interface (GUI) and is segmented into different states. To address this, specific design patterns were considered to ensure optimal fulfillment of our project requirements.
-#### The Patterns:
-The patterns applied to the project, were **Factory Method Pattern, Composite Pattern, Game Loop Pattern, State Pattern, MVC architectural Pattern, Template Method and the Facade Pattern**.  
-#### Implementation:
-In terms of implementation, we've established distinct classes with specific roles. We have classes dedicated to data storage (models), classes governing the game's logic (controllers), and classes responsible for visual effects on the screen (viewers). These classes are interconnected in the following manner:
-**UML**
+### Factory Method Pattern 
+A creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.
+The base Game class uses the LanternaGUI library for its graphical interface, ensuring consistent behavior across platforms. Through the factory method pattern, platform-specific GUI components can be generated without rewriting the Game class logic. This approach involves interacting with abstract GUI components, maintaining functionality through a common base class or interface.
+### Composite Pattern
+A structural design pattern that lets you compose objects into tree structures and then work with these structures as if they were individual objects.
+In the game, the CompoundGraphic concept is reflected in the MenuState and Menu classes, functioning as a unified container for diverse graphical elements. The client code in the Game class interacts seamlessly with these graphics, abstracted through a common interface, enabling flexible handling of complex graphic structures without direct coupling to specific classes.
+
+### Game Loop Pattern
+A behavioral design pattern that orchestrates the continuous and structured execution of steps such as updating, rendering, and handling input in a cycle, ensuring a seamless and responsive gaming experience.
+In the Game program, the Game Loop Pattern choreographs the continuous execution of updating, rendering, and input handling, ensuring a responsive gaming experience. The cyclical orchestration within the main loop encapsulates the essence of this behavioral design pattern, facilitating a seamless and dynamic gameplay flow.
+
+### State Pattern
+This behavioral design pattern is an important part of our game. By implementing it, we can allow loading of "scenes".
+We started by creating an abstract class called State that requires a Viewer and a Controller.
+All together, we can now create a specific State for a level or for a menu.
+This state simplifies and improves our code.
+
+### MVC architectural Pattern
+
+MVC stands for Model View Controller.
+This pattern mostly relates to the UI/interaction layer of our game, allowing these three aspects to work together.
+- Model - includes the class code itself, the pure application data and logic.
+- Viewer - presents the data to the user, in this case, printing out to the GUI the information specified in the model.
+- Controller - exists between the Model and the Viewer, listening to events triggered either by the Viewer or by the user.
+
+The most simple example is the user pressing a key to show something ingame: the controller listens to the pressed key, the model processes this input and the viewer outputs it.
+This is an important pattern for our project, as it allows all group elements to work simultaneously on the model, controller and viewers while also allowing models to have multiple viewers, something that can really come in handy.
+
+### Template Method
+
+The template method defines the skeleton of an algorithm in the superclass but lets subclasses override specific steps of the algorithm without changing its structure.
+This behavioral pattern is present in many aspects of our code, for example, in the creation of states, viewers and controllers.
+For example:
+- The State abstract class is defined
+- Act1State, Act2State, Act3State classes are defined as extensions of the State class, overriding some of its' functions.
+Overall, it is a nice pattern, as we can override only specific parts of the code, making them less suitable to errors triggered by changes to the rest of the code.
+
+### Facade Method
+In our current design, the utilization of the Facade Pattern proves instrumental, providing a streamlined interface to a complex subsystem with multiple components. This approach allows us to selectively incorporate essential features, shielding the code from subsystem intricacies and promoting testability and replaceability. Furthermore, the integration of the Facade Pattern facilitates the expansion of Lanterna functionalities while upholding the principles of the Interface Segregation Principle.
+
+## Design Challenges, Contextual Issues, and Solutions
+### Viewers:
+
+#### Challenge: GUI Complexity
+Context: Designing a **text based** user interface (GUI) that effectively communicates the game's narrative and provides an engaging user experience.
+Issue: Balancing simplicity with the need to convey story elements and game interactions through text based elements. Ensuring a visually appealing interface without overwhelming the player.
+
+Solution: Employed the Composite Pattern to create a unified container for graphical elements, allowing seamless integration of diverse components. This facilitated a visually rich interface while maintaining a structured and modular design.
+
+#### Challenge: Theming and Consistency
+Context: Maintaining a consistent thematic presentation throughout the game.
+Issue: Ensuring that visual elements align with the ancient Greek aesthetic and contribute to a cohesive storytelling experience. Avoiding visual inconsistencies that could disrupt immersion.
+
+Solution: Implemented a meticulous design guideline emphasizing adherence to ancient Greek visual aesthetics. Consistently applied thematic elements, such as fonts and colors, to create a cohesive and immersive visual experience.
+
+These classes can be found in the following archive:
+- [Viewer](.../src/main/java/com/ldts/mythsmists/viewer)
+
+### Controllers:
+
+#### Challenge: Input Handling
+Context: Managing user inputs and translating them into meaningful actions within the game.
+Issue: Developing a robust input handling system that responds accurately to user interactions.
+
+Solution:Implemented a comprehensive input handling system optimized for keyboards to ensure responsiveness, minimizing input lag and synchronizing user actions with corresponding game events.
+
+#### Challenge: Game Logic Integration
+Context: Integrating controllers with underlying game logic.
+Issue: Ensuring a smooth interaction between controllers and the game's logic to maintain a cohesive flow.
+
+Solution: Established a well-defined interface between controllers and game logic, promoting modular and loosely coupled interactions. Applied the MVC architectural pattern to streamline communication between controllers, models, and viewers.
+
+### Models:
+
+#### Challenge: Data Representation
+Context: Representing game data effectively for storage and manipulation.
+Issue: Designing models that capture essential game entities in a way that is both intuitive for developers and efficient for runtime performance.
+
+Solution: Implemented data models with a focus on clarity and efficiency. Employed appropriate data structures and representations to enhance readability and support optimized runtime performance.
+
+#### Challenge: Modular Design
+Context: Creating modular models for extensibility.
+Issue: Developing models that allow for easy expansion and modification as the game evolves.
+
+Solution: Applied the Template Method pattern to create modular models, allowing selective overrides for specific functionalities. Ensured that changes to one aspect of the game did not adversely impact other components.
+
+### General:
+
+#### Challenge: Storyline Integration
+Context: Integrating the game's storyline with the overall design.
+Issue: Balancing design choices to enhance the storytelling experience while aligning with the Greek myth theme.
+
+Solution: Enforced a cohesive design narrative that complemented the Greek myth theme. Utilized the Facade Pattern to provide a streamlined interface for narrative elements, simplifying integration and promoting storyline coherence.
+
+#### Challenge: Testing and Debugging
+Context: Ensuring the reliability and stability of the game.
+Issue: Implementing effective testing strategies to identify and address potential bugs, glitches, or performance issues.
+
+Solution: Conducted thorough testing at various development stages, including unit testing, integration testing, and user testing. Employed debugging tools and regular code reviews to identify and rectify issues promptly. Balanced testing rigor with development timelines to ensure a stable and polished final product.
+
+## Known-code smells
+
+We have fixed all the errors reported by error-prone. No other major code smells identified. 
+
+## Testing
+
+### Screenshot of coverage report
+
+### Link to mutation testing report
+
+## Self-evaluation
+
+The tasks were distributed collaboratively, and each team member contributed their best efforts. This collaborative effort not only enhanced our knowledge of Java and design principles/patterns but also fostered teamwork among us.
+
+- Clara Sousa: 33.3%
+- João Mendes: 33.3%
+- Miguel Moita: 33.3%
+
