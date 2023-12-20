@@ -11,7 +11,7 @@ import com.ldts.mythsmists.states.*;
 import java.io.IOException;
 
 public class MapController extends GameController {
-    private final OrpheusController orpheusController;
+    private OrpheusController orpheusController;
     private final EnemyController enemyController;
 
     public MapController(Map map) {
@@ -36,5 +36,9 @@ public class MapController extends GameController {
                 enemyController.step(game, action, time);
             }
         }
+    }
+
+    public void setOrpheusController(OrpheusController orpheusController) {
+        this.orpheusController = orpheusController;
     }
 }

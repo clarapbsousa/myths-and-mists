@@ -47,4 +47,12 @@ public class OrpheusControllerTest {
         assertEquals(new Position(10, 10), orpheus.getPosition());
     }
 
+    @Test
+    void dracmaCounterTest() {
+        orpheus.increaseCount();
+        assertEquals(1, orpheus.getCount());
+    }
+
+
+
 }

@@ -24,13 +24,18 @@ public class AudioPlayer {
         clip.start();
     }
 
+    public FloatControl getCurrentVolume() {
+        return fc;
+    }
+
+
     public void stop() {
         clip.stop();
     }
 
     // allowed threshold -80.0 to 4.206dB
     // setting if conditions to avoid IllegalArgumentException
-    // i know, i could just do a try/catch
+    // I know, I could just do a try/catch
     public void volUp() {
         if (fc.getValue() < 4.206) fc.setValue(fc.getValue() + 2.0f);
     }
