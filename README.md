@@ -81,12 +81,6 @@ That's how the game ends. Even though in the original story the only ending is o
 
 *All good things must come to an end. The bad ones too.*
 
-## Class Diagram
-
-### UML approach
-As we didn't start coding much yet, this is our current class diagram. Every class name should be understandable due to the game's structural context.
-![UML LDTS](https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/132692222/fc15f534-f01f-408a-8900-ac5a9f74524c)
-
 ## Sreenshots
 The following screenshots offer a glimpse into the overall appearance of our game, showcasing its diverse functionalities and illustrating the progression of the story.
 ### Menu
@@ -180,67 +174,3 @@ Your love proved to be unwavering, and you gazed back at the right moment. As a 
   <b><i>Fig 9.2. Good Ending </i></b>  
 </p>
 Unfortunately, despite the deep love between Orpheus and Eurydice, you succumbed to doubt and looked back prematurely. As a consequence, the agreement with Hades was broken, and Eurydice vanished from Orpheus's sight forever. The once hopeful journey concludes in sorrow, with Orpheus left to bear the weight of his regret.
-
-## Design Patterns
-### Factory Method Pattern 
-
-A creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.
-
-The base Game class uses the LanternaGUI library for its graphical interface, ensuring consistent behavior across platforms. Through the factory method pattern, platform-specific GUI components can be generated without rewriting the Game class logic. This approach involves interacting with abstract GUI components, maintaining functionality through a common base class or interface.
-
-
-### Composite Pattern
-
-A structural design pattern that lets you compose objects into tree structures and then work with these structures as if they were individual objects.
-
-In the game, the CompoundGraphic concept is reflected in the MenuState and Menu classes, functioning as a unified container for diverse graphical elements. The client code in the Game class interacts seamlessly with these graphics, abstracted through a common interface, enabling flexible handling of complex graphic structures without direct coupling to specific classes.
-
-### Game Loop Pattern
-
-A behavioral design pattern that orchestrates the continuous and structured execution of steps such as updating, rendering, and handling input in a cycle, ensuring a seamless and responsive gaming experience.
-
-In the Game program, the Game Loop Pattern choreographs the continuous execution of updating, rendering, and input handling, ensuring a responsive gaming experience. The cyclical orchestration within the main loop encapsulates the essence of this behavioral design pattern, facilitating a seamless and dynamic gameplay flow.
-
-### State Pattern
-
-This behavioral design pattern is an important part of our game. By implementing it, we can allow loading of "scenes".
-
-We started by creating an abstract class called State that requires a Viewer and a Controller.
-
-All together, we can now create a specific State for a level or for a menu.
-
-This state simplifies and improves our code.
-
-### MVC architectural Pattern
-
-MVC stands for Model View Controller.
-
-This pattern mostly relates to the UI/interaction layer of our game, allowing these three aspects to work together.
-
-- Model - includes the class code itself, the pure application data and logic.
-
-- Viewer - presents the data to the user, in this case, printing out to the GUI the information specified in the model.
-
-- Controller - exists between the Model and the Viewer, listening to events triggered either by the Viewer or by the user.
-
-
-The most simple example is the user pressing a key to show something ingame: the controller listens to the pressed key, the model processes this input and the viewer outputs it.
-
-This is an important pattern for our project, as it allows all group elements to work simultaneously on the model, controller and viewers while also allowing models to have multiple viewers, something that can really come in handy.
-
-
-### Template Method
-
-
-The template method defines the skeleton of an algorithm in the superclass but lets subclasses override specific steps of the algorithm without changing its structure.
-
-This behavioral pattern is present in many aspects of our code, for example, in the creation of states, viewers and controllers.
-
-For example:
-- The State abstract class is defined
-- Act1State, Act2State, Act3State classes are defined as extensions of the State class, overriding some of its' functions.
-
-Overall, it is a nice pattern, as we can override only specific parts of the code, making them less suitable to errors triggered by changes to the rest of the code.
-
-
-
