@@ -166,7 +166,7 @@ Orpheus is alone in a corridor, or is he? Where should he look back?
 <p align="center" justify="center">
 <img width="1039" alt="GoodEnding" src="https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/848bc81c-8f3c-4dd1-975e-e443db094843">
 <p align="center">
-  <b><i>Fig 8.1. Good Ending </i></b>  
+  <b><i>Fig 9.1. Good Ending </i></b>  
 </p>
 Your love proved to be unwavering, and you gazed back at the right moment. As a result, you emerge victorious, and you and Eurydice can now embark on your happily ever after.
 
@@ -174,7 +174,7 @@ Your love proved to be unwavering, and you gazed back at the right moment. As a 
 <p align="center" justify="center">
 <img width="1039" alt="GoodEnding" src="https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/05bf429f-3b8c-4552-9d68-51b9f64d001c">
 <p align="center">
-  <b><i>Fig 8.2. Good Ending </i></b>  
+  <b><i>Fig 9.2. Good Ending </i></b>  
 </p>
 Unfortunately, despite the deep love between Orpheus and Eurydice, you succumbed to doubt and looked back prematurely. As a consequence, the agreement with Hades was broken, and Eurydice vanished from Orpheus's sight forever. The once hopeful journey concludes in sorrow, with Orpheus left to bear the weight of his regret.
 
