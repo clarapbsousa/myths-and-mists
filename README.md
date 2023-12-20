@@ -1,6 +1,9 @@
 ![alt_text](https://media.discordapp.net/attachments/852653617798185012/1175031954236772402/banner.png)
 
 # **Myths and Mists**
+This project was developed by Clara Sousa (up202207583@up.pt), João Mendes (up202208586@up.pt) and Miguel Moita (up202207678@up.pt) for LDTS 2022-23.
+For a more detailed version of this description click [here](./docs/README.md).
+
 ## A story on love & loss, powered by Lanterna
 
 Myths and Mists is based on the Greek myth of Orpheus and Eurydice, a story about a newlywed couple that turns into a proof of love, an encounter with the underworld and with loss. An unforgettable and touching story that we crafted into a Java interactive adventure, powered by Lanterna.
