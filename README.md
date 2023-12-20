@@ -85,7 +85,7 @@ As we didn't start coding much yet, this is our current class diagram. Every cla
 ![UML LDTS](https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/132692222/fc15f534-f01f-408a-8900-ac5a9f74524c)
 
 ## Sreenshots
-The subsequent screenshots showcase the overall appearance of our game, highlighting its varied functionalities.
+The following screenshots offer a glimpse into the overall appearance of our game, showcasing its diverse functionalities and illustrating the progression of the story.
 ### Menu
 <p align="center" justify="center">
 <img width="728" alt="Captura de ecrã 2023-11-26, às 18 53 34" src="https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/4ae8bb2e-9af2-48fe-94b2-a07359f12af3">
@@ -106,9 +106,77 @@ The Menu is simple and intuitive. You can choose to start playing the game, navi
 If you select options, you will be able to choose whether you want the music volume lower, higher, muted, or even a different music track.
 
 ### Prologue
+<p align="center" justify="center">
 <img width="1039" alt="Prologue" src="https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/bfebf535-246f-49a0-b952-8e7edd7ca9b1">
+</p>
+<p align="center">
+  <b><i>Fig 3. Prologue: First Text Section </i></b>  
+</p>  
+In-game text sections maintain a consistent style, resembling something simple and readable on every screen. The objective is to impart information about the story and offer context for the game, all while evoking the mystique and ambiance reminiscent of ancient Greek tales and plays presented in the form of a poem. This thematic approach persists throughout the game, weaving a poetic thread that harkens back to the storytelling traditions of ancient Greece...
 
-Text sections will essentially look like this. Something simple and readable on every screen. The objective here is to give you some information about the story and some context for the game, while keeping the same mystic and feeling of old greek tales and plays in the form of a poem, this will recorrent along the game.
+### Act1
+<p align="center" justify="center">
+<img width="519" alt="Act1" src="https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/7efddee6-d104-4ea2-9c7f-fd329ff70a83">
+  </p>
+  <p align="center">
+  <b><i>Fig 4.1. Act1: Map1 </i></b> 
+    </p>  
+    <p align="center" justify="center">
+<img width="519" alt="Act15" src=https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/83a5cf3f-f231-4c28-87d8-89faa7a91ebd">
+  </p>
+  <p align="center"> 
+  <b><i>Fig 4.2. Act1: Map1.5 </i></b>  
+</p>
+In this level, the player (Orpheus) needs to collect at least 10 drachmas (5 in each map) to access the underworld while maintaining his energy. If his energy drops to zero due to encounters with demons or souls, the game ends.
+
+### Interlude1 
+<p align="center" justify="center">
+<img width="1039" alt="Interlude1" src=https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/6def1936-32dd-42a2-a0aa-64a7dc5d2395">
+<p align="center">
+  <b><i>Fig 5. Interlude1: Text Section </i></b>  
+</p>
+Upon reaching the Underworld, Orpheus now encounters the challenge of dealing with Cerberus.
+
+### Act2 
+<p align="center" justify="center">
+<img width="1039" alt="Act2" src="https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/1e3dc087-2f11-47d6-a716-ef01364613b3">
+<p align="center">
+  <b><i>Fig 6. Act2: Map2 </i></b>  
+</p>
+Orpheus must skillfully evade the three-headed representation of Cerberus, embodied by dogs, and skillfully navigate through demons and souls without depleting his energy entirely. Successfully overcoming this challenge is crucial for advancing to the next level, ultimately leading to the long-awaited encounter with Hades.
+
+### Interlude2 
+<p align="center" justify="center">
+<img width="1039" alt="Interlude2" src="https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/7e59208f-3788-432a-a9db-88c43c949539">
+<p align="center">
+  <b><i>Fig 7. Interlude2: Text Section </i></b>  
+</p>
+Orpheus finally confronts Hades, hopeful to be reunited with his lover. Hades agrees to the reunion, but with a single condition: Orpheus must proceed with complete trust, believing that his beloved is faithfully following him. Hades emphasizes that if the strength of their love is as profound as Orpheus claims, he will trust and instructs Orpheus to resist the urge to look back until the opportune moment.
+
+### Act2
+<p align="center" justify="center">
+  <img width="1039" alt="Act2" src="https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/1c5cbcac-2036-42fc-b39c-6935bc44e3ea">
+<p align="center">
+  <b><i>Fig 8. Act2: The Final Act </i></b>  
+</p>
+Orpheus is alone in a corridor, or is he? Where should he look back? 
+
+### Endings
+#### Good Ending
+<p align="center" justify="center">
+<img width="1039" alt="GoodEnding" src="https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/848bc81c-8f3c-4dd1-975e-e443db094843">
+<p align="center">
+  <b><i>Fig 8.1. Good Ending </i></b>  
+</p>
+Your love proved to be unwavering, and you gazed back at the right moment. As a result, you emerge victorious, and you and Eurydice can now embark on your happily ever after.
+
+#### Bad Ending
+<p align="center" justify="center">
+<img width="1039" alt="GoodEnding" src="https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/05bf429f-3b8c-4552-9d68-51b9f64d001c">
+<p align="center">
+  <b><i>Fig 8.2. Good Ending </i></b>  
+</p>
+Unfortunately, despite the deep love between Orpheus and Eurydice, you succumbed to doubt and looked back prematurely. As a consequence, the agreement with Hades was broken, and Eurydice vanished from Orpheus's sight forever. The once hopeful journey concludes in sorrow, with Orpheus left to bear the weight of his regret.
 
 ## Design Patterns
 ### Factory Method Pattern 
