@@ -1,4 +1,4 @@
-package model;
+package com.ldts.mythsmists.model;
 
 import com.ldts.mythsmists.model.Position;
 import net.jqwik.api.ForAll;

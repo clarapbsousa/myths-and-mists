@@ -1,4 +1,4 @@
-package sound;
+package com.ldts.mythsmists.sound;
 
 import com.ldts.mythsmists.sound.AudioPlayer;
 import org.junit.jupiter.api.BeforeEach;
@@ -15,6 +15,7 @@ public class AudioPlayerTest {
     private AudioPlayer player;
     @BeforeEach
     void setup() {
+
         player = new AudioPlayer("./src/main/resources/music/overture.wav");
         player.play();
     }

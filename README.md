@@ -156,24 +156,60 @@ For example:
 
 Overall, it is a nice pattern, as we can override only specific parts of the code, making them less suitable to errors triggered by changes to the rest of the code.
 
-## Testing (updated 20/12 11h)
+## Testing (updated 20/12 14h)
 
 ### Viewer testing
 We tested all viewers in our game via mocking the GUI class and the drawing functions.
 
-Map viewer testing:
+> Map viewer testing:
 - First step was to set up all necessary elements to the level: the player, rivers, checkpoint... each level has its specific elements. (This was done via @BeforeEach.)
 - Later on, we tested every drawing function of every element on the level.
-- Mockito.verify()
+- Mockito.verify() was used as testing condition
 
-Text section viewer testing:
+> Text section viewer testing:
 - Viewing text sections is easier
 - First step was to set up a list of sample sentences to mock a text section (as usual, via @BeforeEach)
 - Later on, we tested the drawText() function to check if the sentences were actually being displayed.
-- Mockito.verify()
+- Mockito.verify() was used as testing condition
 
-Menu viewer testing:
+> Menu viewer testing:
 - Similar logic to text section testing
 - First step was to set up a menu and a menu viewer
 - Later on, we tested the drawText() function to check if the menu entries were being displayed
-- Mockito.verify()
+- Mockito.verify() was used as testing condition
+
+> Orpheus viewer testing:
+- We set up an Orpheus object and a mocked GUI
+- Tested the drawOrpheus() function to check if the character was being presented
+- Mockito.verify() was used as testing condition
+
+### Model testing
+
+> Position testing
+- Property-based test, using jqwik
+- Tests getting left, right, up and down coordinates of a given coordinate
+- assertEquals() was used as testing condition
+
+### Sound testing
+
+As we implemented an AudioPlayer class for playing music ingame, we also implemented audio controls to control volume and playback. 
+
+> AudioPlayer testing
+- Set up consists on creating a new AudioPlayer object and a path to a song file (we used overture.wav but would work with any .wav file we had)
+- Tests volume control (volume up and volume down), by testing FloatControl float values
+- We had to round the FloatControl value as it has many decimal places. This doesn't affect the test validity, as this number tends to 0 (i.e. 3.0000000000000001)
+- assertEquals() was used as testing condition
+
+### Controller testing (in progress...)
+
+> Orpheus controller testing
+- Set up consists in creating a map (along with some elements) and an Orpheus object
+- moveRightEmpty() tests Orpheus movement, when there isn't a wall near
+- moveRightNotEmpty() tests Orpheus movement collider: if there is a wall at its right, then it should not move to the wall's position.
+- dracmaCounterTest() tests if the Dracma counter increasing function works, by calling it and checking if the value has changed
+- assertEquals() was used as testing condition
+
+> Map controller testing (Incomplete)
+- Set up consists in creating a map, an OrpheusController (later replacing the map's one with it) and a MapController
+- checkpointTest() tests the flag variable that checks if the player has reached the checkpoint: a very important aspect for state-changing.
+- assertEquals() was used as testing condition

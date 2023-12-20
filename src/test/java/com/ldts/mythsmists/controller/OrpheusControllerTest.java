@@ -1,4 +1,4 @@
-package controller;
+package com.ldts.mythsmists.controller;
 
 import com.ldts.mythsmists.controller.game.OrpheusController;
 import com.ldts.mythsmists.model.Elements.Checkpoint;

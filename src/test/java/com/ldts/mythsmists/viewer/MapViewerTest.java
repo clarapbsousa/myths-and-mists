@@ -1,10 +1,10 @@
-package viewer;
+package com.ldts.mythsmists.viewer;
 
 import com.ldts.mythsmists.gui.GUI;
 import com.ldts.mythsmists.model.Elements.*;
 import com.ldts.mythsmists.model.Position;
 import com.ldts.mythsmists.model.game.map.Map;
-import com.ldts.mythsmists.viewer.game.Map15Viewer;
+import com.ldts.mythsmists.viewer.game.MapViewer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -12,22 +12,22 @@ import org.mockito.Mockito;
 import java.io.IOException;
 import java.util.Arrays;
 
-public class Map15ViewerTest {
+public class MapViewerTest {
 
     /*
-    Testing viewer of 1.5th map
+    Testing viewer of first map
      */
 
     private Orpheus orpheus;
     private Map map;
     private GUI gui;
-    private Map15Viewer viewer;
+    private MapViewer viewer;
     @BeforeEach
     void setup() {
         orpheus = new Orpheus(10, 10);
         gui = Mockito.mock(GUI.class);
         map = new Map(150, 150);
-        viewer = new Map15Viewer(map);
+        viewer = new MapViewer(map);
 
         map.setOrpheus(orpheus);
         map.setWalls(Arrays.asList(new Wall(3,3), new Wall(4,5), new Wall(7, 7), new Wall(10, 20), new Wall(30, 40)));

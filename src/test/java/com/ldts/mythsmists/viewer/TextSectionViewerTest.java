@@ -1,4 +1,4 @@
-package viewer;
+package com.ldts.mythsmists.viewer;
 
 import com.ldts.mythsmists.model.Position;
 import com.ldts.mythsmists.model.textsections.TextSection;

@@ -1,10 +1,11 @@
-package viewer;
+package com.ldts.mythsmists.viewer;
 
 import com.ldts.mythsmists.gui.GUI;
 import com.ldts.mythsmists.model.Elements.*;
 import com.ldts.mythsmists.model.Position;
 import com.ldts.mythsmists.model.game.map.Map;
-import com.ldts.mythsmists.viewer.game.MapViewer;
+import com.ldts.mythsmists.viewer.game.Map15Viewer;
+import com.ldts.mythsmists.viewer.game.Map2Viewer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -12,29 +13,25 @@ import org.mockito.Mockito;
 import java.io.IOException;
 import java.util.Arrays;
 
-public class MapViewerTest {
-
-    /*
-    Testing viewer of first map
-     */
+public class Map2ViewerTest {
 
     private Orpheus orpheus;
     private Map map;
     private GUI gui;
-    private MapViewer viewer;
+    private Map2Viewer viewer;
+
     @BeforeEach
     void setup() {
         orpheus = new Orpheus(10, 10);
         gui = Mockito.mock(GUI.class);
         map = new Map(150, 150);
-        viewer = new MapViewer(map);
+        viewer = new Map2Viewer(map);
 
         map.setOrpheus(orpheus);
         map.setWalls(Arrays.asList(new Wall(3,3), new Wall(4,5), new Wall(7, 7), new Wall(10, 20), new Wall(30, 40)));
         map.setEnemys(Arrays.asList(new Enemy(4,4), new Enemy(5, 2), new Enemy(7, 1), new Enemy(10, 23), new Enemy(11, 24)));
         map.setCheckpoint(new Checkpoint(50, 50));
-        map.setRivers(Arrays.asList(new Water(1,1), new Water(2, 0), new Water(141, 132)));
-        map.setDracmas(Arrays.asList(new Dracma(6,6), new Dracma(75,43), new Dracma(70,39), new Dracma(89, 12), new Dracma(87, 11)));
+        map.setCerberus(Arrays.asList(new Cerberus(5, 10), new Cerberus(5, 12), new Cerberus(5, 14)));
     }
 
     @Test
@@ -80,26 +77,12 @@ public class MapViewerTest {
     }
 
     @Test
-    void drawRivers() throws IOException, InterruptedException {
+    void drawCerberus() throws IOException, InterruptedException {
         viewer.draw(gui);
 
-        Mockito.verify(gui, Mockito.times(1)).drawWater(new Position(1, 1));
-        Mockito.verify(gui, Mockito.times(1)).drawWater(new Position(2, 0));
-        Mockito.verify(gui, Mockito.times(1)).drawWater(new Position(141, 132));
-
-        Mockito.verify(gui, Mockito.times(3)).drawWater(Mockito.any(Position.class));
+        Mockito.verify(gui, Mockito.times(1)).drawCerberus(new Position(5, 10));
+        Mockito.verify(gui, Mockito.times(1)).drawCerberus(new Position(5, 12));
+        Mockito.verify(gui, Mockito.times(1)).drawCerberus(new Position(5, 14));
+        Mockito.verify(gui, Mockito.times(3)).drawCerberus(Mockito.any(Position.class));
     }
-
-    @Test
-    void drawDracmas() throws IOException, InterruptedException {
-        viewer.draw(gui);
-
-        Mockito.verify(gui, Mockito.times(1)).drawDracma(new Position(6,6));
-        Mockito.verify(gui, Mockito.times(1)).drawDracma(new Position(75,43));
-        Mockito.verify(gui, Mockito.times(1)).drawDracma(new Position(70,39));
-        Mockito.verify(gui, Mockito.times(1)).drawDracma(new Position(89,12));
-        Mockito.verify(gui, Mockito.times(1)).drawDracma(new Position(87,11));
-    }
-
-
 }

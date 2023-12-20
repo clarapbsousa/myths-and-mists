@@ -1,4 +1,4 @@
-package viewer;
+package com.ldts.mythsmists.viewer;
 
 import com.ldts.mythsmists.gui.GUI;
 import com.ldts.mythsmists.model.Elements.Orpheus;
