@@ -84,16 +84,31 @@ That's how the game ends. Even though in the original story the only ending is o
 As we didn't start coding much yet, this is our current class diagram. Every class name should be understandable due to the game's structural context.
 ![UML LDTS](https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/132692222/fc15f534-f01f-408a-8900-ac5a9f74524c)
 
-## Mockups
+## Sreenshots
+The subsequent screenshots showcase the overall appearance of our game, highlighting its varied functionalities.
 ### Menu
+<p align="center" justify="center">
 <img width="728" alt="Captura de ecrã 2023-11-26, às 18 53 34" src="https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/4ae8bb2e-9af2-48fe-94b2-a07359f12af3">
+</p>
+<p align="center">
+  <b><i>Fig 1. Main Menu </i></b>
+</p>  
 
-We've implemented a simple menu. In the future it may look better - let's focus on more important aspects for now.
+The Menu is simple and intuitive. You can choose to start playing the game, navigate to options to manage the music, or exit the game.
+
+### Options
+<p align="center" justify="center">
+<img width="862" alt="Options" src="https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/eb96d70f-258e-4267-9421-c8d642c02e6d">
+</p>
+<p align="center">
+  <b><i>Fig 2. Options Menu </i></b>  
+</p>  
+If you select options, you will be able to choose whether you want the music volume lower, higher, muted, or even a different music track.
 
 ### Prologue
-<img width="728" alt="Captura de ecrã 2023-11-26, às 18 55 22" src="https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/0faf9ec1-517d-45a4-b53b-f82838d12b3e">
+<img width="1039" alt="Prologue" src="https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/bfebf535-246f-49a0-b952-8e7edd7ca9b1">
 
-Text sections will essentially look like this. Something simple and readable on every screen, keeping you updated with the story.
+Text sections will essentially look like this. Something simple and readable on every screen. The objective here is to give you some information about the story and some context for the game, while keeping the same mystic and feeling of old greek tales and plays in the form of a poem, this will recorrent along the game.
 
 ## Design Patterns
 ### Factory Method Pattern 
