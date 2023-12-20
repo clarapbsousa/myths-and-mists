@@ -48,7 +48,7 @@ public class CerberusController extends GameController {
 
 
 
-    private void moveCerberus(Cerberus cerberus, Position position) {
+    public void moveCerberus(Cerberus cerberus, Position position) {
         if (getModel().isEmpty(position)) {
             cerberus.setPosition(position);
             if (getModel().getOrpheus().getPosition().equals(position))
