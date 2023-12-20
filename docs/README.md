@@ -62,6 +62,9 @@ Overall, it is a nice pattern, as we can override only specific parts of the cod
 ### Facade Method
 In our current design, the utilization of the Facade Pattern proves instrumental, providing a streamlined interface to a complex subsystem with multiple components. This approach allows us to selectively incorporate essential features, shielding the code from subsystem intricacies and promoting testability and replaceability. Furthermore, the integration of the Facade Pattern facilitates the expansion of Lanterna functionalities while upholding the principles of the Interface Segregation Principle.
 
+## UML approach
+ As coding is now complete, here's our finalized class diagram, illustrating the comprehensive structure of the game. Each class name is carefully chosen for clarity within the game's context.
+
 ## Design Challenges, Contextual Issues, and Solutions
 ### Viewers:
 
