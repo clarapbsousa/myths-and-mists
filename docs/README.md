@@ -77,8 +77,14 @@ Issue: Ensuring that visual elements align with the ancient Greek aesthetic and 
 
 Solution: Implemented a meticulous design guideline emphasizing adherence to ancient Greek visual aesthetics. Consistently applied thematic elements, such as fonts and colors, to create a cohesive and immersive visual experience.
 
-These classes can be found in the following archive:
-- [Viewer](.../src/main/java/com/ldts/mythsmists/viewer)
+Some of these classes can be found in the following files:
+- [Viewer](src/main/java/com/ldts/mythsmists/viewer/Viewer.java)
+- [Element Viewer](src/main/java/com/ldts/mythsmists/viewer/game/ElementViewer.java)
+- [Orpheus Viewer](src/main/java/com/ldts/mythsmists/viewer/game/OrpheusViewer.java)
+- [Cerberus Viewer](src/main/java/com/ldts/mythsmists/viewer/game/CerberusViewer.java)
+- [Map Viewer](src/main/java/com/ldts/mythsmists/viewer/game/MapViewer.java)
+- [Menu Viewer](src/main/java/com/ldts/mythsmists/viewer/menu/MenuViewer.java)
+- [Options Menu Viewer](src/main/java/com/ldts/mythsmists/viewer/menu/OptionsMenuViewer.java)
 
 ### Controllers:
 
@@ -94,6 +100,16 @@ Issue: Ensuring a smooth interaction between controllers and the game's logic to
 
 Solution: Established a well-defined interface between controllers and game logic, promoting modular and loosely coupled interactions. Applied the MVC architectural pattern to streamline communication between controllers, models, and viewers.
 
+Some of these classes can be found in the following files:
+- [Controller](src/main/java/com/ldts/mythsmists/controller/Controller.java)
+- [Game Controller](src/main/java/com/ldts/mythsmists/controller/game/GameController.java)
+- [Orpheus Controller](src/main/java/com/ldts/mythsmists/controller/game/OrpheusController.java)
+- [Cerberus Controller](src/main/java/com/ldts/mythsmists/controller/game/CerberusController.java)
+- [Map Controller](src/main/java/com/ldts/mythsmists/controller/game/MapController.java)
+- [Menu Controller](src/main/java/com/ldts/mythsmists/controller/menu/MenuController.java)
+- [Options Menu Viewer](src/main/java/com/ldts/mythsmists/controller/menu/OptionsMenuController.java)
+- [Prologue Controller](src/main/java/com/ldts/mythsmists/controller/textsections/PrologueController.java)
+
 ### Models:
 
 #### Challenge: Data Representation
@@ -107,6 +123,14 @@ Context: Creating modular models for extensibility.
 Issue: Developing models that allow for easy expansion and modification as the game evolves.
 
 Solution: Applied the Template Method pattern to create modular models, allowing selective overrides for specific functionalities. Ensured that changes to one aspect of the game did not adversely impact other components.
+
+Some of these classes can be found in the following files:
+- [Position](src/main/java/com/ldts/mythsmists/model/Position.java)
+- [Cerberus](src/main/java/com/ldts/mythsmists/model/Elements/Cerberus.java)
+- [Element](src/main/java/com/ldts/mythsmists/model/Elements/Element.java)
+- [Map](src/main/java/com/ldts/mythsmists/model/game/map/Map.java)
+- [Menu](src/main/java/com/ldts/mythsmists/model/menu/Menu.java)
+- [Text Sections](src/main/java/com/ldts/mythsmists/model/textsections/TextSection.java)
 
 ### General:
 
