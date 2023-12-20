@@ -156,5 +156,24 @@ For example:
 
 Overall, it is a nice pattern, as we can override only specific parts of the code, making them less suitable to errors triggered by changes to the rest of the code.
 
+## Testing (updated 20/12 11h)
 
+### Viewer testing
+We tested all viewers in our game via mocking the GUI class and the drawing functions.
 
+Map viewer testing:
+- First step was to set up all necessary elements to the level: the player, rivers, checkpoint... each level has its specific elements. (This was done via @BeforeEach.)
+- Later on, we tested every drawing function of every element on the level.
+- Mockito.verify()
+
+Text section viewer testing:
+- Viewing text sections is easier
+- First step was to set up a list of sample sentences to mock a text section (as usual, via @BeforeEach)
+- Later on, we tested the drawText() function to check if the sentences were actually being displayed.
+- Mockito.verify()
+
+Menu viewer testing:
+- Similar logic to text section testing
+- First step was to set up a menu and a menu viewer
+- Later on, we tested the drawText() function to check if the menu entries were being displayed
+- Mockito.verify()
