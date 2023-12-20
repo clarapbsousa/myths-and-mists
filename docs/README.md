@@ -151,7 +151,53 @@ Solution: Conducted thorough testing at various development stages, including un
 We have fixed all the errors reported by error-prone. No other major code smells identified. 
 
 ## Testing
+### Viewer testing
+We tested all viewers in our game via mocking the GUI class and the drawing functions.  
+#### Text Section Viewer Testing:
+- Streamlined text section viewing for enhanced readability.
+- Initiated by configuring a list of sample sentences to emulate a text section, facilitated via @BeforeEach setup.
+- Subsequent testing focused on validating the drawText() function's efficacy in displaying the sentences.
+- Employed Mockito.verify() to assert testing conditions.
 
+#### Menu Viewer Testing:
+- Parallel approach to text section testing.
+- Commenced by establishing a menu and its corresponding viewer.
+- Subsequent evaluation involved testing the drawText() function to ensure accurate display of menu entries.
+- Utilized Mockito.verify() as the benchmark for testing conditions.
+
+#### Orpheus Viewer Testing:
+- Executed Orpheus viewer testing by initializing an Orpheus object and a mocked GUI.
+- Thoroughly examined the drawOrpheus() function to confirm the accurate representation of the character.
+- Validated testing conditions through the use of Mockito.verify().
+### Model Testing
+
+#### Position Testing:
+- Implemented a property-based test using jqwik.
+- Conducted tests to retrieve left, right, up, and down coordinates of a given coordinate.
+- Utilized `assertEquals()` as the testing condition.
+
+### Sound Testing
+#### AudioPlayer Testing:
+- The setup involves creating a new AudioPlayer object and specifying a path to a song file (utilized "overture.wav" but compatible with any .wav file).
+- Evaluated volume control functionality (volume up and volume down) by testing FloatControl float values.
+- Rounded the FloatControl value due to multiple decimal places, maintaining test validity.
+- Utilized `assertEquals()` for testing conditions.
+
+### Controller Testing (Work in Progress...)
+
+#### Orpheus Controller Testing:
+- Configured the setup by creating a map (including various elements) and an Orpheus object.
+- Conducted tests:
+  - `moveRightEmpty()`: Examined Orpheus movement when there is no wall nearby.
+  - `moveRightNotEmpty()`: Assessed Orpheus movement when there is a wall to its right, ensuring it does not move to the wall's position.
+  - `dracmaCounterTest()`: Verified the Dracma counter increasing function's functionality by calling it and checking for value changes.
+- Employed `assertEquals()` as the testing condition.
+
+#### Map Controller Testing (Incomplete):
+- Established the setup with a created map, an OrpheusController (later replacing the map's controller), and a MapController.
+- Conducted the `checkpointTest()` to assess the flag variable checking if the player reached the checkpoint, a crucial aspect for state-changing.
+- Utilized `assertEquals()` for testing conditions.
+  
 ### Screenshot of coverage report
 
 ### Link to mutation testing report
