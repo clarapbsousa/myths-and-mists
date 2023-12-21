@@ -34,18 +34,6 @@ public class Menu {
         return curEntry == i;
     }
 
-    public boolean isSelectedStart() {
-        return isSelected(0);
-    }
-
-    public boolean isSelectedOptions() {
-        return isSelected(1);
-    }
-
-    public boolean isSelectedExit() {
-        return isSelected(2);
-    }
-
     public int getNumberEntries() {
         return this.entries.size();
     }

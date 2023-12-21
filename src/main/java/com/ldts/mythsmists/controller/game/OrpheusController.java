@@ -38,10 +38,6 @@ public class OrpheusController extends GameController{
         }
     }
 
-    public void breakWall() {
-
-    }
-
     @Override
     public void step(Game game, GUI.ACTION action, long time) throws IOException {
             if (action == GUI.ACTION.UP) {
@@ -51,6 +47,5 @@ public class OrpheusController extends GameController{
             if (action == GUI.ACTION.DOWN) moveOrpheusDown();
             if (action == GUI.ACTION.LEFT) moveOrpheusLeft();
             if (action == GUI.ACTION.LOOK) getModel().getOrpheus().set_lookback();
-            if (action == GUI.ACTION.DESTROY) breakWall();
     }
 }

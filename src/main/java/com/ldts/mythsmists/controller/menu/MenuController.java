@@ -28,9 +28,9 @@ public class MenuController extends Controller<Menu> {
                 getModel().nextEntry();
                 break;
             case SELECT:
-                if (getModel().isSelectedStart()) game.setState(new PrologueState(new TextSection()));
-                if (getModel().isSelectedExit()) game.setState(null);
-                if (getModel().isSelectedOptions()) game.setState(new OptionsMenuState(new OptionsMenu()));
+                if (getModel().isSelected(0)) game.setState(new PrologueState(new TextSection()));
+                if (getModel().isSelected(2)) game.setState(null);
+                if (getModel().isSelected(1)) game.setState(new OptionsMenuState(new OptionsMenu()));
                 break;
         }
     }
