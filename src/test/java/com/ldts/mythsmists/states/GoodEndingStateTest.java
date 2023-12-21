@@ -1,44 +1,40 @@
 package com.ldts.mythsmists.states;
 
 import com.ldts.mythsmists.Game;
-import com.ldts.mythsmists.controller.menu.MenuController;
-import com.ldts.mythsmists.controller.menu.OptionsMenuController;
+import com.ldts.mythsmists.controller.Controller;
+import com.ldts.mythsmists.controller.textsections.EndingController;
+import com.ldts.mythsmists.controller.textsections.Interlude1Controller;
 import com.ldts.mythsmists.gui.GUI;
-import com.ldts.mythsmists.model.menu.Menu;
-import com.ldts.mythsmists.model.menu.OptionsMenu;
+import com.ldts.mythsmists.model.textsections.TextSection;
 import com.ldts.mythsmists.viewer.Viewer;
-import com.ldts.mythsmists.viewer.menu.MenuViewer;
-import com.ldts.mythsmists.viewer.menu.OptionsMenuViewer;
+import com.ldts.mythsmists.viewer.textsections.TextSectionViewer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
-import com.ldts.mythsmists.controller.Controller;
 
 import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.ArgumentMatchers.eq;
 
-
-public class MenuStateTest {
-
-    private MenuState state;
-    private MenuController mockController;
-    private MenuViewer mockViewer;
+public class GoodEndingStateTest {
+    private GoodEndingState state;
+    private EndingController mockController;
+    private TextSectionViewer mockViewer;
 
     @BeforeEach
     public void setUp() {
-        mockController = Mockito.mock(MenuController.class);
-        mockViewer = Mockito.mock(MenuViewer.class);
+        mockController = Mockito.mock(EndingController.class);
+        mockViewer = Mockito.mock(TextSectionViewer.class);
 
-        state = new MenuState(new Menu()) {
+        state = new GoodEndingState(new TextSection()) {
             @Override
-            protected Viewer<Menu> getViewer() {
+            protected Viewer<TextSection> getViewer() {
                 return mockViewer;
             }
 
             @Override
-            protected Controller<Menu> getController() {
+            protected Controller<TextSection> getController() {
                 return mockController;
             }
         };

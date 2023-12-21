@@ -1,44 +1,43 @@
 package com.ldts.mythsmists.states;
 
 import com.ldts.mythsmists.Game;
+import com.ldts.mythsmists.controller.Controller;
+import com.ldts.mythsmists.controller.game.MapController;
 import com.ldts.mythsmists.controller.menu.MenuController;
-import com.ldts.mythsmists.controller.menu.OptionsMenuController;
 import com.ldts.mythsmists.gui.GUI;
+import com.ldts.mythsmists.model.game.map.Map;
+import com.ldts.mythsmists.model.game.map.MapLoader;
 import com.ldts.mythsmists.model.menu.Menu;
-import com.ldts.mythsmists.model.menu.OptionsMenu;
 import com.ldts.mythsmists.viewer.Viewer;
+import com.ldts.mythsmists.viewer.game.MapViewer;
 import com.ldts.mythsmists.viewer.menu.MenuViewer;
-import com.ldts.mythsmists.viewer.menu.OptionsMenuViewer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
-import com.ldts.mythsmists.controller.Controller;
 
 import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.ArgumentMatchers.eq;
 
-
-public class MenuStateTest {
-
-    private MenuState state;
-    private MenuController mockController;
-    private MenuViewer mockViewer;
+public class Act1StateTest {
+    private Act1State state;
+    private MapController mockController;
+    private MapViewer mockViewer;
 
     @BeforeEach
-    public void setUp() {
-        mockController = Mockito.mock(MenuController.class);
-        mockViewer = Mockito.mock(MenuViewer.class);
+    public void setUp() throws IOException {
+        mockController = Mockito.mock(MapController.class);
+        mockViewer = Mockito.mock(MapViewer.class);
 
-        state = new MenuState(new Menu()) {
+        state = new Act1State(new MapLoader(1).createMap()) {
             @Override
-            protected Viewer<Menu> getViewer() {
+            protected Viewer<Map> getViewer() {
                 return mockViewer;
             }
 
             @Override
-            protected Controller<Menu> getController() {
+            protected Controller<Map> getController() {
                 return mockController;
             }
         };
