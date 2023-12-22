@@ -60,7 +60,7 @@ When you reach to Hades, you'll have to explain why you are there. A promise wil
 After the said promise, Orpheus will walk out of the  Underworld.
 
 You will be presented with a maze and a sentence on top of the screen: 
-"Want to look back? Press [X]".
+"Want to look back? Press [L]".
 
 As you go through the maze, you'll have the opportunity to look back.
 
@@ -81,7 +81,7 @@ That's how the game ends. Even though in the original story the only ending is o
 
 *All good things must come to an end. The bad ones too.*
 
-## Sreenshots
+## Screenshots
 The following screenshots offer a glimpse into the overall appearance of our game, showcasing its diverse functionalities and illustrating the progression of the story.
 ### Menu
 <p align="center" justify="center">
@@ -124,7 +124,7 @@ In-game text sections maintain a consistent style, resembling something simple a
   <p align="center"> 
   <b><i>Fig 4.2. Act1: Map1.5 </i></b>  
 </p>
-In this level, the player (Orpheus) needs to collect at least 10 drachmas (5 in each map) to access the underworld while maintaining his energy. If his energy drops to zero due to encounters with demons or souls, the game ends.
+In this level, the player (Orpheus) needs to collect at least 10 dracmas (5 in each map) to access the underworld while maintaining his energy. If his energy drops to zero due to encounters with demons or souls, the game ends.
 
 ### Interlude1 
 <p align="center" justify="center">
