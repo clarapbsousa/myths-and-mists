@@ -10,8 +10,8 @@ This project was developed by:
 
 - **Connected Menus** - The user has the capability of browsing through the different menus. (Ex: Main Menu and Options Menu).
 - **Keyboard control** - The keyboard inputs are received through the respective events and interpreted according to the current game state.
-- **Player control** - The player may move with the keyboard control, pass through th Text-Sections and excute other functions.
-- **Collisions detection** - Collisions between different objects are verified. (Ex: Player/Orpheus, Dracmas, Enemies, Walls).
+- **Player control** - The player may move with the keyboard control, pass through Text-Sections and execute other functions.
+- **Collision detection** - Collisions between different objects are verified. (Ex: Player/Orpheus, Dracmas, Enemies, Walls).
 - **Different levels** - 3 distinct levels with unique text sections, each offering different contexts, provides a dynamic and engaging narrative structure.
   This approach allows for diverse storytelling elements and contributes to the overall richness and depth of the narrative experience.
 
@@ -19,19 +19,20 @@ This project was developed by:
 All the planned features were successfully implemented.
 
 ## Design Patterns
-The patterns applied to the project, were **Factory Method Pattern, Composite Pattern, Game Loop Pattern, State Pattern, MVC architectural Pattern, Template
-Method and the Facade Pattern**. 
+The patterns applied to the project: **Factory Method Pattern, Composite Pattern, Game Loop Pattern, State Pattern, MVC Architectural Pattern, Template
+Method and Facade Pattern**. 
 
 ### Factory Method Pattern 
 A creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.
 The base Game class uses the LanternaGUI library for its graphical interface, ensuring consistent behavior across platforms. Through the factory method pattern, platform-specific GUI components can be generated without rewriting the Game class logic. This approach involves interacting with abstract GUI components, maintaining functionality through a common base class or interface.
+
 ### Composite Pattern
 A structural design pattern that lets you compose objects into tree structures and then work with these structures as if they were individual objects.
-In the game, the CompoundGraphic concept is reflected in the MenuState and Menu classes, functioning as a unified container for diverse graphical elements. The client code in the Game class interacts seamlessly with these graphics, abstracted through a common interface, enabling flexible handling of complex graphic structures without direct coupling to specific classes.
+In the game, the CompoundGraphic concept is reflected in the MenuState and Menu classes, functioning as an unified container for diverse graphical elements. The client code in the Game class interacts seamlessly with these graphics, abstracted through a common interface, enabling flexible handling of complex graphic structures without direct coupling to specific classes.
 
 ### Game Loop Pattern
 A behavioral design pattern that orchestrates the continuous and structured execution of steps such as updating, rendering, and handling input in a cycle, ensuring a seamless and responsive gaming experience.
-In the Game program, the Game Loop Pattern choreographs the continuous execution of updating, rendering, and input handling, ensuring a responsive gaming experience. The cyclical orchestration within the main loop encapsulates the essence of this behavioral design pattern, facilitating a seamless and dynamic gameplay flow.
+In the Game program, the Game Loop Pattern choreographs the continuous execution of updating, rendering and input handling, ensuring a responsive gaming experience. The cyclical orchestration within the main loop encapsulates the essence of this behavioral design pattern, facilitating a seamless and dynamic gameplay flow.
 
 ### State Pattern
 This behavioral design pattern is an important part of our game. By implementing it, we can allow loading of "scenes".
@@ -60,7 +61,7 @@ For example:
 Overall, it is a nice pattern, as we can override only specific parts of the code, making them less suitable to errors triggered by changes to the rest of the code.
 
 ### Facade Method
-In our current design, the utilization of the Facade Pattern proves instrumental, providing a streamlined interface to a complex subsystem with multiple components. This approach allows us to selectively incorporate essential features, shielding the code from subsystem intricacies and promoting testability and replaceability. Furthermore, the integration of the Facade Pattern facilitates the expansion of Lanterna functionalities while upholding the principles of the Interface Segregation Principle.
+In our current design, the utilization of the Facade Pattern provides a streamlined interface to a complex subsystem with multiple components. This approach allows us to selectively incorporate essential features, shielding the code from subsystem intricacies and promoting testability and replaceability. Furthermore, the integration of the Facade Pattern facilitates the expansion of Lanterna functionalities while upholding the principles of the Interface Segregation Principle.
 
 ## UML approach
  As coding is now complete, here's our finalized class diagram, illustrating the comprehensive structure of the game. Each class name is carefully chosen for clarity within the game's context.
@@ -95,7 +96,7 @@ Some of these classes can be found in the following files:
 Context: Managing user inputs and translating them into meaningful actions within the game.
 Issue: Developing a robust input handling system that responds accurately to user interactions.
 
-Solution:Implemented a comprehensive input handling system optimized for keyboards to ensure responsiveness, minimizing input lag and synchronizing user actions with corresponding game events.
+Solution: Implemented a comprehensive input handling system optimized for keyboards to ensure responsiveness, minimizing input lag and synchronizing user actions with corresponding game events.
 
 #### Challenge: Game Logic Integration
 Context: Integrating controllers with underlying game logic.
@@ -149,10 +150,6 @@ Issue: Implementing effective testing strategies to identify and address potenti
 
 Solution: Conducted thorough testing at various development stages, including unit testing, integration testing, and user testing. Employed debugging tools and regular code reviews to identify and rectify issues promptly. Balanced testing rigor with development timelines to ensure a stable and polished final product.
 
-## Known-code smells
-
-We have fixed all the errors reported by error-prone. No other major code smells identified. 
-
 ## Testing
 ### Viewer testing
 We tested all viewers in our game via mocking the GUI class and the drawing functions.  
@@ -160,13 +157,13 @@ We tested all viewers in our game via mocking the GUI class and the drawing func
 - Streamlined text section viewing for enhanced readability.
 - Initiated by configuring a list of sample sentences to emulate a text section, facilitated via @BeforeEach setup.
 - Subsequent testing focused on validating the drawText() function's efficacy in displaying the sentences.
-- Employed Mockito.verify() to assert testing conditions.
+- Employed `Mockito.verify()` to assert testing conditions.
 
 #### Menu Viewer Testing:
 - Parallel approach to text section testing.
 - Commenced by establishing a menu and its corresponding viewer.
 - Subsequent evaluation involved testing the drawText() function to ensure accurate display of menu entries.
-- Utilized Mockito.verify() as the benchmark for testing conditions.
+- Utilized `Mockito.verify()` as the benchmark for testing conditions.
 
 #### Orpheus Viewer Testing:
 - Executed Orpheus viewer testing by initializing an Orpheus object and a mocked GUI.
