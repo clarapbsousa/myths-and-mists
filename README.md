@@ -1,6 +1,9 @@
 ![alt_text](https://media.discordapp.net/attachments/852653617798185012/1175031954236772402/banner.png)
 
 # **Myths and Mists**
+This project was developed by [Clara Sousa](https://github.com/clarapbsousa) (up202207583@up.pt), [João Mendes](https://github.com/jv36) (up202208586@up.pt) and [Miguel Moita](https://github.com/MiguelMoita) (up202207678@up.pt) for LDTS 2023-24.
+- For a more detailed version of this description click [here](./docs/README.md).
+
 ## A story on love & loss, powered by Lanterna
 
 Myths and Mists is based on the Greek myth of Orpheus and Eurydice, a story about a newlywed couple that turns into a proof of love, an encounter with the underworld and with loss. An unforgettable and touching story that we crafted into a Java interactive adventure, powered by Lanterna.
@@ -57,7 +60,7 @@ When you reach to Hades, you'll have to explain why you are there. A promise wil
 After the said promise, Orpheus will walk out of the  Underworld.
 
 You will be presented with a maze and a sentence on top of the screen: 
-"Want to look back? Press [X]".
+"Want to look back? Press [L]".
 
 As you go through the maze, you'll have the opportunity to look back.
 
@@ -78,138 +81,96 @@ That's how the game ends. Even though in the original story the only ending is o
 
 *All good things must come to an end. The bad ones too.*
 
-## Class Diagram
-
-### UML approach
-As we didn't start coding much yet, this is our current class diagram. Every class name should be understandable due to the game's structural context.
-![UML LDTS](https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/132692222/fc15f534-f01f-408a-8900-ac5a9f74524c)
-
-## Mockups
+## Screenshots
+The following screenshots offer a glimpse into the overall appearance of our game, showcasing its diverse functionalities and illustrating the progression of the story.
 ### Menu
+<p align="center" justify="center">
 <img width="728" alt="Captura de ecrã 2023-11-26, às 18 53 34" src="https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/4ae8bb2e-9af2-48fe-94b2-a07359f12af3">
+</p>
+<p align="center">
+  <b><i>Fig 1. Main Menu </i></b>
+</p>  
 
-We've implemented a simple menu. In the future it may look better - let's focus on more important aspects for now.
+The Menu is simple and intuitive. You can choose to start playing the game, navigate to options to manage the music, or exit the game.
+
+### Options
+<p align="center" justify="center">
+<img width="862" alt="Options" src="https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/eb96d70f-258e-4267-9421-c8d642c02e6d">
+</p>
+<p align="center">
+  <b><i>Fig 2. Options Menu </i></b>  
+</p>  
+If you select options, you will be able to choose whether you want the music volume lower, higher, muted, or even a different music track.
 
 ### Prologue
-<img width="728" alt="Captura de ecrã 2023-11-26, às 18 55 22" src="https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/0faf9ec1-517d-45a4-b53b-f82838d12b3e">
+<p align="center" justify="center">
+<img width="1039" alt="Prologue" src="https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/bfebf535-246f-49a0-b952-8e7edd7ca9b1">
+</p>
+<p align="center">
+  <b><i>Fig 3. Prologue: First Text Section </i></b>  
+</p>  
+In-game text sections maintain a consistent style, resembling something simple and readable on every screen. The objective is to impart information about the story and offer context for the game, all while evoking the mystique and ambiance reminiscent of ancient Greek tales and plays presented in the form of a poem. This thematic approach persists throughout the game, weaving a poetic thread that harkens back to the storytelling traditions of ancient Greece...
 
-Text sections will essentially look like this. Something simple and readable on every screen, keeping you updated with the story.
+### Act1
+<p align="center" justify="center">
+<img width="519" alt="Act1" src="https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/7efddee6-d104-4ea2-9c7f-fd329ff70a83">
+  </p>
+  <p align="center">
+  <b><i>Fig 4.1. Act1: Map1 </i></b> 
+    </p>  
+    <p align="center" justify="center">
+<img width="519" alt="Act15" src=https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/83a5cf3f-f231-4c28-87d8-89faa7a91ebd">
+  </p>
+  <p align="center"> 
+  <b><i>Fig 4.2. Act1: Map1.5 </i></b>  
+</p>
+In this level, the player (Orpheus) needs to collect at least 10 dracmas (5 in each map) to access the underworld while maintaining his energy. If his energy drops to zero due to encounters with demons or souls, the game ends.
 
-## Design Patterns
-### Factory Method Pattern 
+### Interlude1 
+<p align="center" justify="center">
+<img width="1039" alt="Interlude1" src=https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/6def1936-32dd-42a2-a0aa-64a7dc5d2395">
+<p align="center">
+  <b><i>Fig 5. Interlude1: Text Section </i></b>  
+</p>
+Upon reaching the Underworld, Orpheus now encounters the challenge of dealing with Cerberus.
 
-A creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.
+### Act2 
+<p align="center" justify="center">
+<img width="1039" alt="Act2" src="https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/1e3dc087-2f11-47d6-a716-ef01364613b3">
+<p align="center">
+  <b><i>Fig 6. Act2: Map2 </i></b>  
+</p>
+Orpheus must skillfully evade the three-headed representation of Cerberus, embodied by dogs, and skillfully navigate through demons and souls without depleting his energy entirely. Successfully overcoming this challenge is crucial for advancing to the next level, ultimately leading to the long-awaited encounter with Hades.
 
-The base Game class uses the LanternaGUI library for its graphical interface, ensuring consistent behavior across platforms. Through the factory method pattern, platform-specific GUI components can be generated without rewriting the Game class logic. This approach involves interacting with abstract GUI components, maintaining functionality through a common base class or interface.
+### Interlude2 
+<p align="center" justify="center">
+<img width="1039" alt="Interlude2" src="https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/7e59208f-3788-432a-a9db-88c43c949539">
+<p align="center">
+  <b><i>Fig 7. Interlude2: Text Section </i></b>  
+</p>
+Orpheus finally confronts Hades, hopeful to be reunited with his lover. Hades agrees to the reunion, but with a single condition: Orpheus must proceed with complete trust, believing that his beloved is faithfully following him. Hades emphasizes that if the strength of their love is as profound as Orpheus claims, he will trust and instructs Orpheus to resist the urge to look back until the opportune moment.
 
+### Act2
+<p align="center" justify="center">
+  <img width="1039" alt="Act2" src="https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/1c5cbcac-2036-42fc-b39c-6935bc44e3ea">
+<p align="center">
+  <b><i>Fig 8. Act2: The Final Act </i></b>  
+</p>
+Orpheus is alone in a corridor, or is he? Where should he look back? 
 
-### Composite Pattern
+### Endings
+#### Good Ending
+<p align="center" justify="center">
+<img width="1039" alt="GoodEnding" src="https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/848bc81c-8f3c-4dd1-975e-e443db094843">
+<p align="center">
+  <b><i>Fig 9.1. Good Ending </i></b>  
+</p>
+Your love proved to be unwavering, and you gazed back at the right moment. As a result, you emerge victorious, and you and Eurydice can now embark on your happily ever after.
 
-A structural design pattern that lets you compose objects into tree structures and then work with these structures as if they were individual objects.
-
-In the game, the CompoundGraphic concept is reflected in the MenuState and Menu classes, functioning as a unified container for diverse graphical elements. The client code in the Game class interacts seamlessly with these graphics, abstracted through a common interface, enabling flexible handling of complex graphic structures without direct coupling to specific classes.
-
-### Game Loop Pattern
-
-A behavioral design pattern that orchestrates the continuous and structured execution of steps such as updating, rendering, and handling input in a cycle, ensuring a seamless and responsive gaming experience.
-
-In the Game program, the Game Loop Pattern choreographs the continuous execution of updating, rendering, and input handling, ensuring a responsive gaming experience. The cyclical orchestration within the main loop encapsulates the essence of this behavioral design pattern, facilitating a seamless and dynamic gameplay flow.
-
-### State Pattern
-
-This behavioral design pattern is an important part of our game. By implementing it, we can allow loading of "scenes".
-
-We started by creating an abstract class called State that requires a Viewer and a Controller.
-
-All together, we can now create a specific State for a level or for a menu.
-
-This state simplifies and improves our code.
-
-### MVC architectural Pattern
-
-MVC stands for Model View Controller.
-
-This pattern mostly relates to the UI/interaction layer of our game, allowing these three aspects to work together.
-
-- Model - includes the class code itself, the pure application data and logic.
-
-- Viewer - presents the data to the user, in this case, printing out to the GUI the information specified in the model.
-
-- Controller - exists between the Model and the Viewer, listening to events triggered either by the Viewer or by the user.
-
-
-The most simple example is the user pressing a key to show something ingame: the controller listens to the pressed key, the model processes this input and the viewer outputs it.
-
-This is an important pattern for our project, as it allows all group elements to work simultaneously on the model, controller and viewers while also allowing models to have multiple viewers, something that can really come in handy.
-
-
-### Template Method
-
-
-The template method defines the skeleton of an algorithm in the superclass but lets subclasses override specific steps of the algorithm without changing its structure.
-
-This behavioral pattern is present in many aspects of our code, for example, in the creation of states, viewers and controllers.
-
-For example:
-- The State abstract class is defined
-- Act1State, Act2State, Act3State classes are defined as extensions of the State class, overriding some of its' functions.
-
-Overall, it is a nice pattern, as we can override only specific parts of the code, making them less suitable to errors triggered by changes to the rest of the code.
-
-## Testing (updated 20/12 14h)
-
-### Viewer testing
-We tested all viewers in our game via mocking the GUI class and the drawing functions.
-
-> Map viewer testing:
-- First step was to set up all necessary elements to the level: the player, rivers, checkpoint... each level has its specific elements. (This was done via @BeforeEach.)
-- Later on, we tested every drawing function of every element on the level.
-- Mockito.verify() was used as testing condition
-
-> Text section viewer testing:
-- Viewing text sections is easier
-- First step was to set up a list of sample sentences to mock a text section (as usual, via @BeforeEach)
-- Later on, we tested the drawText() function to check if the sentences were actually being displayed.
-- Mockito.verify() was used as testing condition
-
-> Menu viewer testing:
-- Similar logic to text section testing
-- First step was to set up a menu and a menu viewer
-- Later on, we tested the drawText() function to check if the menu entries were being displayed
-- Mockito.verify() was used as testing condition
-
-> Orpheus viewer testing:
-- We set up an Orpheus object and a mocked GUI
-- Tested the drawOrpheus() function to check if the character was being presented
-- Mockito.verify() was used as testing condition
-
-### Model testing
-
-> Position testing
-- Property-based test, using jqwik
-- Tests getting left, right, up and down coordinates of a given coordinate
-- assertEquals() was used as testing condition
-
-### Sound testing
-
-As we implemented an AudioPlayer class for playing music ingame, we also implemented audio controls to control volume and playback. 
-
-> AudioPlayer testing
-- Set up consists on creating a new AudioPlayer object and a path to a song file (we used overture.wav but would work with any .wav file we had)
-- Tests volume control (volume up and volume down), by testing FloatControl float values
-- We had to round the FloatControl value as it has many decimal places. This doesn't affect the test validity, as this number tends to 0 (i.e. 3.0000000000000001)
-- assertEquals() was used as testing condition
-
-### Controller testing (in progress...)
-
-> Orpheus controller testing
-- Set up consists in creating a map (along with some elements) and an Orpheus object
-- moveRightEmpty() tests Orpheus movement, when there isn't a wall near
-- moveRightNotEmpty() tests Orpheus movement collider: if there is a wall at its right, then it should not move to the wall's position.
-- dracmaCounterTest() tests if the Dracma counter increasing function works, by calling it and checking if the value has changed
-- assertEquals() was used as testing condition
-
-> Map controller testing (Incomplete)
-- Set up consists in creating a map, an OrpheusController (later replacing the map's one with it) and a MapController
-- checkpointTest() tests the flag variable that checks if the player has reached the checkpoint: a very important aspect for state-changing.
-- assertEquals() was used as testing condition
+#### Bad Ending
+<p align="center" justify="center">
+<img width="1039" alt="GoodEnding" src="https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/116096892/05bf429f-3b8c-4552-9d68-51b9f64d001c">
+<p align="center">
+  <b><i>Fig 9.2. Good Ending </i></b>  
+</p>
+Unfortunately, despite the deep love between Orpheus and Eurydice, you succumbed to doubt and looked back prematurely. As a consequence, the agreement with Hades was broken, and Eurydice vanished from Orpheus's sight forever. The once hopeful journey concludes in sorrow, with Orpheus left to bear the weight of his regret.
