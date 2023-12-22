@@ -238,9 +238,19 @@ Every test class follows the exact same approach so we feel that there's no need
 - We tested every draw function, very naïvely, by calling it to a new Position and then executing every line under `Mockito.verify()`. This way, we can check if the draw functions are being correctly executed.
 - There are 3 additional tests for the remaining functions: `clear()`, `refresh()` and `close()`, that just use `Mockito.verify()` to check if what they are named after is actually happening.
 
-### Screenshot of coverage report
+### IntelliJ Coverage report
+[HTML report](build/reports/pitest/index.html)
 
-### Link to mutation testing report
+(problemas de heap) meter aqui print do intellij
+
+### Mutation testing report
+LanternaGUI tests don't work with pitest. To avoid getting errors in the report, we've added `excludedTestClasses` to our build.gradle file.
+
+![image](https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/114192458/1db8d4ef-9fc9-49b6-86a7-43a89daeaa2f)
+
+[pitest HTML report](build/reports/tests/test/index.html)
+
+
 
 ## Self-evaluation
 
