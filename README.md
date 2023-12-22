@@ -1,7 +1,7 @@
 ![alt_text](https://media.discordapp.net/attachments/852653617798185012/1175031954236772402/banner.png)
 
 # **Myths and Mists**
-This project was developed by Clara Sousa (up202207583@up.pt), João Mendes (up202208586@up.pt) and Miguel Moita (up202207678@up.pt) for LDTS 2022-23.
+This project was developed by [Clara Sousa](https://github.com/clarapbsousa) (up202207583@up.pt), [João Mendes](https://github.com/jv36) (up202208586@up.pt) and [Miguel Moita](https://github.com/MiguelMoita) (up202207678@up.pt) for LDTS 2023-24.
 - For a more detailed version of this description click [here](./docs/README.md).
 
 ## A story on love & loss, powered by Lanterna
