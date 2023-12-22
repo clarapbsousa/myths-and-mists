@@ -1,4 +1,4 @@
-package controller;
+package com.ldts.mythsmists.controller;
 
 import com.ldts.mythsmists.controller.game.OrpheusController;
 import com.ldts.mythsmists.model.Elements.Checkpoint;
@@ -46,5 +46,13 @@ public class OrpheusControllerTest {
         controller.moveOrpheusRight();
         assertEquals(new Position(10, 10), orpheus.getPosition());
     }
+
+    @Test
+    void dracmaCounterTest() {
+        orpheus.increaseCount();
+        assertEquals(1, orpheus.getCount());
+    }
+
+
 
 }
