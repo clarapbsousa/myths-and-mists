@@ -45,7 +45,7 @@ public class Game {
         return state;
     }
 
-    private void start() throws IOException, InterruptedException {
+    void start() throws IOException, InterruptedException {
         int FPS = 10;
         int frameTime = 1000/FPS;
 

@@ -2,11 +2,13 @@ package com.ldts.mythsmists.states;
 
 import com.ldts.mythsmists.Game;
 import com.ldts.mythsmists.controller.Controller;
+import com.ldts.mythsmists.controller.game.Map2Controller;
 import com.ldts.mythsmists.controller.game.MapController;
 import com.ldts.mythsmists.gui.GUI;
 import com.ldts.mythsmists.model.game.map.Map;
 import com.ldts.mythsmists.model.game.map.MapLoader;
 import com.ldts.mythsmists.viewer.Viewer;
+import com.ldts.mythsmists.viewer.game.Map2Viewer;
 import com.ldts.mythsmists.viewer.game.MapViewer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -19,13 +21,13 @@ import static org.mockito.ArgumentMatchers.eq;
 
 public class Act2StateTest {
     private Act2State state;
-    private MapController mockController;
-    private MapViewer mockViewer;
+    private Map2Controller mockController;
+    private Map2Viewer mockViewer;
 
     @BeforeEach
     public void setUp() throws IOException {
-        mockController = Mockito.mock(MapController.class);
-        mockViewer = Mockito.mock(MapViewer.class);
+        mockController = Mockito.mock(Map2Controller.class);
+        mockViewer = Mockito.mock(Map2Viewer.class);
 
         state = new Act2State(new MapLoader(2).createMap()) {
             @Override
