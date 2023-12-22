@@ -99,7 +99,6 @@ public class LanternaGUITest {
         verify(mockScreen.newTextGraphics()).setForegroundColor(TextColor.Factory.fromString("#F5428D"));
         verify(mockScreen.newTextGraphics()).putString(position.getX(), position.getY() - 1, "F");
     }
-
     @Test
     void testDrawWater() {
         Position position = new Position(10, 10);
@@ -123,6 +122,7 @@ public class LanternaGUITest {
         verify(mockScreen.newTextGraphics()).enableModifiers(SGR.BOLD);
         verify(mockScreen.newTextGraphics()).fillRectangle(new TerminalPosition(0, 0), new TerminalSize(150, 150), '%');
     }
+
 
     @Test
     void testClear() throws IOException {

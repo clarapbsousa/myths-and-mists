@@ -15,6 +15,7 @@ pitest {
     junit5PluginVersion = '1.2.0'
     targetClasses = ['com.ldts.mythsmists.*']
     targetTests = ['com.ldts.mythsmists.*']
+    excludedTestClasses = ['com.ldts.mythsmists.gui.*']
     outputFormats = ['XML', 'HTML']
 }
 
@@ -29,7 +30,7 @@ dependencies {
 
 
 application {
-    mainClass.set('com.ldts.mythsmists.game.Game')
+    mainClass.set('com.ldts.mythsmists.Game')
 }
 
 test {

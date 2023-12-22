@@ -6,8 +6,6 @@ import com.ldts.mythsmists.controller.game.OrpheusController;
 import com.ldts.mythsmists.model.Elements.Checkpoint;
 import com.ldts.mythsmists.model.Elements.Orpheus;
 import com.ldts.mythsmists.model.game.map.Map;
-import com.ldts.mythsmists.model.game.map.MapLoader;
-import com.ldts.mythsmists.states.Act15State;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
