@@ -156,22 +156,22 @@ Solution: Conducted thorough testing at various development stages, including un
 We tested all viewers in our game via mocking the GUI class and the drawing functions.  
 #### Text Section Viewer Testing:
 - Streamlined text section viewing for enhanced readability.
-- Initiated by configuring a list of sample sentences to emulate a text section, facilitated via @BeforeEach setup.
-- Subsequent testing focused on validating the drawText() function's efficacy in displaying the sentences.
+- Initiated by configuring a list of sample sentences to emulate a text section, facilitated via `@BeforeEach` setup.
+- Subsequent testing focused on validating the `drawText()` function's efficacy in displaying the sentences.
 - Employed `Mockito.verify()` to assert testing conditions.
 
 #### Menu Viewer Testing:
 - Parallel approach to text section testing.
 - Commenced by establishing a menu and its corresponding viewer.
-- Subsequent evaluation involved testing the drawText() function to ensure accurate display of menu entries.
+- Subsequent evaluation involved testing the `drawText()` function to ensure accurate display of menu entries.
 - Utilized `Mockito.verify()` as the benchmark for testing conditions.
 
 #### Orpheus Viewer Testing:
 - Executed Orpheus viewer testing by initializing an Orpheus object and a mocked GUI.
-- Thoroughly examined the drawOrpheus() function to confirm the accurate representation of the character.
-- Validated testing conditions through the use of Mockito.verify().
-### Model Testing
+- Thoroughly examined the `drawOrpheus()` function to confirm the accurate representation of the character.
+- Validated testing conditions through the use of `Mockito.verify()`.
 
+### Model Testing
 #### Position Testing:
 - Implemented a property-based test using jqwik.
 - Conducted tests to retrieve left, right, up, and down coordinates of a given coordinate.
@@ -184,7 +184,7 @@ We tested all viewers in our game via mocking the GUI class and the drawing func
 - Rounded the FloatControl value due to multiple decimal places, maintaining test validity.
 - Utilized `assertEquals()` for testing conditions.
 
-### Controller Testing (Work in Progress...)
+### Controller Testing
 
 #### Orpheus Controller Testing:
 - Configured the setup by creating a map (including various elements) and an Orpheus object.
@@ -194,11 +194,50 @@ We tested all viewers in our game via mocking the GUI class and the drawing func
   - `dracmaCounterTest()`: Verified the Dracma counter increasing function's functionality by calling it and checking for value changes.
 - Employed `assertEquals()` as the testing condition.
 
-#### Map Controller Testing (Incomplete):
+#### Map Controller Testing:
 - Established the setup with a created map, an OrpheusController (later replacing the map's controller), and a MapController.
 - Conducted the `checkpointTest()` to assess the flag variable checking if the player reached the checkpoint, a crucial aspect for state-changing.
 - Utilized `assertEquals()` for testing conditions.
-  
+
+#### Enemy Controller Testing:
+- Setup configuration with a map and an EnemyController.
+- `colliderTest()` tests the enemy collider, verifying if, when Orpheus collides with an enemy, its energy drops 1 point.
+- `assertEquals()` was used for testing this condition.
+ 
+#### Cerberus Controller Testing:
+- Setup configuration with a map and an CerberusController.
+- `colliderTest()` tests the enemy collider, verifying if, when Orpheus collides with one of Cerebrus' heads, its energy drops to zero.
+- `assertEquals()` was used for testing this condition.
+
+#### Text Section Controllers (Prologue, Interlude1, Interlude2, Ending) Testing:
+- These classes only have 1 test, `testSelectStep()`, that tests the `step()` function paired with a `GUI.ACTION.SELECT`, that represents pressing the Enter key.
+- These tests follow a more complex approach.
+- The first step is to mock the dependencies accordingly: a TextSection, a Game and a GUI. We also created a Controller<T> object (T depends on the test class), with the mocked TextSection as argument and a time variable.
+- The test verifies if, after pressing the Enter key (recording it using `Mockito.when()` paired with `GUI.getNextAction()`) , the state changes to the desired next state and it verifies this using `Mockito.verify()`.
+- In the end, using `Mockito.verifyNoMoreInteractions()`, the test verifies if there isn't any more interactions between the GUI and Game mocks.
+
+#### Menu Controllers Testing:
+- Both Menu and OptionsMenu controller tests follow a very similar approach to the TextSection controller tests. As they both follow a state-oriented approach, we can test the `step()` function to see if states are being correctly transitioned.
+- Setting up a Menu, GUI and Game mock, a MenuController and a time variable is always the first step.
+- Then we record the action invoking with `Mockito.when()` and `GUI.getNextAction()`.
+- In the menus we have more than one possible option so, instead of verifying the next state once, we have to test this in multiple options. Thanks to the `menu.isSelected(i)` bool, we can test multiple outcomes.
+- Just like the other tests, we use `Mockito.verify()` and `Mockito.verifyNoMoreInteractions()` at the end.
+
+### State testing
+Every test class follows the exact same approach so we feel that there's no need to explain them one by one.
+
+- On setup, a mockController and a mockViewer are created, along with a State object (overriding its predefined elements with the mocked elements).
+- `constructorNotNull()` tests if the State constructor is working properly, by checking if its elements aren't null. This is done using JUnit's `assertNotNull()` function.
+- `testStep()` tests the `step()` function of the state. This function needs some arguments, that have to be mocked: Game and GUI. The third argument, the time variable, doesn't need to be mocked, we can just set it as the current system time using `System.currentTimeMillis()`.
+- Using `Mockito.when()` and `GUI.getNextAction` we record a sample action, i.e. SELECT and then execute the function.
+- Using `Mockito.verify()` we then verify if `step()` and `draw()` are being called correctly.
+- The last step is, as usual, check if there isn't any more interactions between the mocks, using `Mockito.verifyNoMoreInteractions()`.
+
+### LanternaGUI testing
+- On setup, we created a new LanternaGUI object and 2 mocks: a Screen and TextGraphics. The GUI's screen is then set as the mocked screen.
+- We tested every draw function, very naïvely, by calling it to a new Position and then executing every line under `Mockito.verify()`. This way, we can check if the draw functions are being correctly executed.
+- There are 3 additional tests for the remaining functions: `clear()`, `refresh()` and `close()`, that just use `Mockito.verify()` to check if what they are named after is actually happening.
+
 ### Screenshot of coverage report
 
 ### Link to mutation testing report
