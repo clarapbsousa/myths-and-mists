@@ -106,7 +106,7 @@ Issue: Ensuring a smooth interaction between controllers and the game's logic to
 Solution: Established a well-defined interface between controllers and game logic, promoting modular and loosely coupled interactions. Applied the MVC architectural pattern to streamline communication between controllers, models, and viewers.
 
 Some of these classes can be found in the following files:
-- [Controller](/../src/main/java/com/ldts/mythsmists/controller/Controller.java)
+- [Controller](https://github.com/FEUP-LDTS-2023/project-l13gr02/src/main/java/com/ldts/mythsmists/controller/Controller.java)
 - [Game Controller](project-l13gr02/src/main/java/com/ldts/mythsmists/controller/game/GameController.java)
 - [Orpheus Controller](project-l13gr02/src/main/java/com/ldts/mythsmists/controller/game/OrpheusController.java)
 - [Cerberus Controller](project-l13gr02/src/main/java/com/ldts/mythsmists/controller/game/CerberusController.java)
