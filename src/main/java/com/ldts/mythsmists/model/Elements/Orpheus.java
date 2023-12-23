@@ -39,7 +39,7 @@ public class Orpheus extends Element{
         return hasReachedCheckpoint;
     }
 
-    public void setHasReachedCheckpoint() {
+    public void set_HasReachedCheckpoint() {
         this.hasReachedCheckpoint = true;
     }
 

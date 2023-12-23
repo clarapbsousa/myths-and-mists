@@ -27,7 +27,7 @@ public class OrpheusController extends GameController{
                 getModel().getDracmas().removeIf(dracma -> dracma.getPosition().equals(position));
             }
             if(!(getModel().isCheckpoint(position))) {
-                getModel().getOrpheus().setHasReachedCheckpoint();
+                getModel().getOrpheus().set_HasReachedCheckpoint();
             }
             if(!(getModel().isLookSpace(position))) {
                 getModel().getOrpheus().set_isLookSpace();

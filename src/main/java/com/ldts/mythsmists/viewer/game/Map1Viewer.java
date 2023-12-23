@@ -11,9 +11,9 @@ import com.ldts.mythsmists.viewer.Viewer;
 import java.util.Collections;
 import java.util.List;
 
-public class MapViewer extends Viewer<Map> {
+public class Map1Viewer extends Viewer<Map> {
 
-    public MapViewer(Map map) {
+    public Map1Viewer(Map map) {
         super(map);
     }
 
