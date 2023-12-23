@@ -2,9 +2,12 @@
 
 ## Game Developers
 This project was developed by:
-- Clara Sousa (up202207583@up.pt),
-- João Mendes (up202208586@up.pt),
-- Miguel Moita (up202207678@up.pt)
+> Clara Sousa (up202207583@up.pt),
+
+> João Mendes (up202208586@up.pt),
+
+> Miguel Moita (up202207678@up.pt)
+
 for LDTS 2023-24.
 
 ## Implemented Features
