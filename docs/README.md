@@ -249,6 +249,11 @@ Every test class follows the exact same approach so we feel that there's no need
 - There are 3 additional tests for the remaining functions: `clear()`, `refresh()` and `close()`, that just use `Mockito.verify()` to check if what they are named after is actually happening.
 
 ### IntelliJ Coverage report
+
+We've had a few issues while running our tests in IntelliJ, because of LanternaGUI tests. These tests open multiple instances of the game and, due to that, they aren't really lightweight - causing lack of heap space in our computers. This means that, in order for our report to be at 100%, we commented some of the tests in the LanternaGUI class to make this work. Note that all tests pass individually, they just can't pass simultaneously due to our limited hardware. This also leads to IntelliJ showing coverage and line coverage % way below the real ones.
+
+![image](https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/114192458/9bdefc0e-2e8b-46e4-94c7-a9d9306a7f7d)
+
 [HTML report](/build/reports/tests/test/index.html)
 
 (problemas de heap) meter aqui print do intellij
@@ -257,6 +262,9 @@ Every test class follows the exact same approach so we feel that there's no need
 LanternaGUI tests don't work with pitest. To avoid getting errors in the report, we've added `excludedTestClasses` to our build.gradle file.
 
 ![image](https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/114192458/1db8d4ef-9fc9-49b6-86a7-43a89daeaa2f)
+
+![image](https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/114192458/f6e8e40e-8b84-478a-ba05-29f8034fb602)
+
 
 [pitest HTML report](/build/reports/pitest/index.html)
 
