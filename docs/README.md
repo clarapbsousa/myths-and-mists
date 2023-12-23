@@ -83,13 +83,13 @@ Issue: Ensuring that visual elements align with the ancient Greek aesthetic and 
 Solution: Implemented a meticulous design guideline emphasizing adherence to ancient Greek visual aesthetics. Consistently applied thematic elements, such as fonts and colors, to create a cohesive and immersive visual experience.
 
 Some of these classes can be found in the following files:
-- [Viewer](src/main/java/com/ldts/mythsmists/viewer/Viewer.java)
-- [Element Viewer](src/main/java/com/ldts/mythsmists/viewer/game/ElementViewer.java)
-- [Orpheus Viewer](src/main/java/com/ldts/mythsmists/viewer/game/OrpheusViewer.java)
-- [Cerberus Viewer](src/main/java/com/ldts/mythsmists/viewer/game/CerberusViewer.java)
-- [Map Viewer](src/main/java/com/ldts/mythsmists/viewer/game/MapViewer.java)
-- [Menu Viewer](src/main/java/com/ldts/mythsmists/viewer/menu/MenuViewer.java)
-- [Options Menu Viewer](src/main/java/com/ldts/mythsmists/viewer/menu/OptionsMenuViewer.java)
+- [Viewer](project-l13gr02/src/main/java/com/ldts/mythsmists/viewer/Viewer.java)
+- [Element Viewer](project-l13gr02/src/main/java/com/ldts/mythsmists/viewer/game/ElementViewer.java)
+- [Orpheus Viewer](project-l13gr02/src/main/java/com/ldts/mythsmists/viewer/game/OrpheusViewer.java)
+- [Cerberus Viewer](project-l13gr02/src/main/java/com/ldts/mythsmists/viewer/game/CerberusViewer.java)
+- [Map Viewer](project-l13gr02/src/main/java/com/ldts/mythsmists/viewer/game/MapViewer.java)
+- [Menu Viewer](project-l13gr02/src/main/java/com/ldts/mythsmists/viewer/menu/MenuViewer.java)
+- [Options Menu Viewer](project-l13gr02/src/main/java/com/ldts/mythsmists/viewer/menu/OptionsMenuViewer.java)
 
 ### Controllers:
 
@@ -106,14 +106,14 @@ Issue: Ensuring a smooth interaction between controllers and the game's logic to
 Solution: Established a well-defined interface between controllers and game logic, promoting modular and loosely coupled interactions. Applied the MVC architectural pattern to streamline communication between controllers, models, and viewers.
 
 Some of these classes can be found in the following files:
-- [Controller](src/main/java/com/ldts/mythsmists/controller/Controller.java)
-- [Game Controller](src/main/java/com/ldts/mythsmists/controller/game/GameController.java)
-- [Orpheus Controller](src/main/java/com/ldts/mythsmists/controller/game/OrpheusController.java)
-- [Cerberus Controller](src/main/java/com/ldts/mythsmists/controller/game/CerberusController.java)
-- [Map Controller](src/main/java/com/ldts/mythsmists/controller/game/MapController.java)
-- [Menu Controller](src/main/java/com/ldts/mythsmists/controller/menu/MenuController.java)
-- [Options Menu Viewer](src/main/java/com/ldts/mythsmists/controller/menu/OptionsMenuController.java)
-- [Prologue Controller](src/main/java/com/ldts/mythsmists/controller/textsections/PrologueController.java)
+- [Controller](project-l13gr02/src/main/java/com/ldts/mythsmists/controller/Controller.java)
+- [Game Controller](project-l13gr02/src/main/java/com/ldts/mythsmists/controller/game/GameController.java)
+- [Orpheus Controller](project-l13gr02/src/main/java/com/ldts/mythsmists/controller/game/OrpheusController.java)
+- [Cerberus Controller](project-l13gr02/src/main/java/com/ldts/mythsmists/controller/game/CerberusController.java)
+- [Map Controller](project-l13gr02/src/main/java/com/ldts/mythsmists/controller/game/MapController.java)
+- [Menu Controller](project-l13gr02/src/main/java/com/ldts/mythsmists/controller/menu/MenuController.java)
+- [Options Menu Viewer](project-l13gr02/src/main/java/com/ldts/mythsmists/controller/menu/OptionsMenuController.java)
+- [Prologue Controller](project-l13gr02/src/main/java/com/ldts/mythsmists/controller/textsections/PrologueController.java)
 
 ### Models:
 
@@ -130,12 +130,12 @@ Issue: Developing models that allow for easy expansion and modification as the g
 Solution: Applied the Template Method pattern to create modular models, allowing selective overrides for specific functionalities. Ensured that changes to one aspect of the game did not adversely impact other components.
 
 Some of these classes can be found in the following files:
-- [Position](src/main/java/com/ldts/mythsmists/model/Position.java)
-- [Cerberus](src/main/java/com/ldts/mythsmists/model/Elements/Cerberus.java)
-- [Element](src/main/java/com/ldts/mythsmists/model/Elements/Element.java)
-- [Map](src/main/java/com/ldts/mythsmists/model/game/map/Map.java)
-- [Menu](src/main/java/com/ldts/mythsmists/model/menu/Menu.java)
-- [Text Sections](src/main/java/com/ldts/mythsmists/model/textsections/TextSection.java)
+- [Position](project-l13gr02/src/main/java/com/ldts/mythsmists/model/Position.java)
+- [Cerberus](project-l13gr02/src/main/java/com/ldts/mythsmists/model/Elements/Cerberus.java)
+- [Element](project-l13gr02/src/main/java/com/ldts/mythsmists/model/Elements/Element.java)
+- [Map](project-l13gr02/src/main/java/com/ldts/mythsmists/model/game/map/Map.java)
+- [Menu](project-l13gr02/src/main/java/com/ldts/mythsmists/model/menu/Menu.java)
+- [Text Sections](project-l13gr02/src/main/java/com/ldts/mythsmists/model/textsections/TextSection.java)
 
 ### General:
 
@@ -239,7 +239,7 @@ Every test class follows the exact same approach so we feel that there's no need
 - There are 3 additional tests for the remaining functions: `clear()`, `refresh()` and `close()`, that just use `Mockito.verify()` to check if what they are named after is actually happening.
 
 ### IntelliJ Coverage report
-[HTML report](project-l13gr02/build/reports/pitest/index.html)
+[HTML report](project-l13gr02/build/reports/tests/test/index.html)
 
 (problemas de heap) meter aqui print do intellij
 
@@ -248,7 +248,7 @@ LanternaGUI tests don't work with pitest. To avoid getting errors in the report,
 
 ![image](https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/114192458/1db8d4ef-9fc9-49b6-86a7-43a89daeaa2f)
 
-[pitest HTML report](/build/reports/tests/test/index.html)
+[pitest HTML report](project-l13gr02/build/reports/pitest/index.html)
 
 
 
