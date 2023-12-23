@@ -33,18 +33,18 @@ Without getting into much detail or spoil, Orpheus will need to go into the Unde
 
 In this level, the base will be the 'hero' tutorial presented in class.
 
-Our 'hero', Orpheus, is trying to reach the Underworld to talk to Hades. Our hero must negotiate with the enigmatic ferryman, Charon, to cross the River Styx. The toll for this perilous journey is precisely 10 drachmas.
-This quest unfolds across two distinct maps, each demanding the collection of 5 drachmas. However, the path is fraught with perils, as Orpheus must navigate throughsouls and enemies. Beware, for the hero's energy is limited, and succumbing to the challenges along the way could jeopardize the mission.
+Our 'hero', Orpheus, is trying to reach the Underworld to talk to Hades. Orpheus must negotiate with the enigmatic ferryman, Charon, to cross the River Styx. The toll for his journey is precisely 10 dracmas.
+This quest unfolds across two distinct maps, each demanding the collection of 5 dracmas. However, the path is fraught with perils, as Orpheus must navigate through souls and enemies. Beware, for the hero's energy is limited, and succumbing to the challenges along the way could jeopardize the mission.
 
 You'll have the possibility to retry, if failed.
 
-Upon successfully collecting the required 10 drachmas, the narrative transitions, the window fading to black, signaling the commencement of Act 2. The stage is set for the unfolding saga in the depths of the Underworld, where Orpheus's fate and the fate of his love hang in the balance.
+Upon successfully collecting the required 10 dracmas, the narrative transitions, the window fading to black, signaling the commencement of Act 2. The stage is set for the unfolding saga in the depths of the Underworld, where Orpheus's fate and the fate of his love hang in the balance.
 
 *A true hero shall pass Act 1 at the first try.*
 
 ### Act 2: RUN!
 
-The second act will focus on the Underworld.
+The second act focus on the Underworld and its chaos.
 
 Still following a simple approach, the user will now have to face all of the dangers of the Underworld and have a talk with Hades.
 
