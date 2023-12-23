@@ -1,0 +1,88 @@
+Index: src/main/java/com/ldts/mythsmists/states/Act1State.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.ldts.mythsmists.states;\n\nimport com.ldts.mythsmists.controller.Controller;\nimport com.ldts.mythsmists.controller.game.Map1Controller;\nimport com.ldts.mythsmists.model.game.map.Map;\nimport com.ldts.mythsmists.viewer.Viewer;\nimport com.ldts.mythsmists.viewer.game.MapViewer;\n\npublic class Act1State extends State<Map>{\n\n    public Act1State(Map map) {super(map);}\n\n    @Override\n    protected Viewer<Map> getViewer() {\n        return new MapViewer(getModel());\n    }\n\n    @Override\n    protected Controller<Map> getController() {\n        return new Map1Controller(getModel());\n    }\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/ldts/mythsmists/states/Act1State.java b/src/main/java/com/ldts/mythsmists/states/Act1State.java
+--- a/src/main/java/com/ldts/mythsmists/states/Act1State.java	(revision b28dd23152a8d5a2c2837c4a396c8493fe153635)
++++ b/src/main/java/com/ldts/mythsmists/states/Act1State.java	(date 1703127256858)
+@@ -4,7 +4,7 @@
+ import com.ldts.mythsmists.controller.game.Map1Controller;
+ import com.ldts.mythsmists.model.game.map.Map;
+ import com.ldts.mythsmists.viewer.Viewer;
+-import com.ldts.mythsmists.viewer.game.MapViewer;
++import com.ldts.mythsmists.viewer.game.Map1Viewer;
+ 
+ public class Act1State extends State<Map>{
+ 
+@@ -12,7 +12,7 @@
+ 
+     @Override
+     protected Viewer<Map> getViewer() {
+-        return new MapViewer(getModel());
++        return new Map1Viewer(getModel());
+     }
+ 
+     @Override
+Index: src/main/java/com/ldts/mythsmists/viewer/game/MapViewer.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/ldts/mythsmists/viewer/game/MapViewer.java b/src/main/java/com/ldts/mythsmists/viewer/game/Map1Viewer.java
+rename from src/main/java/com/ldts/mythsmists/viewer/game/MapViewer.java
+rename to src/main/java/com/ldts/mythsmists/viewer/game/Map1Viewer.java
+--- a/src/main/java/com/ldts/mythsmists/viewer/game/MapViewer.java	(revision b28dd23152a8d5a2c2837c4a396c8493fe153635)
++++ b/src/main/java/com/ldts/mythsmists/viewer/game/Map1Viewer.java	(date 1703125023769)
+@@ -11,9 +11,9 @@
+ import java.util.Collections;
+ import java.util.List;
+ 
+-public class MapViewer extends Viewer<Map> {
++public class Map1Viewer extends Viewer<Map> {
+ 
+-    public MapViewer(Map map) {
++    public Map1Viewer(Map map) {
+         super(map);
+     }
+ 
+Index: src/main/java/com/ldts/mythsmists/model/Elements/Orpheus.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.ldts.mythsmists.model.Elements;\n\npublic class Orpheus extends Element{\n    private int energy;\n    private int count;\n\n    private boolean hasReachedCheckpoint;\n    private boolean isLookSpace;\n\n    private boolean lookback;\n\n    public Orpheus(int x, int y) {\n        super(x, y);\n        this.energy = 10;\n        this.count = 0;\n        this.hasReachedCheckpoint = false;\n    }\n\n    public void decreaseEnergy() {\n        this.energy--;\n    }\n\n    public void setEnergyToZero() {\n        this.energy = 0;\n    }\n    public void increaseCount() {\n        this.count++;\n    }\n\n    public int getEnergy() {\n        return energy;\n    }\n\n    public int getCount() {\n        return count;\n    }\n\n    public boolean get_hasReachedCheckpoint() {\n        return hasReachedCheckpoint;\n    }\n\n    public void setHasReachedCheckpoint() {\n        this.hasReachedCheckpoint = true;\n    }\n\n    public boolean get_isLookSpace() {\n        return isLookSpace;\n    }\n\n    public void set_isLookSpace() {\n        this.isLookSpace = true;\n    }\n\n    public boolean get_lookback() {\n        return lookback;\n    }\n\n    public void set_lookback() {\n        this.lookback = true;\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/ldts/mythsmists/model/Elements/Orpheus.java b/src/main/java/com/ldts/mythsmists/model/Elements/Orpheus.java
+--- a/src/main/java/com/ldts/mythsmists/model/Elements/Orpheus.java	(revision b28dd23152a8d5a2c2837c4a396c8493fe153635)
++++ b/src/main/java/com/ldts/mythsmists/model/Elements/Orpheus.java	(date 1703130976040)
+@@ -39,7 +39,7 @@
+         return hasReachedCheckpoint;
+     }
+ 
+-    public void setHasReachedCheckpoint() {
++    public void set_HasReachedCheckpoint() {
+         this.hasReachedCheckpoint = true;
+     }
+ 
+Index: src/main/java/com/ldts/mythsmists/controller/game/OrpheusController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.ldts.mythsmists.controller.game;\n\nimport com.ldts.mythsmists.Game;\nimport com.ldts.mythsmists.gui.GUI;\nimport com.ldts.mythsmists.model.Position;\nimport com.ldts.mythsmists.model.game.map.Map;\nimport java.io.IOException;\n\npublic class OrpheusController extends GameController{\n\n    public OrpheusController(Map map){super(map);}\n\n    public void moveOrpheusLeft(){ moveOrpheus(getModel().getOrpheus().getPosition().getLeft());}\n    public void moveOrpheusRight(){ moveOrpheus(getModel().getOrpheus().getPosition().getRight());}\n    public void moveOrpheusUp(){ moveOrpheus(getModel().getOrpheus().getPosition().getUp());}\n\n    public void moveOrpheusDown(){ moveOrpheus(getModel().getOrpheus().getPosition().getDown());}\n\n    public void moveOrpheus(Position position) {\n        if(getModel().isEmpty(position)){\n            getModel().getOrpheus().setPosition(position);\n            if(!(getModel().isEnemy(position))){\n                getModel().getOrpheus().decreaseEnergy();\n            }\n            if(!(getModel().isDracma(position))){\n                getModel().getOrpheus().increaseCount();\n                getModel().getDracmas().removeIf(dracma -> dracma.getPosition().equals(position));\n            }\n            if(!(getModel().isCheckpoint(position))) {\n                getModel().getOrpheus().setHasReachedCheckpoint();\n            }\n            if(!(getModel().isLookSpace(position))) {\n                getModel().getOrpheus().set_isLookSpace();\n            }\n            if(!(getModel().isWater(position))) {\n                getModel().getOrpheus().decreaseEnergy();\n            }\n        }\n    }\n\n    public void breakWall() {\n\n    }\n\n    @Override\n    public void step(Game game, GUI.ACTION action, long time) throws IOException {\n            if (action == GUI.ACTION.UP) {\n                moveOrpheusUp();\n            }\n            if (action == GUI.ACTION.RIGHT) moveOrpheusRight();\n            if (action == GUI.ACTION.DOWN) moveOrpheusDown();\n            if (action == GUI.ACTION.LEFT) moveOrpheusLeft();\n            if (action == GUI.ACTION.LOOK) getModel().getOrpheus().set_lookback();\n            if (action == GUI.ACTION.DESTROY) breakWall();\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/ldts/mythsmists/controller/game/OrpheusController.java b/src/main/java/com/ldts/mythsmists/controller/game/OrpheusController.java
+--- a/src/main/java/com/ldts/mythsmists/controller/game/OrpheusController.java	(revision b28dd23152a8d5a2c2837c4a396c8493fe153635)
++++ b/src/main/java/com/ldts/mythsmists/controller/game/OrpheusController.java	(date 1703130976028)
+@@ -27,7 +27,7 @@
+                 getModel().getDracmas().removeIf(dracma -> dracma.getPosition().equals(position));
+             }
+             if(!(getModel().isCheckpoint(position))) {
+-                getModel().getOrpheus().setHasReachedCheckpoint();
++                getModel().getOrpheus().set_HasReachedCheckpoint();
+             }
+             if(!(getModel().isLookSpace(position))) {
+                 getModel().getOrpheus().set_isLookSpace();
