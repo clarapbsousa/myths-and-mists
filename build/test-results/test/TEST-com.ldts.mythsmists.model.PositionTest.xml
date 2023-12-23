@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ldts.mythsmists.model.PositionTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-12-22T20:32:14" hostname="vicente-HP" time="1.534">
+  <properties/>
+  <testcase name="getDown" classname="com.ldts.mythsmists.model.PositionTest" time="0.994"/>
+  <testcase name="getLeft" classname="com.ldts.mythsmists.model.PositionTest" time="0.142"/>
+  <testcase name="getUp" classname="com.ldts.mythsmists.model.PositionTest" time="0.177"/>
+  <testcase name="getRight" classname="com.ldts.mythsmists.model.PositionTest" time="0.214"/>
+  <system-out><![CDATA[timestamp = 2023-12-22T20:32:15.626679434, PositionTest:getDown = 
+                              |-------------------jqwik-------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = PREVIOUS_SEED | use the previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 81         | # of all combined edge cases
+edge-cases#tried = 81         | # of edge cases tried in current run
+seed = 4848706255063525151    | random seed to reproduce generated values
+
+
+timestamp = 2023-12-22T20:32:15.809186825, PositionTest:getLeft = 
+                              |-------------------jqwik-------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = PREVIOUS_SEED | use the previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 81         | # of all combined edge cases
+edge-cases#tried = 81         | # of edge cases tried in current run
+seed = -5991225749373372356   | random seed to reproduce generated values
+
+
+timestamp = 2023-12-22T20:32:15.990447386, PositionTest:getUp = 
+                              |-------------------jqwik-------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = PREVIOUS_SEED | use the previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 81         | # of all combined edge cases
+edge-cases#tried = 81         | # of edge cases tried in current run
+seed = 6163547676914288553    | random seed to reproduce generated values
+
+
+timestamp = 2023-12-22T20:32:16.186317970, PositionTest:getRight = 
+                              |-------------------jqwik-------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = PREVIOUS_SEED | use the previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 81         | # of all combined edge cases
+edge-cases#tried = 81         | # of edge cases tried in current run
+seed = 2361274859049243355    | random seed to reproduce generated values
+
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
