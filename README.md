@@ -48,9 +48,9 @@ The second act focus on the Underworld and its chaos.
 
 Still following a simple approach, the user will now have to face all of the dangers of the Underworld and have a talk with Hades.
 
-Your primary objective is to traverse the Underworld unscathed, encountering obstacles such as the fearsome Cerberus heads. Your dexterity and strategic choices determine whether you can outmaneuver the gigantic three-headed hound, preserving Orpheus's energy for the meeting with Hades.
+Your mission is to navigate this realm unscathed, contending with dangers like the formidable Cerberus heads and numerous adversaries. Your choices and dexterity are crucial in preserving Orpheus's energy for the impending meeting with Hades.
 
-Upon reaching Hades, a poetic text section materializes, setting the stage for a profound interaction, capturing the essence of the exchange between Orpheus and the ruler of the Underworld. Amidst the verses, a promise is made, laying the groundwork for the unfolding narrative and the resolution of Orpheus's quest.
+Upon reaching the ruler of the Underworld, a poetic text section unfolds, capturing the essence of the profound interaction between Orpheus and Hades. Amidst the verses, a solemn promise is made, shaping the narrative and paving the way for the resolution of Orpheus's quest.
 
 An unsettling feeling clings to your chest as your mind echoes a haunting reminder:
 
