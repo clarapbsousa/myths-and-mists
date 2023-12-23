@@ -256,15 +256,11 @@ We've had a few issues while running our tests in IntelliJ, because of LanternaG
 
 [HTML report](/build/reports/tests/test/index.html)
 
-(problemas de heap) meter aqui print do intellij
 
 ### Mutation testing report
 LanternaGUI tests don't work with pitest. To avoid getting errors in the report, we've added `excludedTestClasses` to our build.gradle file.
 
 ![image](https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/114192458/1db8d4ef-9fc9-49b6-86a7-43a89daeaa2f)
-
-![image](https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/114192458/f6e8e40e-8b84-478a-ba05-29f8034fb602)
-
 
 [pitest HTML report](/build/reports/pitest/index.html)
 
