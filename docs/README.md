@@ -239,7 +239,7 @@ Every test class follows the exact same approach so we feel that there's no need
 - There are 3 additional tests for the remaining functions: `clear()`, `refresh()` and `close()`, that just use `Mockito.verify()` to check if what they are named after is actually happening.
 
 ### IntelliJ Coverage report
-[HTML report](/build/reports/pitest/index.html)
+[HTML report](project-l13gr02/build/reports/pitest/index.html)
 
 (problemas de heap) meter aqui print do intellij
 
