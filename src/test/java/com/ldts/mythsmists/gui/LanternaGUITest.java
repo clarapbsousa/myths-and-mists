@@ -123,7 +123,6 @@ public class LanternaGUITest {
         verify(mockScreen.newTextGraphics()).fillRectangle(new TerminalPosition(0, 0), new TerminalSize(150, 150), '%');
     }
 
-
     @Test
     void testClear() throws IOException {
         lanternaGUI.clear();

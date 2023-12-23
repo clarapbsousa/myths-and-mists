@@ -7,7 +7,7 @@ import com.ldts.mythsmists.gui.GUI;
 import com.ldts.mythsmists.model.game.map.Map;
 import com.ldts.mythsmists.model.game.map.MapLoader;
 import com.ldts.mythsmists.viewer.Viewer;
-import com.ldts.mythsmists.viewer.game.MapViewer;
+import com.ldts.mythsmists.viewer.game.Map1Viewer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -20,12 +20,12 @@ import static org.mockito.ArgumentMatchers.eq;
 public class Act1StateTest {
     private Act1State state;
     private MapController mockController;
-    private MapViewer mockViewer;
+    private Map1Viewer mockViewer;
 
     @BeforeEach
     public void setUp() throws IOException {
         mockController = Mockito.mock(MapController.class);
-        mockViewer = Mockito.mock(MapViewer.class);
+        mockViewer = Mockito.mock(Map1Viewer.class);
 
         state = new Act1State(new MapLoader(1).createMap()) {
             @Override

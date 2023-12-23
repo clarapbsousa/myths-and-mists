@@ -4,7 +4,7 @@ import com.ldts.mythsmists.gui.GUI;
 import com.ldts.mythsmists.model.Elements.*;
 import com.ldts.mythsmists.model.Position;
 import com.ldts.mythsmists.model.game.map.Map;
-import com.ldts.mythsmists.viewer.game.MapViewer;
+import com.ldts.mythsmists.viewer.game.Map1Viewer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -21,13 +21,13 @@ public class MapViewerTest {
     private Orpheus orpheus;
     private Map map;
     private GUI gui;
-    private MapViewer viewer;
+    private Map1Viewer viewer;
     @BeforeEach
     void setup() {
         orpheus = new Orpheus(10, 10);
         gui = Mockito.mock(GUI.class);
         map = new Map(150, 150);
-        viewer = new MapViewer(map);
+        viewer = new Map1Viewer(map);
 
         map.setOrpheus(orpheus);
         map.setWalls(Arrays.asList(new Wall(3,3), new Wall(4,5), new Wall(7, 7), new Wall(10, 20), new Wall(30, 40)));

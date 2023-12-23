@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.ldts.mythsmists.gui.LanternaGUITest" tests="7" skipped="1" failures="0" errors="0" timestamp="2023-12-22T20:32:18" hostname="vicente-HP" time="3.882">
+<testsuite name="com.ldts.mythsmists.gui.LanternaGUITest" tests="4" skipped="1" failures="0" errors="0" timestamp="2023-12-23T19:02:36" hostname="vicente-HP" time="8.99">
   <properties/>
-  <testcase name="testDrawDracma()" classname="com.ldts.mythsmists.gui.LanternaGUITest" time="1.176"/>
-  <testcase name="testClear()" classname="com.ldts.mythsmists.gui.LanternaGUITest" time="0.415"/>
-  <testcase name="testClose()" classname="com.ldts.mythsmists.gui.LanternaGUITest" time="0.469"/>
-  <testcase name="testDrawCerberus()" classname="com.ldts.mythsmists.gui.LanternaGUITest" time="0.444"/>
-  <testcase name="testDrawWall()" classname="com.ldts.mythsmists.gui.LanternaGUITest" time="0.455"/>
-  <testcase name="testRefresh()" classname="com.ldts.mythsmists.gui.LanternaGUITest" time="0.366"/>
-  <testcase name="testDrawEnemy()" classname="com.ldts.mythsmists.gui.LanternaGUITest" time="0.545">
+  <testcase name="testDrawDracma()" classname="com.ldts.mythsmists.gui.LanternaGUITest" time="5.481"/>
+  <testcase name="testClear()" classname="com.ldts.mythsmists.gui.LanternaGUITest" time="2.719"/>
+  <testcase name="testClose()" classname="com.ldts.mythsmists.gui.LanternaGUITest" time="0.456"/>
+  <testcase name="testDrawCerberus()" classname="com.ldts.mythsmists.gui.LanternaGUITest" time="0.331">
     <skipped/>
   </testcase>
   <system-out><![CDATA[]]></system-out>
