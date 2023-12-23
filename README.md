@@ -68,16 +68,16 @@ As you go through the maze, you'll have the opportunity to look back.
 
 > Bad Ending
 
-**Good Ending**
+**Triumph of Love: Good Ending**
 
-Congratulations. If you reached the good ending, you reached the end of the maze. And you didn't look back, even though the shivering sentence was haunting you all the time. That will prompt the good ending, again, as a text-based segment that explains it.
+In the final moments of the game, your unwavering trust in your instincts and your deep love for Eurydice led you to the path of triumph. Despite the haunting whispers of the shivering sentence that echoed through your mind, you resisted the temptation to look back when you shouldn't have. Your determination and courage prevailed, proving that love can indeed conquer the fates. As a result, you have reached the elusive good ending. The narrative unfolds, congratulating you on your resilience and the strength of your connection with Eurydice. The tale concludes on a triumphant note, leaving you with a sense of accomplishment and the satisfaction of defying the odds.
 
-**Bad Ending**
+**Heartbreak and Regret: Bad Ending**
 
-You probably did reach the end of the maze. But you looked back. If you were tempted by that sentence, the game is over - the bad ending prompts.
+Despite your best efforts, the weight of nerves and anxiety proved too much to bear. In a moment of weakness, you succumbed to the temptation and looked back. The consequences of this action are immediate and irreversible. The game comes to an abrupt end, signaling the arrival of the bad ending. The narrative conveys a sense of heartbreak and regret, emphasizing the significance of that critical choice. The shivering sentence, once a mere warning, now stands as a haunting reminder of what might have been. The story concludes on a somber note, leaving players to reflect on the impact of their decisions and the fragility of the line between success and failure.
 
 
-That's how the game ends. Even though in the original story the only ending is our bad ending, we decided to take our twist and implement a second ending, considering that not all players know the myth behind the game.
+In this narrative twist, the addition of a good ending provides players with a sense of agency and the possibility of a positive outcome, deviating from the original myth to create a more varied and engaging gaming experience.
 
 *All good things must come to an end. The bad ones too.*
 
