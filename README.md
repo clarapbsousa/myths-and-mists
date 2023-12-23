@@ -59,10 +59,15 @@ When you reach to Hades, you'll have to explain why you are there. A promise wil
 
 After the said promise, Orpheus will walk out of the  Underworld.
 
-You will be presented with a maze and a sentence on top of the screen: 
-"Want to look back? Press [L]".
+You will be presented with a simple corridor and a sentence at the top of the screen, tempting you with a single choice: "Want to look back? Press [L]."
 
-As you go through the maze, you'll have the opportunity to look back.
+The corridor stretches ahead, dimly lit, and a palpable sense of tension hangs in the air. You feel the weight of the sentence, a silent reminder of the consequences that may follow your actions.
+
+With each step, you wrestle with the decision to look back. The temptation grows, and you can't shake the feeling that something significant lies behind you. 
+
+Your instincts and trust in the journey urge you forward, but the allure of the unknown, coupled with the haunting sentence, lingers. The choice is yours—press [L] to look back or continue your path, driven by trust and determination.
+
+As you navigate this corridor of uncertainty, the echoes of your decision ripple through the narrative, shaping the destiny of both you and your lover. The sentence serves as a constant reminder of the delicate balance between curiosity and steadfastness, leaving the outcome in your hands. The corridor becomes a metaphorical battleground where trust and temptation collide, and the consequences of your choice unfold in the unfolding story of love and destiny.
 
 > Good Ending
 
