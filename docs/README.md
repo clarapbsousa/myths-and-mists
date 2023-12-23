@@ -67,7 +67,7 @@ In our current design, the utilization of the Facade Pattern provides a streamli
 ## UML approach
  As coding is now complete, here's our finalized class diagram, illustrating the comprehensive structure of the game. Each class name is carefully chosen for clarity within the game's context.
 
-![UML LDTS](https://github.com/FEUP-LDTS-2023/project-l13gr02/issues/2#issue-2054807611)
+![UML Final Diagram](https://github.com/FEUP-LDTS-2023/project-l13gr02/issues/2#issue-2054807611)
 
 ## Design Challenges, Contextual Issues, and Solutions
 ### Viewers:
