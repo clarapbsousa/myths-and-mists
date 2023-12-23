@@ -239,7 +239,7 @@ Every test class follows the exact same approach so we feel that there's no need
 - There are 3 additional tests for the remaining functions: `clear()`, `refresh()` and `close()`, that just use `Mockito.verify()` to check if what they are named after is actually happening.
 
 ### IntelliJ Coverage report
-[HTML report](build/reports/pitest/index.html)
+[HTML report](/build/reports/pitest/index.html)
 
 (problemas de heap) meter aqui print do intellij
 
@@ -248,7 +248,7 @@ LanternaGUI tests don't work with pitest. To avoid getting errors in the report,
 
 ![image](https://github.com/FEUP-LDTS-2023/project-l13gr02/assets/114192458/1db8d4ef-9fc9-49b6-86a7-43a89daeaa2f)
 
-[pitest HTML report](build/reports/tests/test/index.html)
+[pitest HTML report](/build/reports/tests/test/index.html)
 
 
 
