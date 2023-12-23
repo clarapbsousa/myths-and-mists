@@ -83,7 +83,7 @@ Issue: Ensuring that visual elements align with the ancient Greek aesthetic and 
 Solution: Implemented a meticulous design guideline emphasizing adherence to ancient Greek visual aesthetics. Consistently applied thematic elements, such as fonts and colors, to create a cohesive and immersive visual experience.
 
 Some of these classes can be found in the following files:
-- [Viewer](project-l13gr02/src/main/java/com/ldts/mythsmists/viewer/Viewer.java)
+- [Viewer](/src/main/java/com/ldts/mythsmists/viewer/Viewer.java)
 - [Element Viewer](project-l13gr02/src/main/java/com/ldts/mythsmists/viewer/game/ElementViewer.java)
 - [Orpheus Viewer](project-l13gr02/src/main/java/com/ldts/mythsmists/viewer/game/OrpheusViewer.java)
 - [Cerberus Viewer](project-l13gr02/src/main/java/com/ldts/mythsmists/viewer/game/CerberusViewer.java)
