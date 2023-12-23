@@ -50,9 +50,9 @@ Still following a simple approach, the user will now have to face all of the dan
 
 Your primary objective is to traverse the Underworld unscathed, encountering obstacles such as the fearsome Cerberus heads. Your dexterity and strategic choices determine whether you can outmaneuver the gigantic three-headed hound, preserving Orpheus's energy for the meeting with Hades.
 
-Successfully navigating the dangers prompts the obstacles, including Cerberus, to yield, allowing passage to unfold. The Underworld unveils its mysteries as you progress toward the heart of the domain.
+Upon reaching Hades, a poetic text section materializes, setting the stage for a profound interaction, capturing the essence of the exchange between Orpheus and the ruler of the Underworld. Amidst the verses, a promise is made, laying the groundwork for the unfolding narrative and the resolution of Orpheus's quest.
 
-When you reach to Hades, a text section will appear, a poem to explain the interaction and a promise will be made.
+An unsettling feeling clings to your chest as your mind echoes a haunting reminder:
 
 *Don't look back on a promise.*
 
