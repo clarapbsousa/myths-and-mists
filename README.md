@@ -12,16 +12,16 @@ Myths and Mists is based on the Greek myth of Orpheus and Eurydice, a story abou
 
 Just like a musical or a play, the game will be divided into 3 different acts: each with its own particularities.
 
-### Act 1: Love at First Sight / Into the Underworld
+### Act 1: A Lovers' Story / Into the Underworld
 
 The first act will be presented to the user in 2 segments:
-> Love at First Sight
+> A Lovers' Story (Prologue)
 
 > Into the Underworld
 
-**Love at First Sight**
+**A Lovers' Story**
 
-The first segment of Act 1 is a text-based story. The window will show the beginning of the myth. A sort of intro. 
+The first segment of Act 1 is a text-based story. The window will show the beginning of the myth. ***The Prologue***. 
 
 Keep in mind that, during the game, text-based sentences will be showed, just to keep context of the story and improve the overall storytelling experience.
 
@@ -33,25 +33,26 @@ Without getting into much detail or spoil, Orpheus will need to go into the Unde
 
 In this level, the base will be the 'hero' tutorial presented in class.
 
-Our 'hero' will be Orpheus, trying to reach the Underworld to talk to Hades, avoiding obstacles.
+Our 'hero', Orpheus, is trying to reach the Underworld to talk to Hades. Our hero must negotiate with the enigmatic ferryman, Charon, to cross the River Styx. The toll for this perilous journey is precisely 10 drachmas.
+This quest unfolds across two distinct maps, each demanding the collection of 5 drachmas. However, the path is fraught with perils, as Orpheus must navigate throughsouls and enemies. Beware, for the hero's energy is limited, and succumbing to the challenges along the way could jeopardize the mission.
 
 You'll have the possibility to retry, if failed.
 
-When you reach the Underworld, the window will fade to black. Time for Act 2.
+Upon successfully collecting the required 10 drachmas, the narrative transitions, the window fading to black, signaling the commencement of Act 2. The stage is set for the unfolding saga in the depths of the Underworld, where Orpheus's fate and the fate of his love hang in the balance.
 
 *A true hero shall pass Act 1 at the first try.*
 
-### Act 2: A Sung Promise
+### Act 2: RUN!
 
 The second act will focus on the Underworld.
 
-Still following a simple approach (or other?), the user will now have to face all of the dangers of the Underworld and have a talk with Hades.
+Still following a simple approach, the user will now have to face all of the dangers of the Underworld and have a talk with Hades.
 
-Orpheus is a good singer. So, taking advantage on that, you'll have to sing through the level.
+Your primary objective is to traverse the Underworld unscathed, encountering obstacles such as the fearsome Cerberus heads. Your dexterity and strategic choices determine whether you can outmaneuver the gigantic three-headed hound, preserving Orpheus's energy for the meeting with Hades.
 
-By clicking on a key, Orpheus will "shoot" musical notes out of his mouth. This will make all the obstacles, like Cerberus (the gigantic three-headed hound) to let you pass.
+Successfully navigating the dangers prompts the obstacles, including Cerberus, to yield, allowing passage to unfold. The Underworld unveils its mysteries as you progress toward the heart of the domain.
 
-When you reach to Hades, you'll have to explain why you are there. A promise will be made.
+When you reach to Hades, a text section will appear, a poem to explain the interaction and a promise will be made.
 
 *Don't look back on a promise.*
 
