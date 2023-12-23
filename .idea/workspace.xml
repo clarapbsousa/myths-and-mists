@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b501c58-9a02-4eb9-adad-5e2fb7167b96" name="Changes" comment="Mudanças mínimas">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ldts/mythsmists/controller/game/OrpheusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ldts/mythsmists/controller/game/OrpheusController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ldts/mythsmists/model/Elements/Orpheus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ldts/mythsmists/model/Elements/Orpheus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ldts/mythsmists/states/Act1State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ldts/mythsmists/states/Act1State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ldts/mythsmists/viewer/game/MapViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ldts/mythsmists/viewer/game/Map1Viewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +22,12 @@
       <state>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="mythsmists" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -73,26 +75,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Game.executor": "Run",
-    "Gradle.Build project-l13gr02.executor": "Run",
-    "Gradle.project-l13gr02 [:Game.main()].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/miguel/Desktop/hero-solid",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "File.Encoding",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Game.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build project-l13gr02.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.project-l13gr02 [:Game.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/miguel/Desktop/hero-solid&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
@@ -163,6 +166,7 @@
       <workItem from="1703009301838" duration="12227000" />
       <workItem from="1703193300150" duration="3271000" />
       <workItem from="1703344755687" duration="981000" />
+      <workItem from="1703346206035" duration="102000" />
     </task>
     <task id="LOCAL-00001" summary="Atualização do Read Me">
       <option name="closed" value="true" />
@@ -334,7 +338,8 @@
     <MESSAGE value="Criação do unispace3 com novos personagens / texturas" />
     <MESSAGE value="Mudanças no build.gradle com foco no pitest" />
     <MESSAGE value="Mudanças mínimas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mudanças mínimas" />
+    <MESSAGE value="," />
+    <option name="LAST_COMMIT_MESSAGE" value="," />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
