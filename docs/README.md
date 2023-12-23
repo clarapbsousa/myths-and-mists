@@ -72,7 +72,8 @@ In our current design, the utilization of the Facade Pattern provides a streamli
 </p>
 <p align="center">
   <b><i> UML </i></b>  
-</p>  
+</p>
+
 ## Design Challenges, Contextual Issues, and Solutions
 ### Viewers:
 
