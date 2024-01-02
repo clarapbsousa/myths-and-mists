@@ -181,3 +181,4 @@ Your love proved to be unwavering, and you gazed back at the right moment. As a 
 </p>
 Unfortunately, despite the deep love between Orpheus and Eurydice, you succumbed to doubt and looked back prematurely. As a consequence, the agreement with Hades was broken, and Eurydice vanished from Orpheus's sight forever. The once hopeful journey concludes in sorrow, with Orpheus left to bear the weight of his regret.
 # myths-and-mists
+# myths-and-mists
